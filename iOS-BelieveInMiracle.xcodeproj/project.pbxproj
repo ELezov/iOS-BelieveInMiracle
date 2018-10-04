@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9221663CC8003FC06F /* AppDelegate.swift */; };
-		9887FF9521663CC8003FC06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9421663CC8003FC06F /* ViewController.swift */; };
+		9887FF9521663CC8003FC06F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9421663CC8003FC06F /* MainVC.swift */; };
 		9887FF9821663CC8003FC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9621663CC8003FC06F /* Main.storyboard */; };
 		9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9921663CC9003FC06F /* Assets.xcassets */; };
 		9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9B21663CC9003FC06F /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		9887FF8F21663CC8003FC06F /* iOS-BelieveInMiracle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-BelieveInMiracle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9887FF9221663CC8003FC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9887FF9421663CC8003FC06F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9887FF9421663CC8003FC06F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		9887FF9721663CC8003FC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9887FF9921663CC9003FC06F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9887FF9C21663CC9003FC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,86 @@
 		9887FF9121663CC8003FC06F /* iOS-BelieveInMiracle */ = {
 			isa = PBXGroup;
 			children = (
-				9887FF9221663CC8003FC06F /* AppDelegate.swift */,
-				9887FF9421663CC8003FC06F /* ViewController.swift */,
-				9887FF9621663CC8003FC06F /* Main.storyboard */,
-				9887FF9921663CC9003FC06F /* Assets.xcassets */,
-				9887FF9B21663CC9003FC06F /* LaunchScreen.storyboard */,
-				9887FF9E21663CC9003FC06F /* Info.plist */,
+				9887FFAC21663E12003FC06F /* Environment */,
+				9887FFA621663D45003FC06F /* Resources */,
+				9887FFA521663D40003FC06F /* Core */,
+				9887FFA421663D35003FC06F /* App */,
 			);
 			path = "iOS-BelieveInMiracle";
+			sourceTree = "<group>";
+		};
+		9887FFA421663D35003FC06F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9887FFA721663D62003FC06F /* BussinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9887FFA521663D40003FC06F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9887FFA621663D45003FC06F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9887FF9921663CC9003FC06F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9887FFA721663D62003FC06F /* BussinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				9887FFA921663D83003FC06F /* Flows */,
+				9887FFA821663D6D003FC06F /* AppDelegate */,
+			);
+			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		9887FFA821663D6D003FC06F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9887FF9221663CC8003FC06F /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9887FFA921663D83003FC06F /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				9887FFAB21663DEE003FC06F /* LaunchScreen */,
+				9887FFAA21663DB6003FC06F /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9887FFAA21663DB6003FC06F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9887FF9621663CC8003FC06F /* Main.storyboard */,
+				9887FF9421663CC8003FC06F /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9887FFAB21663DEE003FC06F /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9887FF9B21663CC9003FC06F /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		9887FFAC21663E12003FC06F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				9887FF9E21663CC9003FC06F /* Info.plist */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9887FF9521663CC8003FC06F /* ViewController.swift in Sources */,
+				9887FF9521663CC8003FC06F /* MainVC.swift in Sources */,
 				9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +354,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
-				INFOPLIST_FILE = "iOS-BelieveInMiracle/Info.plist";
+				INFOPLIST_FILE = "iOS-BelieveInMiracle/Environment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +373,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
-				INFOPLIST_FILE = "iOS-BelieveInMiracle/Info.plist";
+				INFOPLIST_FILE = "iOS-BelieveInMiracle/Environment/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
