@@ -7,21 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3BE5671E24E743BCB5837F /* Pods_iOS_BelieveInMiracle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */; };
 		9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9221663CC8003FC06F /* AppDelegate.swift */; };
 		9887FF9521663CC8003FC06F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9421663CC8003FC06F /* MainVC.swift */; };
-		9887FF9821663CC8003FC06F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9621663CC8003FC06F /* Main.storyboard */; };
+		9887FF9821663CC8003FC06F /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9621663CC8003FC06F /* MainVC.storyboard */; };
 		9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9921663CC9003FC06F /* Assets.xcassets */; };
 		9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9B21663CC9003FC06F /* LaunchScreen.storyboard */; };
+		9887FFAE21664B73003FC06F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFAD21664B73003FC06F /* MainView.swift */; };
+		9887FFB321664BE0003FC06F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFB021664BE0003FC06F /* Router.swift */; };
+		9887FFB421664BE0003FC06F /* RouterAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFB121664BE0003FC06F /* RouterAbstract.swift */; };
+		9887FFB521664BE0003FC06F /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFB221664BE0003FC06F /* Presentable.swift */; };
+		9887FFB821664BE6003FC06F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFB621664BE6003FC06F /* BaseCoordinator.swift */; };
+		9887FFB921664BE6003FC06F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFB721664BE6003FC06F /* Coordinator.swift */; };
+		9887FFBB21664C5E003FC06F /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFBA21664C5E003FC06F /* ApplicationCoordinator.swift */; };
+		9887FFBD21664CA8003FC06F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFBC21664CA7003FC06F /* MainCoordinator.swift */; };
+		9887FFC121665554003FC06F /* NSObject + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFBF21665554003FC06F /* NSObject + Extensions.swift */; };
+		9887FFC821665C15003FC06F /* UIStoryboard+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFC721665C15003FC06F /* UIStoryboard+ViewController.swift */; };
+		9887FFCA21665C3B003FC06F /* AboutFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFC921665C3B003FC06F /* AboutFlowCoordinator.swift */; };
+		9887FFD021665DC7003FC06F /* MainCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FFCF21665DC7003FC06F /* MainCoordinatorOutput.swift */; };
+		98BA73E1216D164200886AD2 /* MainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73E0216D164200886AD2 /* MainAssembly.swift */; };
+		98BA73E3216D171900886AD2 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73E2216D171900886AD2 /* ApplicationAssembly.swift */; };
+		98BA73E7216D177F00886AD2 /* NavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BA73E5216D177F00886AD2 /* NavigationController.storyboard */; };
+		98BA73E8216D177F00886AD2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73E6216D177F00886AD2 /* NavigationController.swift */; };
+		98BA73EA216D18B600886AD2 /* AboutAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73E9216D18B600886AD2 /* AboutAssembly.swift */; };
+		98BA73EC216D18C600886AD2 /* AssemblyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73EB216D18C600886AD2 /* AssemblyFactory.swift */; };
+		98BA7400216D19BA00886AD2 /* AboutViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73FB216D19BA00886AD2 /* AboutViewModelAbstract.swift */; };
+		98BA7401216D19BA00886AD2 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73FC216D19BA00886AD2 /* AboutView.swift */; };
+		98BA7402216D19BA00886AD2 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73FD216D19BA00886AD2 /* AboutVC.swift */; };
+		98BA7403216D19BA00886AD2 /* AboutVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BA73FE216D19BA00886AD2 /* AboutVC.storyboard */; };
+		98BA7404216D19BA00886AD2 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA73FF216D19BA00886AD2 /* AboutViewModel.swift */; };
+		98BA7407216D1A3200886AD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA7406216D1A3200886AD2 /* ViewController.swift */; };
+		98BA740B216D1CEC00886AD2 /* ViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA7409216D1CEC00886AD2 /* ViewModelAbstract.swift */; };
+		98BA740C216D1CEC00886AD2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA740A216D1CEC00886AD2 /* ViewModel.swift */; };
+		98BA740E216D1D0000886AD2 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA740D216D1D0000886AD2 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40F206C330A1245083714BDA /* Pods-iOS-BelieveInMiracle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-BelieveInMiracle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle.debug.xcconfig"; sourceTree = "<group>"; };
+		8F92715826B156BF1178BCCB /* Pods-iOS-BelieveInMiracle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-BelieveInMiracle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle.release.xcconfig"; sourceTree = "<group>"; };
 		9887FF8F21663CC8003FC06F /* iOS-BelieveInMiracle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-BelieveInMiracle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9887FF9221663CC8003FC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9887FF9421663CC8003FC06F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		9887FF9721663CC8003FC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9887FF9721663CC8003FC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainVC.storyboard; sourceTree = "<group>"; };
 		9887FF9921663CC9003FC06F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9887FF9C21663CC9003FC06F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9887FF9E21663CC9003FC06F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9887FFAD21664B73003FC06F /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9887FFB021664BE0003FC06F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9887FFB121664BE0003FC06F /* RouterAbstract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterAbstract.swift; sourceTree = "<group>"; };
+		9887FFB221664BE0003FC06F /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		9887FFB621664BE6003FC06F /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9887FFB721664BE6003FC06F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9887FFBA21664C5E003FC06F /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		9887FFBC21664CA7003FC06F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9887FFBF21665554003FC06F /* NSObject + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject + Extensions.swift"; sourceTree = "<group>"; };
+		9887FFC721665C15003FC06F /* UIStoryboard+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+ViewController.swift"; sourceTree = "<group>"; };
+		9887FFC921665C3B003FC06F /* AboutFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutFlowCoordinator.swift; sourceTree = "<group>"; };
+		9887FFCF21665DC7003FC06F /* MainCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorOutput.swift; sourceTree = "<group>"; };
+		98BA73E0216D164200886AD2 /* MainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembly.swift; sourceTree = "<group>"; };
+		98BA73E2216D171900886AD2 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		98BA73E5216D177F00886AD2 /* NavigationController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NavigationController.storyboard; sourceTree = "<group>"; };
+		98BA73E6216D177F00886AD2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		98BA73E9216D18B600886AD2 /* AboutAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAssembly.swift; sourceTree = "<group>"; };
+		98BA73EB216D18C600886AD2 /* AssemblyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyFactory.swift; sourceTree = "<group>"; };
+		98BA73FB216D19BA00886AD2 /* AboutViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModelAbstract.swift; sourceTree = "<group>"; };
+		98BA73FC216D19BA00886AD2 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		98BA73FD216D19BA00886AD2 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		98BA73FE216D19BA00886AD2 /* AboutVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AboutVC.storyboard; sourceTree = "<group>"; };
+		98BA73FF216D19BA00886AD2 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		98BA7406216D1A3200886AD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		98BA7409216D1CEC00886AD2 /* ViewModelAbstract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelAbstract.swift; sourceTree = "<group>"; };
+		98BA740A216D1CEC00886AD2 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		98BA740D216D1D0000886AD2 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_BelieveInMiracle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +87,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3BE5671E24E743BCB5837F /* Pods_iOS_BelieveInMiracle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3BE3612E5E4CA01BA3CD20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40F206C330A1245083714BDA /* Pods-iOS-BelieveInMiracle.debug.xcconfig */,
+				8F92715826B156BF1178BCCB /* Pods-iOS-BelieveInMiracle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9887FF8621663CC8003FC06F = {
 			isa = PBXGroup;
 			children = (
 				9887FF9121663CC8003FC06F /* iOS-BelieveInMiracle */,
 				9887FF9021663CC8003FC06F /* Products */,
+				1A3BE3612E5E4CA01BA3CD20 /* Pods */,
+				9C154530E3C1EA3EE658365B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +135,7 @@
 		9887FFA421663D35003FC06F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				9887FFC621665BB5003FC06F /* Assembly */,
 				9887FFA721663D62003FC06F /* BussinessLogic */,
 			);
 			path = App;
@@ -73,6 +144,9 @@
 		9887FFA521663D40003FC06F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				98BA7408216D1CCD00886AD2 /* Custom */,
+				9887FFBE21665509003FC06F /* ExtendedBehaviour */,
+				9887FFAF21664BCF003FC06F /* Coordinator */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -97,6 +171,7 @@
 		9887FFA821663D6D003FC06F /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				9887FFBA21664C5E003FC06F /* ApplicationCoordinator.swift */,
 				9887FF9221663CC8003FC06F /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
@@ -105,6 +180,11 @@
 		9887FFA921663D83003FC06F /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				98BA7405216D1A2000886AD2 /* Base */,
+				98BA73E4216D176500886AD2 /* NavigationController */,
+				9887FFC321665641003FC06F /* About */,
+				9887FFCF21665DC7003FC06F /* MainCoordinatorOutput.swift */,
+				9887FFBC21664CA7003FC06F /* MainCoordinator.swift */,
 				9887FFAB21663DEE003FC06F /* LaunchScreen */,
 				9887FFAA21663DB6003FC06F /* Main */,
 			);
@@ -114,7 +194,8 @@
 		9887FFAA21663DB6003FC06F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9887FF9621663CC8003FC06F /* Main.storyboard */,
+				9887FFAD21664B73003FC06F /* MainView.swift */,
+				9887FF9621663CC8003FC06F /* MainVC.storyboard */,
 				9887FF9421663CC8003FC06F /* MainVC.swift */,
 			);
 			path = Main;
@@ -136,6 +217,102 @@
 			path = Environment;
 			sourceTree = "<group>";
 		};
+		9887FFAF21664BCF003FC06F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9887FFB621664BE6003FC06F /* BaseCoordinator.swift */,
+				9887FFB721664BE6003FC06F /* Coordinator.swift */,
+				9887FFB221664BE0003FC06F /* Presentable.swift */,
+				9887FFB021664BE0003FC06F /* Router.swift */,
+				9887FFB121664BE0003FC06F /* RouterAbstract.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9887FFBE21665509003FC06F /* ExtendedBehaviour */ = {
+			isa = PBXGroup;
+			children = (
+				9887FFBF21665554003FC06F /* NSObject + Extensions.swift */,
+				9887FFC721665C15003FC06F /* UIStoryboard+ViewController.swift */,
+			);
+			path = ExtendedBehaviour;
+			sourceTree = "<group>";
+		};
+		9887FFC321665641003FC06F /* About */ = {
+			isa = PBXGroup;
+			children = (
+				98BA73F9216D198000886AD2 /* Model */,
+				98BA73F8216D197C00886AD2 /* View */,
+				9887FFC921665C3B003FC06F /* AboutFlowCoordinator.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		9887FFC621665BB5003FC06F /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				98BA73E0216D164200886AD2 /* MainAssembly.swift */,
+				98BA73E2216D171900886AD2 /* ApplicationAssembly.swift */,
+				98BA73E9216D18B600886AD2 /* AboutAssembly.swift */,
+				98BA73EB216D18C600886AD2 /* AssemblyFactory.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		98BA73E4216D176500886AD2 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				98BA73E5216D177F00886AD2 /* NavigationController.storyboard */,
+				98BA73E6216D177F00886AD2 /* NavigationController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		98BA73F8216D197C00886AD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98BA73FC216D19BA00886AD2 /* AboutView.swift */,
+				98BA73FD216D19BA00886AD2 /* AboutVC.swift */,
+				98BA73FE216D19BA00886AD2 /* AboutVC.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98BA73F9216D198000886AD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				98BA73FB216D19BA00886AD2 /* AboutViewModelAbstract.swift */,
+				98BA73FF216D19BA00886AD2 /* AboutViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		98BA7405216D1A2000886AD2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				98BA7406216D1A3200886AD2 /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		98BA7408216D1CCD00886AD2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				98BA740D216D1D0000886AD2 /* Dynamic.swift */,
+				98BA740A216D1CEC00886AD2 /* ViewModel.swift */,
+				98BA7409216D1CEC00886AD2 /* ViewModelAbstract.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9C154530E3C1EA3EE658365B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9887FFA121663CC9003FC06F /* Build configuration list for PBXNativeTarget "iOS-BelieveInMiracle" */;
 			buildPhases = (
+				AC6AFFC45FF06325EE3654A6 /* [CP] Check Pods Manifest.lock */,
 				9887FF8B21663CC8003FC06F /* Sources */,
 				9887FF8C21663CC8003FC06F /* Frameworks */,
 				9887FF8D21663CC8003FC06F /* Resources */,
+				7B3208D52DAA6AA0F1E9AC71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,31 +375,97 @@
 			files = (
 				9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */,
 				9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */,
-				9887FF9821663CC8003FC06F /* Main.storyboard in Resources */,
+				98BA73E7216D177F00886AD2 /* NavigationController.storyboard in Resources */,
+				9887FF9821663CC8003FC06F /* MainVC.storyboard in Resources */,
+				98BA7403216D19BA00886AD2 /* AboutVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B3208D52DAA6AA0F1E9AC71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC6AFFC45FF06325EE3654A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-BelieveInMiracle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9887FF8B21663CC8003FC06F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9887FFD021665DC7003FC06F /* MainCoordinatorOutput.swift in Sources */,
+				98BA740E216D1D0000886AD2 /* Dynamic.swift in Sources */,
+				9887FFB921664BE6003FC06F /* Coordinator.swift in Sources */,
+				9887FFB321664BE0003FC06F /* Router.swift in Sources */,
 				9887FF9521663CC8003FC06F /* MainVC.swift in Sources */,
+				9887FFBD21664CA8003FC06F /* MainCoordinator.swift in Sources */,
+				9887FFAE21664B73003FC06F /* MainView.swift in Sources */,
+				98BA740C216D1CEC00886AD2 /* ViewModel.swift in Sources */,
+				98BA7400216D19BA00886AD2 /* AboutViewModelAbstract.swift in Sources */,
+				9887FFC121665554003FC06F /* NSObject + Extensions.swift in Sources */,
+				98BA7407216D1A3200886AD2 /* ViewController.swift in Sources */,
+				9887FFB421664BE0003FC06F /* RouterAbstract.swift in Sources */,
+				98BA73EC216D18C600886AD2 /* AssemblyFactory.swift in Sources */,
+				9887FFBB21664C5E003FC06F /* ApplicationCoordinator.swift in Sources */,
+				98BA73EA216D18B600886AD2 /* AboutAssembly.swift in Sources */,
+				98BA7404216D19BA00886AD2 /* AboutViewModel.swift in Sources */,
+				9887FFCA21665C3B003FC06F /* AboutFlowCoordinator.swift in Sources */,
+				98BA7401216D19BA00886AD2 /* AboutView.swift in Sources */,
+				98BA73E1216D164200886AD2 /* MainAssembly.swift in Sources */,
+				98BA73E8216D177F00886AD2 /* NavigationController.swift in Sources */,
+				9887FFB821664BE6003FC06F /* BaseCoordinator.swift in Sources */,
 				9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */,
+				98BA740B216D1CEC00886AD2 /* ViewModelAbstract.swift in Sources */,
+				9887FFB521664BE0003FC06F /* Presentable.swift in Sources */,
+				98BA7402216D19BA00886AD2 /* AboutVC.swift in Sources */,
+				98BA73E3216D171900886AD2 /* ApplicationAssembly.swift in Sources */,
+				9887FFC821665C15003FC06F /* UIStoryboard+ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9887FF9621663CC8003FC06F /* Main.storyboard */ = {
+		9887FF9621663CC8003FC06F /* MainVC.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9887FF9721663CC8003FC06F /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainVC.storyboard;
 			sourceTree = "<group>";
 		};
 		9887FF9B21663CC9003FC06F /* LaunchScreen.storyboard */ = {
@@ -350,6 +595,7 @@
 		};
 		9887FFA221663CC9003FC06F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40F206C330A1245083714BDA /* Pods-iOS-BelieveInMiracle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,6 +615,7 @@
 		};
 		9887FFA321663CC9003FC06F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F92715826B156BF1178BCCB /* Pods-iOS-BelieveInMiracle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
