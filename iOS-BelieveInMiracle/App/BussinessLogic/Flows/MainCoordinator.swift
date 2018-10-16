@@ -24,8 +24,14 @@ final class MainCoordinator: BaseCoordinator & MainCoordinatorOutput {
                 return nil
         }
         
+        guard let donateFlowCoordinator = diContainer.resolve(DonateFlowCoordinator.self),
+            let donateVC: UIViewController = donateFlowCoordinator.start() else {
+                return nil
+        }
+        
         addDependency(aboutFlowCoordinator)
-        mainView.controllers = [aboutVC]
+        addDependency(donateFlowCoordinator)
+        mainView.controllers = [aboutVC, donateVC]
         return mainView.toPresent()
     }
 }

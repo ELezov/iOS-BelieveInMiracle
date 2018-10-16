@@ -9,6 +9,7 @@
 import Foundation
 import Swinject
 
+//swiftlint:disable force_unwrapping
 final class AboutAssembly: Assembly {
     func assemble(container: Container) {
         

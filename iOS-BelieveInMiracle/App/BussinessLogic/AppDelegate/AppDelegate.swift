@@ -26,7 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return coordinator
     }()
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        setupAppearance()
+        
         // Override point for customization after application launch.
         window = UIWindow()
         window?.makeKeyAndVisible()
@@ -34,5 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         applicationCoordinator?.start()
         return true
     }
+    
+    /// Настройка глобальных стилей приложения
+    func setupAppearance() {
+        let appearanceManager = diContainer.resolve(AppearanceManager.self)
+        appearanceManager?.apply()
+    }
 }
-

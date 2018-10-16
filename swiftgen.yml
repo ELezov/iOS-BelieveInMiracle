@@ -1,0 +1,10 @@
+input_dir: iOS-BelieveInMiracle
+output_dir: iOS-BelieveInMiracle
+xcassets:
+  paths: Resources/Assets.xcassets
+  templateName: swift4
+  output: Resources/Generated/Assets.swift
+strings:
+  paths: Resources/en.lproj/Localizable.strings
+  templateName: structured-swift4
+  output: Resources/Generated/Strings.swift

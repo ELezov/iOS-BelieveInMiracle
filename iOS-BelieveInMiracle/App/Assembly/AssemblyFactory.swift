@@ -15,8 +15,10 @@ struct AssemblyFactory {
         let assembler = Assembler(
             [
                 ApplicationAssembly(),
+                CommonAssembly(),
                 MainAssembly(),
-                AboutAssembly()
+                AboutAssembly(),
+                DonateAssembly()
             ]
         )
         return assembler.resolver

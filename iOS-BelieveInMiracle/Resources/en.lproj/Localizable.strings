@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  iOS-BelieveInMiracle
+
+  Created by Eugene Lezov on 16.10.2018.
+  Copyright © 2018 Eugene Lezov. All rights reserved.
+*/
+
+"donate.sms" = "Отправить SMS";
+"donate.sms.instruction" = "на короткий номер со словом ВЕРИМ (пробел) ваша сумма";
+"donate.card" = "Оплата банковской картой";

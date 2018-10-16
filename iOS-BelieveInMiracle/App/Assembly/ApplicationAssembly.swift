@@ -9,6 +9,7 @@
 import Foundation
 import Swinject
 
+//swiftlint:disable force_unwrapping
 final class ApplicationAssembly: Assembly {
     
     func assemble(container: Container) {
@@ -34,5 +35,9 @@ final class ApplicationAssembly: Assembly {
             let coordinator = MainCoordinator(diContainer: resolver)
             return coordinator
         }.inObjectScope(.transient)
+        
+        container.register(AppearanceManager.self) { _ in
+            return AppearanceManager()
+        }
     }
 }

@@ -7,4 +7,7 @@ target 'iOS-BelieveInMiracle' do
 
   # Pods for iOS-BelieveInMiracle
   pod 'Swinject'
+  pod 'SwiftGen', '5.3.0'
+  pod 'SwiftLint'
+  pod 'SnapKit'
 end
