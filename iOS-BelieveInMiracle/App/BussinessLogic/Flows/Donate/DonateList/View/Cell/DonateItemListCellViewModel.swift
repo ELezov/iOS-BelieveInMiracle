@@ -21,7 +21,7 @@ CellViewModelActionableFasseles {
     let donateType: DonateItemType
     
     func setup(cell: DonateItemListCellView) {
-       //cell.imageView?.image = imageForDonate()
+        cell.iconImageView.image = imageForDonate()
         cell.titleLabel.text = titleForDonate()
         if let descriptionText = descriptionForDonate() {
             cell.descriptionLabel.isHidden = false

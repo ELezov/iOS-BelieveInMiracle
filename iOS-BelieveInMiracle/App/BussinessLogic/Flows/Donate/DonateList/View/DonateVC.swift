@@ -1,10 +1,9 @@
 import UIKit
-import MessageUI
 
 final class DonateVC:
 ViewController,
 DonateView {
-    
+   
     // MARK: - Outlets
     
     @IBOutlet weak private var tableView: UITableView! {
@@ -18,6 +17,7 @@ DonateView {
     // MARK: - Public
     
     var onCardDonate: ((WebViewConfigurationModel) -> Void)?
+    var onSmsDonate: EmptyCompletion?
     
     var viewModel: DonateViewModelAbstract?
     var tableBuilder: DonateVCTableBuilderAbstract?
@@ -45,49 +45,10 @@ fileprivate extension DonateVC {
                 
                 self?.onCardDonate?(configModel)
             case .sms:
-                self?.showSMS()
+                self?.onSmsDonate?()
             }
-            
         }
         let items = tableBuilder?.map(onSelectHandler) ?? []
         tableViewModel?.setNewItems([items])
     }
-}
-
-extension DonateVC: MFMessageComposeViewControllerDelegate {
-    
-    func showSMS() {
-        let messageVC = configureSMSComposerVC(toRecepients: [GlobalConstants.smsCodeForDonate], body: "Верим ")
-        
-        messageVC.messageComposeDelegate = self
-        
-        if MFMessageComposeViewController.canSendText() {
-            self.present(messageVC, animated: true, completion: nil)
-        }
-    }
-    
-    func configureSMSComposerVC(
-        toRecepients: [String],
-        subject: String? = nil,
-        body: String? = nil) -> MFMessageComposeViewController {
-        let smsVC = MFMessageComposeViewController()
-        smsVC.body = body
-        smsVC.recipients = toRecepients
-        smsVC.subject = subject
-        return smsVC
-    }
-    
-    func messageComposeViewController(_ controller: MFMessageComposeViewController,
-                                      didFinishWith result: MessageComposeResult) {
-        switch result {
-        case .sent:
-            break
-        case .cancelled:
-            break
-        case .failed:
-            break
-        }
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
 }

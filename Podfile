@@ -10,4 +10,5 @@ target 'iOS-BelieveInMiracle' do
   pod 'SwiftGen', '5.3.0'
   pod 'SwiftLint'
   pod 'SnapKit'
+  pod 'NVActivityIndicatorView'
 end

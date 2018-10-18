@@ -32,7 +32,15 @@ URLFlowMixin {
         controller?.onCardDonate = { [weak self] configModel in
             self?.openURLinWebView(urlModel: configModel)
         }
+        controller?.onSmsDonate = { [weak self] in
+            self?.showInputMoneyScreen()
+        }
         router.setRootModule(controller)
         return router.rootController
+    }
+    
+    private func showInputMoneyScreen() {
+        let controller = diContainer.resolve(DonateInputMoneyView.self)
+        router.push(controller)
     }
 }

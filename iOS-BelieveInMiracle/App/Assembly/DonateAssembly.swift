@@ -36,5 +36,16 @@ final class DonateAssembly: Assembly {
         container.register(DonateVCTableBuilderAbstract.self) { _ in
             return DonateVCTableBuilder()
         }
+        
+        container.register(DonateInputMoneyViewModelAbstract.self) { _ in
+            let viewModel = DonateInputMoneyViewModel()
+            return viewModel
+        }
+        
+        container.register(DonateInputMoneyView.self) { resolver in
+            let controller = UIStoryboard.makeController(DonateInputMoneyVC.self)
+            controller.viewModel = resolver.resolve(DonateInputMoneyViewModelAbstract.self)
+            return controller
+        }
     }
 }
