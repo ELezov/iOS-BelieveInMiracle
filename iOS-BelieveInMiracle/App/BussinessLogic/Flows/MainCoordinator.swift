@@ -29,9 +29,15 @@ final class MainCoordinator: BaseCoordinator & MainCoordinatorOutput {
                 return nil
         }
         
+        guard let requestVolunteerFlowCoordinator = diContainer.resolve(RequestVolunteerFlowCoordinator.self),
+            let requestVolunteerVC: UIViewController = requestVolunteerFlowCoordinator.start() else {
+                return nil
+        }
+        
         addDependency(aboutFlowCoordinator)
         addDependency(donateFlowCoordinator)
-        mainView.controllers = [aboutVC, donateVC]
+        addDependency(requestVolunteerFlowCoordinator)
+        mainView.controllers = [requestVolunteerVC, donateVC, aboutVC]
         return mainView.toPresent()
     }
 }

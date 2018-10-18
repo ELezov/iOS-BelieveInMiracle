@@ -18,7 +18,8 @@ struct AssemblyFactory {
                 CommonAssembly(),
                 MainAssembly(),
                 AboutAssembly(),
-                DonateAssembly()
+                DonateAssembly(),
+                RequestVolunteerAssembly()
             ]
         )
         return assembler.resolver

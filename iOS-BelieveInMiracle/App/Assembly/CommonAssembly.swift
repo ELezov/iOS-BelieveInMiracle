@@ -30,6 +30,4 @@ final class CommonAssembly: Assembly {
             return viewModel
         }
     }
-    
-   
 }

@@ -58,6 +58,5 @@ CellViewModelActionableFasseles {
     func descriptionForDonate() -> String? {
         guard donateType == .sms else { return nil }
         return L10n.Donate.Sms.instruction
-            
     }
 }
