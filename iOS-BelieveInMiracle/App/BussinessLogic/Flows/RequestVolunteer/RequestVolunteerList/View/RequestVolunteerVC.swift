@@ -4,7 +4,7 @@ final class RequestVolunteerVC:
 ViewController,
 RequestVolunteerView {
     
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet weak private var tableView: UITableView! {
         didSet {
             tableView.separatorStyle = .none
             tableViewModel?.tableView = tableView

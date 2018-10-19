@@ -12,25 +12,29 @@ final class RequestVolunteerVCTableBuilder:
 RequestVolunteerVCTableBuilderAbstract {
     func map(_ completion: @escaping EmptyCompletion) -> [CellViewModel] {
         var result = [CellViewModel]()
-        var selectHandler: EmptyCompletion = { [weak self] in
+        let selectHandler: EmptyCompletion = {
             completion()
         }
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.clownTherapy.image,
-                                                           title: "Терапия"))
+                                                           icon: Asset.hospitalVolunteer.image,
+                                                           title: "Больничные волонтеры"))
+        result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
+                                                           onIndicator: selectHandler,
+                                                           icon: Asset.adressVolunteer.image,
+                                                           title: "Адресные волонтеры"))
+        result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
+                                                           onIndicator: selectHandler,
+                                                           icon: Asset.eventVolunteer.image,
+                                                           title: "Волонтеры мероприятий"))
+        result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
+                                                           onIndicator: selectHandler,
+                                                           icon: Asset.distanceVolunteer.image,
+                                                           title: "Дистанционные волонтеры"))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
                                                            onIndicator: selectHandler,
                                                            icon: Asset.clownTherapy.image,
-                                                           title: "ТерапияТерапияТерапияТерапияТерапияТерапия"))
-        result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.clownTherapy.image,
-                                                           title: "Терапия"))
-        result.append(RequestVolunterTypeBaseCellViewModel(onClick: nil,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.clownTherapy.image,
-                                                           title: "Терапия"))
+                                                           title: "Клоунотерапия"))
         return result
     }
 }
