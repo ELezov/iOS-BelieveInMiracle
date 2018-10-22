@@ -44,6 +44,9 @@ internal struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal enum Common {
+    internal static let indicator = ImageAsset(name: "indicator")
+  }
   internal enum Donate {
     internal static let card = ImageAsset(name: "card")
     internal static let phone = ImageAsset(name: "phone")
@@ -54,12 +57,14 @@ internal enum Asset {
     internal static let money = ImageAsset(name: "money")
     internal static let volonter = ImageAsset(name: "volonter")
   }
-  internal static let adressVolunteer = ImageAsset(name: "adress_volunteer")
-  internal static let clownTherapy = ImageAsset(name: "clown_therapy")
-  internal static let distanceVolunteer = ImageAsset(name: "distance_volunteer")
-  internal static let eventVolunteer = ImageAsset(name: "event_volunteer")
+  internal enum Volunteer {
+    internal static let adressVolunteer = ImageAsset(name: "adress_volunteer")
+    internal static let clownTherapy = ImageAsset(name: "clown_therapy")
+    internal static let distanceVolunteer = ImageAsset(name: "distance_volunteer")
+    internal static let eventVolunteer = ImageAsset(name: "event_volunteer")
+    internal static let hospitalVolunteer = ImageAsset(name: "hospital_volunteer")
+  }
   internal static let facebook = ImageAsset(name: "facebook")
-  internal static let hospitalVolunteer = ImageAsset(name: "hospital_volunteer")
   internal static let icAttachMoneyBlack24dp = ImageAsset(name: "ic_attach_money_black_24dp")
   internal static let icChildCareBlack24dp = ImageAsset(name: "ic_child_care_black_24dp")
   internal static let icInfoBlack24dp = ImageAsset(name: "ic_info_black_24dp")
@@ -74,18 +79,19 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Common.indicator,
     Donate.card,
     Donate.phone,
     TabBar.info,
     TabBar.kids,
     TabBar.money,
     TabBar.volonter,
-    adressVolunteer,
-    clownTherapy,
-    distanceVolunteer,
-    eventVolunteer,
+    Volunteer.adressVolunteer,
+    Volunteer.clownTherapy,
+    Volunteer.distanceVolunteer,
+    Volunteer.eventVolunteer,
+    Volunteer.hospitalVolunteer,
     facebook,
-    hospitalVolunteer,
     icAttachMoneyBlack24dp,
     icChildCareBlack24dp,
     icInfoBlack24dp,

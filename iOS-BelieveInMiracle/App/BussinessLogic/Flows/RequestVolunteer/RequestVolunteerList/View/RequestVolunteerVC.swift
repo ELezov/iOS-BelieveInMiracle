@@ -28,7 +28,8 @@ fileprivate extension RequestVolunteerVC {
     
     func configureTableView() {
         let items = tableBuilder?.map({
-            self.tableViewModel?.tableView?.reloadData()
+            self.tableViewModel?.tableView?.beginUpdates()
+            self.tableViewModel?.tableView?.endUpdates()
         }) ?? []
         tableViewModel?.setNewItems([items])
     }

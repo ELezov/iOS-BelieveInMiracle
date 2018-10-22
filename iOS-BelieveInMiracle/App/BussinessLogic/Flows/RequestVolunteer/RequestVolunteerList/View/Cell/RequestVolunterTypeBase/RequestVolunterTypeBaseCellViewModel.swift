@@ -14,7 +14,11 @@ CellViewModelHeightable,
 CellViewModelActionableFasseles,
 CellViewModelExpandable {
 
-    var expandedState: ExpandableState = .expanded
+    var expandedState: ExpandableState = .expanded {
+        didSet {
+            
+        }
+    }
     
     typealias OnClick = (RequestVolunterTypeBaseCellViewModel) -> Void
     
@@ -27,12 +31,18 @@ CellViewModelExpandable {
     
     let icon: UIImage
     let title: String
+    let description: String
     
-    init(onClick: OnClick?, onIndicator: EmptyCompletion?, icon: UIImage, title: String) {
+    init(onClick: OnClick?,
+         onIndicator: EmptyCompletion?,
+         icon: UIImage,
+         title: String,
+         description: String) {
         self.onClick = onClick
         self.onIndicator = onIndicator
         self.icon = icon
         self.title = title
+        self.description = description
     }
     
     func setup(cell: RequestVolunterTypeBaseCellView) {
@@ -42,6 +52,12 @@ CellViewModelExpandable {
         cell.typeTitleLabel.text = title
         cell.onIndicatorTapped = {
             self.expandedState = (self.expandedState == .expanded) ? .collapsed : .expanded
+            switch self.expandedState {
+            case .expanded:
+                cell.animateRotation(fromValue: Double.pi, toValue: 0.0)
+            case .collapsed:
+                cell.animateRotation(fromValue: 0.0, toValue: Double.pi)
+            }
             self.handleExpandable(stackView: cell.stackView)
             self.onIndicator?()
         }
@@ -61,14 +77,10 @@ CellViewModelExpandable {
     
     func configureCollapsedViews() -> [UIView] {
         var result = [UIView]()
-        if let view = RequestVolunteerDescriptionView.setup(title: "\u{2022} Hahahaha") {
+        if let view = RequestVolunteerDescriptionView.setup(title: description) {
+             view.configure()
              view.layoutIfNeeded()
              result.append(view)
-        }
-       
-        if let view = RequestVolunteerDescriptionView.setup(title: "\u{2022} HahahahaHahahahaHaha hahaHahahahaHahahaha") {
-            view.layoutSubviews()
-            result.append(view)
         }
         
         return result

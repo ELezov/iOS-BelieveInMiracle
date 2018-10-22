@@ -11,4 +11,5 @@ target 'iOS-BelieveInMiracle' do
   pod 'SwiftLint'
   pod 'SnapKit'
   pod 'NVActivityIndicatorView'
+  pod 'lottie-ios'
 end

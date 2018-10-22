@@ -92,6 +92,10 @@
 		98BA7418216D262200886AD2 /* DonateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BA7413216D262200886AD2 /* DonateVC.storyboard */; };
 		98BA7419216D262200886AD2 /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA7414216D262200886AD2 /* DonateViewModel.swift */; };
 		98BA741E216D265800886AD2 /* DonateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA741D216D265800886AD2 /* DonateAssembly.swift */; };
+		98DAD47A217E396D00A605ED /* checked_done.json in Resources */ = {isa = PBXBuildFile; fileRef = 98DAD479217E396D00A605ED /* checked_done.json */; };
+		98DAD47C217E437C00A605ED /* checkmark_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 98DAD47B217E437C00A605ED /* checkmark_animation.json */; };
+		98DAD47E217E43ED00A605ED /* load_complete.json in Resources */ = {isa = PBXBuildFile; fileRef = 98DAD47D217E43ED00A605ED /* load_complete.json */; };
+		98DAD480217E444600A605ED /* good_to_go.json in Resources */ = {isa = PBXBuildFile; fileRef = 98DAD47F217E444600A605ED /* good_to_go.json */; };
 		98F69FB22178F8A800D7EAD3 /* RequestVolunteerVCTableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F69FB12178F8A700D7EAD3 /* RequestVolunteerVCTableBuilder.swift */; };
 		98F69FB42178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F69FB32178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift */; };
 /* End PBXBuildFile section */
@@ -185,6 +189,10 @@
 		98BA7413216D262200886AD2 /* DonateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonateVC.storyboard; sourceTree = "<group>"; };
 		98BA7414216D262200886AD2 /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
 		98BA741D216D265800886AD2 /* DonateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateAssembly.swift; sourceTree = "<group>"; };
+		98DAD479217E396D00A605ED /* checked_done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checked_done.json; sourceTree = "<group>"; };
+		98DAD47B217E437C00A605ED /* checkmark_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkmark_animation.json; sourceTree = "<group>"; };
+		98DAD47D217E43ED00A605ED /* load_complete.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = load_complete.json; sourceTree = "<group>"; };
+		98DAD47F217E444600A605ED /* good_to_go.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = good_to_go.json; sourceTree = "<group>"; };
 		98F69FB12178F8A700D7EAD3 /* RequestVolunteerVCTableBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerVCTableBuilder.swift; sourceTree = "<group>"; };
 		98F69FB32178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerVCTableBuilderAbstract.swift; sourceTree = "<group>"; };
 		D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_BelieveInMiracle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,6 +347,7 @@
 		9887FFA621663D45003FC06F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				98DAD478217E396500A605ED /* Lottie */,
 				98A1E86321762ED900522557 /* Generated */,
 				9887FF9921663CC9003FC06F /* Assets.xcassets */,
 				98A1E87D21763FBE00522557 /* Localizable.strings */,
@@ -640,6 +649,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		98DAD478217E396500A605ED /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				98DAD47F217E444600A605ED /* good_to_go.json */,
+				98DAD47D217E43ED00A605ED /* load_complete.json */,
+				98DAD47B217E437C00A605ED /* checkmark_animation.json */,
+				98DAD479217E396D00A605ED /* checked_done.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		98F69FAF2178F87F00D7EAD3 /* RequestVolunteerList */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,10 +751,14 @@
 			files = (
 				98A1E8882176553300522557 /* WebVC.storyboard in Resources */,
 				98BA7418216D262200886AD2 /* DonateVC.storyboard in Resources */,
+				98DAD47E217E43ED00A605ED /* load_complete.json in Resources */,
+				98DAD480217E444600A605ED /* good_to_go.json in Resources */,
 				9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */,
 				9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */,
 				988CCA002178E5B600E87CCD /* DonateInputMoneyVC.storyboard in Resources */,
+				98DAD47A217E396D00A605ED /* checked_done.json in Resources */,
 				98BA73E7216D177F00886AD2 /* NavigationController.storyboard in Resources */,
+				98DAD47C217E437C00A605ED /* checkmark_animation.json in Resources */,
 				9887FF9821663CC8003FC06F /* MainVC.storyboard in Resources */,
 				982CF08B2178F355002A235B /* RequestVolunteerVC.storyboard in Resources */,
 				982CF0982178F5F7002A235B /* RequestVolunterTypeBaseCellView.xib in Resources */,
@@ -758,12 +782,14 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
