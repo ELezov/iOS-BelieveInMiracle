@@ -1,6 +1,6 @@
 import UIKit
 
-/// Менеджер глобальных стилей
+/// Менеджер по настройки appearance
 final class AppearanceManager {
     func apply() {
         configureTabBar()
@@ -11,6 +11,6 @@ fileprivate extension AppearanceManager {
     
     func configureTabBar() {
         UITabBar.appearance().barTintColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor.black
+        UITabBar.appearance().tintColor = UIColor(Color.primaryDark)
     }
 }

@@ -19,15 +19,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VDN-5L-QYN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="534"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O95-Br-uv2">
+                                <rect key="frame" x="0.0" y="554" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYy-6B-dBB" customClass="ActionButton" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="8" width="343" height="48"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cYy-6B-dBB" secondAttribute="trailing" constant="16" id="Czp-XA-h8H"/>
+                                    <constraint firstItem="cYy-6B-dBB" firstAttribute="top" secondItem="O95-Br-uv2" secondAttribute="top" constant="8" id="e0W-ZD-QNa"/>
+                                    <constraint firstAttribute="bottom" secondItem="cYy-6B-dBB" secondAttribute="bottom" constant="8" id="fXQ-TT-Ufz"/>
+                                    <constraint firstItem="cYy-6B-dBB" firstAttribute="leading" secondItem="O95-Br-uv2" secondAttribute="leading" constant="16" id="h3E-a7-MnS"/>
+                                    <constraint firstAttribute="height" constant="64" id="zfR-Zp-n3L"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="O95-Br-uv2" firstAttribute="trailing" secondItem="OVH-h1-0FX" secondAttribute="trailing" id="4vo-IL-5Qk"/>
                             <constraint firstItem="VDN-5L-QYN" firstAttribute="top" secondItem="OVH-h1-0FX" secondAttribute="top" id="GgZ-Or-1cB"/>
-                            <constraint firstItem="VDN-5L-QYN" firstAttribute="bottom" secondItem="OVH-h1-0FX" secondAttribute="bottom" id="Mo0-PQ-y4N"/>
+                            <constraint firstItem="O95-Br-uv2" firstAttribute="bottom" secondItem="OVH-h1-0FX" secondAttribute="bottom" id="JhE-0i-2vY"/>
                             <constraint firstItem="VDN-5L-QYN" firstAttribute="trailing" secondItem="OVH-h1-0FX" secondAttribute="trailing" id="XqX-Xl-Cr7"/>
+                            <constraint firstItem="O95-Br-uv2" firstAttribute="leading" secondItem="OVH-h1-0FX" secondAttribute="leading" id="jUI-1b-Pgc"/>
+                            <constraint firstItem="O95-Br-uv2" firstAttribute="top" secondItem="VDN-5L-QYN" secondAttribute="bottom" id="kWY-f5-NQ1"/>
                             <constraint firstItem="VDN-5L-QYN" firstAttribute="leading" secondItem="OVH-h1-0FX" secondAttribute="leading" id="obL-g6-aiP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OVH-h1-0FX"/>
@@ -35,6 +55,9 @@
                     <tabBarItem key="tabBarItem" systemItem="mostRecent" id="5JS-j2-bbe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="continueButton" destination="cYy-6B-dBB" id="qBb-a0-hWN"/>
+                        <outlet property="continueContainer" destination="O95-Br-uv2" id="Mgj-RS-drc"/>
+                        <outlet property="continueContainerHeight" destination="zfR-Zp-n3L" id="2Jq-CB-53F"/>
                         <outlet property="tableView" destination="VDN-5L-QYN" id="JvY-E6-xxB"/>
                     </connections>
                 </viewController>

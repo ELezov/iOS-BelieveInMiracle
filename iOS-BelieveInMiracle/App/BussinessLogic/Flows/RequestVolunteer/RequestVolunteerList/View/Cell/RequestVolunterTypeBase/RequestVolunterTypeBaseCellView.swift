@@ -19,6 +19,7 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     }
     
     var onIndicatorTapped: EmptyCompletion?
+    var onCheck: BoolCompletion?
     
     // MARK: - Outlets
     
@@ -31,26 +32,14 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let checkBox = LOTAnimatedSwitch.init(named: "checked_done")
-        checkBox.setOn(false, animated: false)
-        checkBox.setProgressRangeForOffState(fromProgress: 1, toProgress: 0)
-        checkBox.setProgressRangeForOnState(fromProgress: 0, toProgress: 1)
-        checkBox.addTarget(self, action: #selector(switchTapped), for: .valueChanged)
-        self.checkBoxContainer.addSubview(checkBox)
-        checkBox.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
         self.selectionStyle = .none
-        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.3).cgColor
-        containerView.layer.shadowOpacity = 1
-        containerView.layer.shadowOffset = CGSize.zero
-        containerView.layer.shadowRadius = 3
-        containerView.layer.cornerRadius = 5
+        configureCheckbox()
+        configureContainerView()
     }
     
     @objc
-    func switchTapped() {
-        
+    func switchTapped(_ sender: LOTAnimatedSwitch) {
+        onCheck?(sender.isOn)
     }
     
     @IBAction private func indicatorButtonTapped(_ sender: Any) {
@@ -66,5 +55,27 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
         rotationAnimation.fillMode = kCAFillModeForwards
         indicatorButton.layer.add(rotationAnimation, forKey: nil)
     }
+}
+
+fileprivate extension RequestVolunterTypeBaseCellView {
     
+    func configureCheckbox() {
+        let checkBox = LOTAnimatedSwitch.init(named: "checked_done")
+        checkBox.setOn(false, animated: false)
+        checkBox.setProgressRangeForOffState(fromProgress: 0.2, toProgress: 0)
+        checkBox.setProgressRangeForOnState(fromProgress: 0, toProgress: 1)
+        checkBox.addTarget(self, action: #selector(switchTapped(_:)), for: .valueChanged)
+        self.checkBoxContainer.addSubview(checkBox)
+        checkBox.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func configureContainerView() {
+        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        containerView.layer.shadowOpacity = 1
+        containerView.layer.shadowOffset = CGSize.zero
+        containerView.layer.shadowRadius = 2
+        containerView.layer.cornerRadius = 5
+    }
 }

@@ -5,7 +5,9 @@
   Created by Eugene Lezov on 16.10.2018.
   Copyright © 2018 Eugene Lezov. All rights reserved.
 */
+// Common
 
+"common.button.continue" = "Продолжить";
 
 // Donate
 "donate.sms" = "Отправить SMS";
@@ -27,3 +29,4 @@
 
 "volunteer.clownTherapy.title" = "Клоунотерапия";
 "volunteer.clownTherapy.description" = "Стать больничным клоуном. Это НЕ аниматор. Это партнер по радости, душевный специалист, друг для всей семьи. ";
+

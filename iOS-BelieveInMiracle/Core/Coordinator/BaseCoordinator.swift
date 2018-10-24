@@ -1,6 +1,7 @@
 import Foundation
 
 typealias EmptyCompletion = () -> Void
+typealias BoolCompletion = (Bool) -> Void
 typealias DefaultFinishHandler = EmptyCompletion
 
 

@@ -32,17 +32,21 @@ CellViewModelExpandable {
     let icon: UIImage
     let title: String
     let description: String
+    var isChecked: Bool = false
+    let tag: Int
     
     init(onClick: OnClick?,
          onIndicator: EmptyCompletion?,
          icon: UIImage,
          title: String,
-         description: String) {
+         description: String,
+         tag: Int) {
         self.onClick = onClick
         self.onIndicator = onIndicator
         self.icon = icon
         self.title = title
         self.description = description
+        self.tag = tag
     }
     
     func setup(cell: RequestVolunterTypeBaseCellView) {
@@ -60,6 +64,10 @@ CellViewModelExpandable {
             }
             self.handleExpandable(stackView: cell.stackView)
             self.onIndicator?()
+        }
+        cell.onCheck = { isChecked in
+            self.isChecked = isChecked
+            self.onClick?(self)
         }
     }
     

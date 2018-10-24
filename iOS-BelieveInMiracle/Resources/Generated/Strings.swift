@@ -8,6 +8,14 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum Common {
+
+    internal enum Button {
+      /// Продолжить
+      internal static let `continue` = L10n.tr("Localizable", "common.button.continue")
+    }
+  }
+
   internal enum Donate {
     /// Оплата банковской картой
     internal static let card = L10n.tr("Localizable", "donate.card")
