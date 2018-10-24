@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5b0-Qd-RIA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="9lM-en-fdY"/>
+                    <tabBarItem key="tabBarItem" title="О фонде" image="info" selectedImage="info" id="9lM-en-fdY"/>
                     <navigationItem key="navigationItem" title="About" id="kCv-mS-gQD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -41,4 +41,7 @@
             <point key="canvasLocation" x="79" y="157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="24" height="24"/>
+    </resources>
 </document>

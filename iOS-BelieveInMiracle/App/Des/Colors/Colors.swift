@@ -17,6 +17,8 @@ enum Color {
     static let backgroundDark = "#BDBDBD"
     static let backgroundLight = "#E0E0E0"
     
+    static let separator = "#E0E0E0"
+    
     func color() -> UIColor {
         return UIColor(self)
     }

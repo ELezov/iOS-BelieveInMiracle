@@ -9,8 +9,9 @@ DonateView {
     @IBOutlet weak private var tableView: UITableView! {
         didSet {
             tableView.separatorStyle = .none
-            tableViewModel?.tableView = tableView
             tableView.register(nibModels: [DonateItemListCellViewModel.self])
+            tableView.backgroundColor = UIColor(Color.backgroundLight)
+            tableViewModel?.tableView = tableView
         }
     }
     

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Request VolunteerVC-->
+        <!--Стать волонтером-->
         <scene sceneID="dQb-yc-8u0">
             <objects>
                 <viewController storyboardIdentifier="RequestVolunteerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="juw-TO-zbY" customClass="RequestVolunteerVC" customModule="iOS_BelieveInMiracle" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OVH-h1-0FX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="5JS-j2-bbe"/>
+                    <tabBarItem key="tabBarItem" title="Стать волонтером" image="volonteer" selectedImage="volonteer" id="5JS-j2-bbe"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="continueButton" destination="cYy-6B-dBB" id="qBb-a0-hWN"/>
@@ -66,4 +66,7 @@
             <point key="canvasLocation" x="304.80000000000001" y="60.719640179910051"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="volonteer" width="20" height="25"/>
+    </resources>
 </document>

@@ -21,49 +21,60 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="MG5-f2-S2w">
-                        <rect key="frame" x="16" y="8" width="83.5" height="83.5"/>
+                        <rect key="frame" x="16" y="16" width="67.5" height="67.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="MG5-f2-S2w" secondAttribute="height" id="6g7-to-Mzi"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Otv-WU-CTW">
-                        <rect key="frame" x="115.5" y="8" width="243.5" height="84"/>
+                        <rect key="frame" x="99.5" y="16" width="259.5" height="68"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="LabelLabelLabelLab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEG-gB-nCG">
-                                <rect key="frame" x="0.0" y="0.0" width="153" height="28"/>
+                                <rect key="frame" x="0.0" y="0.0" width="153" height="22.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjc-0y-JIB">
-                                <rect key="frame" x="0.0" y="28" width="236" height="56"/>
+                                <rect key="frame" x="0.0" y="22.5" width="259.5" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kS8-lY-0A1">
+                        <rect key="frame" x="0.0" y="98" width="375" height="2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="TIi-xw-QG9"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Otv-WU-CTW" firstAttribute="bottom" secondItem="MG5-f2-S2w" secondAttribute="bottom" id="0ut-LD-vb0"/>
-                    <constraint firstItem="MG5-f2-S2w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Dfe-Q2-rvj"/>
+                    <constraint firstItem="kS8-lY-0A1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8tC-0e-D6F"/>
+                    <constraint firstItem="MG5-f2-S2w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Dfe-Q2-rvj"/>
                     <constraint firstItem="MG5-f2-S2w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ib0-Jy-jPo"/>
                     <constraint firstItem="Otv-WU-CTW" firstAttribute="leading" secondItem="MG5-f2-S2w" secondAttribute="trailing" constant="16" id="Ql1-oI-CJb"/>
+                    <constraint firstAttribute="bottom" secondItem="kS8-lY-0A1" secondAttribute="bottom" id="RLR-OY-u24"/>
                     <constraint firstAttribute="trailing" secondItem="Otv-WU-CTW" secondAttribute="trailing" constant="16" id="Rmj-B4-h7q"/>
-                    <constraint firstAttribute="bottom" secondItem="MG5-f2-S2w" secondAttribute="bottom" constant="8" id="W3c-b7-tSF"/>
+                    <constraint firstAttribute="bottom" secondItem="MG5-f2-S2w" secondAttribute="bottom" constant="16" id="W3c-b7-tSF"/>
                     <constraint firstItem="Otv-WU-CTW" firstAttribute="top" secondItem="MG5-f2-S2w" secondAttribute="top" id="Xec-k0-lFE"/>
+                    <constraint firstAttribute="trailing" secondItem="kS8-lY-0A1" secondAttribute="trailing" id="o96-e8-Z6o"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="mjc-0y-JIB" id="of3-k5-pvY"/>
                 <outlet property="iconImageView" destination="MG5-f2-S2w" id="ODL-0z-8oA"/>
+                <outlet property="separatorView" destination="kS8-lY-0A1" id="9OU-yH-jDY"/>
                 <outlet property="titleLabel" destination="eEG-gB-nCG" id="hdz-w7-gpM"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="card" width="226" height="221"/>
+        <image name="card" width="81" height="79"/>
     </resources>
 </document>

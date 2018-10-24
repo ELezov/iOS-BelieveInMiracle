@@ -55,7 +55,7 @@ internal enum Asset {
     internal static let info = ImageAsset(name: "info")
     internal static let kids = ImageAsset(name: "kids")
     internal static let money = ImageAsset(name: "money")
-    internal static let volonter = ImageAsset(name: "volonter")
+    internal static let volonteer = ImageAsset(name: "volonteer")
   }
   internal enum Volunteer {
     internal static let adressVolunteer = ImageAsset(name: "adress_volunteer")
@@ -85,7 +85,7 @@ internal enum Asset {
     TabBar.info,
     TabBar.kids,
     TabBar.money,
-    TabBar.volonter,
+    TabBar.volonteer,
     Volunteer.adressVolunteer,
     Volunteer.clownTherapy,
     Volunteer.distanceVolunteer,
