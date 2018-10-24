@@ -22,6 +22,8 @@
 		98307C55217F5C9A0007D279 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98307C52217F5C9A0007D279 /* UIColor+Style.swift */; };
 		98307C56217F5C9A0007D279 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98307C53217F5C9A0007D279 /* Colors.swift */; };
 		98307C5B217F60250007D279 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98307C5A217F60250007D279 /* ActionButton.swift */; };
+		9840F01D2180D6CD00F65633 /* CloudPaymentsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9840F01C2180D6CD00F65633 /* CloudPaymentsAPI.framework */; };
+		9840F0212180D97D00F65633 /* CloudPaymentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9840F0202180D97D00F65633 /* CloudPaymentsManager.swift */; };
 		98421D01217A376400BC34BE /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98421D00217A376400BC34BE /* UIStackView + Extensions.swift */; };
 		98421D03217A39D600BC34BE /* CellViewModelExpandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98421D02217A39D600BC34BE /* CellViewModelExpandable.swift */; };
 		98421D05217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98421D04217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib */; };
@@ -121,6 +123,10 @@
 		98307C52217F5C9A0007D279 /* UIColor+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Style.swift"; sourceTree = "<group>"; };
 		98307C53217F5C9A0007D279 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		98307C5A217F60250007D279 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		9840F01A2180D5D700F65633 /* CloudPaymentsAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudPaymentsAPI.framework; path = frameworks/CloudPaymentsAPI.framework; sourceTree = "<group>"; };
+		9840F01C2180D6CD00F65633 /* CloudPaymentsAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CloudPaymentsAPI.framework; sourceTree = "<group>"; };
+		9840F01E2180D7B600F65633 /* iOS-BelieveInMiracle-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-BelieveInMiracle-Bridging.h"; sourceTree = "<group>"; };
+		9840F0202180D97D00F65633 /* CloudPaymentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPaymentsManager.swift; sourceTree = "<group>"; };
 		98421D00217A376400BC34BE /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
 		98421D02217A39D600BC34BE /* CellViewModelExpandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelExpandable.swift; sourceTree = "<group>"; };
 		98421D04217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestVolunteerDescriptionView.xib; sourceTree = "<group>"; };
@@ -211,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9840F01D2180D6CD00F65633 /* CloudPaymentsAPI.framework in Frameworks */,
 				5A3BE5671E24E743BCB5837F /* Pods_iOS_BelieveInMiracle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +335,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		9840F01F2180D95D00F65633 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9840F0202180D97D00F65633 /* CloudPaymentsManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		98421D08217A46E500BC34BE /* RequestVolunteerDescriptionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +355,7 @@
 		9887FF8621663CC8003FC06F = {
 			isa = PBXGroup;
 			children = (
+				9840F01C2180D6CD00F65633 /* CloudPaymentsAPI.framework */,
 				9887FF9121663CC8003FC06F /* iOS-BelieveInMiracle */,
 				9887FF9021663CC8003FC06F /* Products */,
 				1A3BE3612E5E4CA01BA3CD20 /* Pods */,
@@ -458,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				9887FF9E21663CC9003FC06F /* Info.plist */,
+				9840F01E2180D7B600F65633 /* iOS-BelieveInMiracle-Bridging.h */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -666,6 +683,7 @@
 		98BA740F216D25FC00886AD2 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
+				9840F01F2180D95D00F65633 /* Helper */,
 				988CC9F72178E59E00E87CCD /* DonateInputMoney */,
 				988CC9F62178E59000E87CCD /* DonateList */,
 				98A1E86E2176381F00522557 /* DonateFlowCoordinator.swift */,
@@ -726,6 +744,7 @@
 		9C154530E3C1EA3EE658365B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9840F01A2180D5D700F65633 /* CloudPaymentsAPI.framework */,
 				D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */,
 			);
 			name = Frameworks;
@@ -959,6 +978,7 @@
 				9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */,
 				98307C54217F5C9A0007D279 /* UIColor+Hex.swift in Sources */,
 				98A1E85C21762BA000522557 /* DonateItemListCellView.swift in Sources */,
+				9840F0212180D97D00F65633 /* CloudPaymentsManager.swift in Sources */,
 				98BA740B216D1CEC00886AD2 /* ViewModelAbstract.swift in Sources */,
 				98BA7417216D262200886AD2 /* DonateVC.swift in Sources */,
 				98A1E8902176553800522557 /* WebViewModel.swift in Sources */,
@@ -1126,6 +1146,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "iOS-BelieveInMiracle/Environment/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1134,6 +1159,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "elezov.iOS-BelieveInMiracle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOS-BelieveInMiracle/Environment/iOS-BelieveInMiracle-Bridging.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1146,6 +1172,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FX7X5MR74;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/frameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "iOS-BelieveInMiracle/Environment/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1154,6 +1185,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "elezov.iOS-BelieveInMiracle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/iOS-BelieveInMiracle/Environment/iOS-BelieveInMiracle-Bridging.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

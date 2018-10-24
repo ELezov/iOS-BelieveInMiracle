@@ -29,5 +29,9 @@ final class CommonAssembly: Assembly {
             let viewModel = WebViewModel(configModel: configModel)
             return viewModel
         }
+        
+        container.register(CloudPaymentsManagerable.self) { _ in
+            return CloudPaymentsManager(apiPublicId: "", apiSecret: "")
+        }
     }
 }

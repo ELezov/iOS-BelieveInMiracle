@@ -25,11 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let coordinator = diContainer.resolve(ApplicationCoordinator.self)
         return coordinator
     }()
+    
+    private lazy var cloudManager: CloudPaymentsManagerable? = {
+        let cloudManager = diContainer.resolve(CloudPaymentsManagerable.self)
+        return cloudManager
+    }()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setupAppearance()
+        
+        let type = cloudManager?.detectTypeCard(cardNumber: "5422550481370424")
         
         // Override point for customization after application launch.
         window = UIWindow()
