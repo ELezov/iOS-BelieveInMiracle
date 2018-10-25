@@ -13,7 +13,7 @@
         <scene sceneID="zU0-29-84B">
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" id="eSr-Lo-rNA" customClass="NavigationController" customModule="iOS_BelieveInMiracle" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gWU-Q8-HKK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="gWU-Q8-HKK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

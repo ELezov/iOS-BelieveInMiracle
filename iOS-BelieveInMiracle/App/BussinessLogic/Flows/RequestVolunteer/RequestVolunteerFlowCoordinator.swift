@@ -23,12 +23,20 @@ BaseCoordinator {
     }
     
     func start() -> UINavigationController? {
-        return showRequestVolunteer()
+        return showRequestVolunteerList()
     }
     
-    private func showRequestVolunteer() -> UINavigationController? {
+    private func showRequestVolunteerList() -> UINavigationController? {
         let controller = diContainer.resolve(RequestVolunteerView.self)
+        controller?.onContinueTapped = { [weak self] in
+            self?.showRequestVolunteerInfo()
+        }
         router.setRootModule(controller)
         return router.rootController
+    }
+    
+    private func showRequestVolunteerInfo() {
+        let controller = diContainer.resolve(RequestVolunteerInfoView.self)
+        router.push(controller)
     }
 }

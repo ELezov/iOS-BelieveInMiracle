@@ -12,4 +12,5 @@ target 'iOS-BelieveInMiracle' do
   pod 'SnapKit'
   pod 'NVActivityIndicatorView'
   pod 'lottie-ios'
+  pod 'InputMask', '4.0.0'
 end

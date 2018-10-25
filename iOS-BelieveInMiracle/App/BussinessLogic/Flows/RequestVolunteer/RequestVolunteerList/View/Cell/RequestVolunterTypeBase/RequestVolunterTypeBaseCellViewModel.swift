@@ -8,17 +8,66 @@
 
 import UIKit
 
+enum VolunteerType{
+    case hospital
+    case address
+    case event
+    case distance
+    case clown
+}
+
 final class RequestVolunterTypeBaseCellViewModel:
 CellViewModelFaceless,
 CellViewModelHeightable,
 CellViewModelActionableFasseles,
 CellViewModelExpandable {
-
-    var expandedState: ExpandableState = .expanded {
-        didSet {
-            
+    
+    var icon: UIImage {
+        switch type {
+        case .hospital:
+            return Asset.Volunteer.hospitalVolunteer.image
+        case .address:
+            return Asset.Volunteer.adressVolunteer.image
+        case .event:
+            return Asset.Volunteer.eventVolunteer.image
+        case .distance:
+            return Asset.Volunteer.distanceVolunteer.image
+        case .clown:
+            return Asset.Volunteer.clownTherapy.image
         }
     }
+    
+    var title: String {
+        switch type {
+        case .hospital:
+            return L10n.Volunteer.Hospitalvolunteer.title
+        case .address:
+            return L10n.Volunteer.Adressvolunteer.title
+        case .event:
+            return L10n.Volunteer.Eventvolunteer.title
+        case .distance:
+            return L10n.Volunteer.Distancevolunteer.title
+        case .clown:
+            return L10n.Volunteer.Clowntherapy.title
+        }
+    }
+    
+    var description: String {
+        switch type {
+        case .hospital:
+            return L10n.Volunteer.Hospitalvolunteer.description
+        case .address:
+            return L10n.Volunteer.Adressvolunteer.description
+        case .event:
+            return L10n.Volunteer.Eventvolunteer.description
+        case .distance:
+            return L10n.Volunteer.Distancevolunteer.description
+        case .clown:
+            return L10n.Volunteer.Clowntherapy.description
+        }
+    }
+    
+    var expandedState: ExpandableState = .expanded
     
     typealias OnClick = (RequestVolunterTypeBaseCellViewModel) -> Void
     
@@ -28,24 +77,17 @@ CellViewModelExpandable {
     static let cellHeight: CGFloat = UITableViewAutomaticDimension
     
     let height: CGFloat = cellHeight
-    
-    let icon: UIImage
-    let title: String
-    let description: String
+    let type: VolunteerType
     var isChecked: Bool = false
     let tag: Int
     
     init(onClick: OnClick?,
          onIndicator: EmptyCompletion?,
-         icon: UIImage,
-         title: String,
-         description: String,
+         type: VolunteerType,
          tag: Int) {
         self.onClick = onClick
         self.onIndicator = onIndicator
-        self.icon = icon
-        self.title = title
-        self.description = description
+        self.type = type
         self.tag = tag
     }
     

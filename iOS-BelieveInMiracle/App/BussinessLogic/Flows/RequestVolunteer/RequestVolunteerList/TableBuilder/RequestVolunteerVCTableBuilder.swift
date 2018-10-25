@@ -19,33 +19,23 @@ RequestVolunteerVCTableBuilderAbstract {
         }
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.hospitalVolunteer.image,
-                                                           title: L10n.Volunteer.Hospitalvolunteer.title,
-                                                           description: L10n.Volunteer.Hospitalvolunteer.description,
+                                                           type: .hospital,
                                                            tag: 0))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.adressVolunteer.image,
-                                                           title: L10n.Volunteer.Adressvolunteer.title,
-                                                           description: L10n.Volunteer.Adressvolunteer.description,
+                                                           type: .address,
                                                            tag: 1))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.eventVolunteer.image,
-                                                           title: L10n.Volunteer.Eventvolunteer.title,
-                                                           description: L10n.Volunteer.Eventvolunteer.description,
+                                                           type: .event,
                                                            tag: 2))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.distanceVolunteer.image,
-                                                           title: L10n.Volunteer.Distancevolunteer.title,
-                                                           description: L10n.Volunteer.Distancevolunteer.description,
+                                                            type: .distance,
                                                            tag: 3))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
                                                            onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.clownTherapy.image,
-                                                           title: L10n.Volunteer.Clowntherapy.title,
-                                                           description: L10n.Volunteer.Clowntherapy.description,
+                                                           type: .clown,
                                                            tag: 4))
         return result
     }

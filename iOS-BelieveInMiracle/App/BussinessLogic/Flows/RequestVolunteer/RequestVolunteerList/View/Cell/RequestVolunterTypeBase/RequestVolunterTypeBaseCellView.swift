@@ -29,12 +29,16 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     @IBOutlet weak var typeTitleLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var separatorView: UIView! {
+        didSet {
+            separatorView.backgroundColor = UIColor(Color.separator)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
         configureCheckbox()
-        configureContainerView()
     }
     
     @objc
@@ -69,13 +73,5 @@ fileprivate extension RequestVolunterTypeBaseCellView {
         checkBox.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-    }
-    
-    func configureContainerView() {
-        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        containerView.layer.shadowOpacity = 1
-        containerView.layer.shadowOffset = CGSize.zero
-        containerView.layer.shadowRadius = 2
-        containerView.layer.cornerRadius = 5
     }
 }

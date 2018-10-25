@@ -3,7 +3,7 @@ import UIKit
 final class RequestVolunteerVC:
 ViewController,
 RequestVolunteerView {
-    
+
     enum Constants {
         static let continueHeight: CGFloat = 64.0
         static let zeroHeight: CGFloat = 0.0
@@ -28,6 +28,8 @@ RequestVolunteerView {
     
     // MARK: - Public
     
+    var onContinueTapped: EmptyCompletion?
+    
     var viewModel: RequestVolunteerViewModelAbstract?
     var tableBuilder: RequestVolunteerVCTableBuilderAbstract?
     var tableViewModel: TableManagerable?
@@ -38,8 +40,16 @@ RequestVolunteerView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+        setNeedsStatusBarAppearanceUpdate()
         configureTableView()
         continueContainerHeight.constant = Constants.zeroHeight
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func continueButtonTapped(_ sender: Any) {
+        onContinueTapped?()
     }
 }
 

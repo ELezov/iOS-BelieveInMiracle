@@ -76,6 +76,13 @@
                             <constraint firstItem="hnB-VQ-zvj" firstAttribute="centerY" secondItem="fu6-DX-qP6" secondAttribute="centerY" id="obv-Sh-3sL"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-hM-jkZ">
+                        <rect key="frame" x="0.0" y="115" width="398" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="EPg-p3-zVH"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fu6-DX-qP6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8l0-za-3Ef"/>
@@ -83,7 +90,10 @@
                     <constraint firstAttribute="trailing" secondItem="qME-Za-cXX" secondAttribute="trailing" constant="8" id="FBe-Hi-rex"/>
                     <constraint firstAttribute="trailing" secondItem="fu6-DX-qP6" secondAttribute="trailing" constant="8" id="PUq-Eq-hVk"/>
                     <constraint firstItem="fu6-DX-qP6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="UeH-vF-cno"/>
+                    <constraint firstAttribute="trailing" secondItem="jIn-hM-jkZ" secondAttribute="trailing" id="V8M-yj-z7K"/>
                     <constraint firstItem="qME-Za-cXX" firstAttribute="top" secondItem="fu6-DX-qP6" secondAttribute="bottom" constant="-3" id="bf5-nw-Stk"/>
+                    <constraint firstAttribute="bottom" secondItem="jIn-hM-jkZ" secondAttribute="bottom" id="jFP-Rw-oTY"/>
+                    <constraint firstItem="jIn-hM-jkZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kjn-Lw-hE9"/>
                     <constraint firstAttribute="bottom" secondItem="qME-Za-cXX" secondAttribute="bottom" constant="8" id="txl-SW-geC"/>
                 </constraints>
             </tableViewCellContentView>
@@ -92,6 +102,7 @@
                 <outlet property="checkBoxContainer" destination="FL6-pe-h0Q" id="laR-Fb-bff"/>
                 <outlet property="containerView" destination="fu6-DX-qP6" id="bHX-Lr-6gJ"/>
                 <outlet property="indicatorButton" destination="Bde-KM-UH6" id="0mL-5o-NBV"/>
+                <outlet property="separatorView" destination="jIn-hM-jkZ" id="g0w-KW-gKl"/>
                 <outlet property="stackView" destination="qME-Za-cXX" id="Knb-ru-mGI"/>
                 <outlet property="typeIconView" destination="hnB-VQ-zvj" id="8X5-3V-Tfr"/>
                 <outlet property="typeTitleLabel" destination="28w-3n-Ye3" id="iNM-h0-6Iy"/>
