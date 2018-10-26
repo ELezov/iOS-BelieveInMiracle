@@ -22,8 +22,13 @@ internal enum L10n {
     /// Отправить SMS
     internal static let sms = L10n.tr("Localizable", "donate.sms")
 
+    internal enum Card {
+      /// Перечислить пожертвование с банковской карты
+      internal static let instruction = L10n.tr("Localizable", "donate.card.instruction")
+    }
+
     internal enum Sms {
-      /// на короткий номер со словом ВЕРИМ (пробел) ваша сумма
+      /// Cообщение на короткий номер 7715 со словом ВЕРИМ (пробел) ваша сумма
       internal static let instruction = L10n.tr("Localizable", "donate.sms.instruction")
     }
   }

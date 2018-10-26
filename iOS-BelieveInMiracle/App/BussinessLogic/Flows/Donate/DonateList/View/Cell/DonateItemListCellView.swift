@@ -23,7 +23,8 @@ class DonateItemListCellView: UITableViewCell {
     }
     @IBOutlet weak var descriptionLabel: UILabel! {
         didSet {
-            descriptionLabel.font = UIFont.systemFont(ofSize: 10.0)
+            descriptionLabel.font = UIFont.systemFont(ofSize: 12.0)
+            descriptionLabel.textColor = UIColor(Color.textPrimaryLight)
         }
     }
     @IBOutlet weak var separatorView: UIView! {

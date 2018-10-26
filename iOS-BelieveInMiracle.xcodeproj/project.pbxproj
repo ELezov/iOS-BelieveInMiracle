@@ -27,6 +27,9 @@
 		98421D05217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98421D04217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib */; };
 		98421D07217A46DB00BC34BE /* RequestVolunteerDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98421D06217A46DB00BC34BE /* RequestVolunteerDescriptionView.swift */; };
 		98421D0A217A482100BC34BE /* UIView + LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98421D09217A482100BC34BE /* UIView + LoadFromNib.swift */; };
+		9871983521836A4D00C642F3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871983421836A4D00C642F3 /* TextFieldView.swift */; };
+		9871983721836A5800C642F3 /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9871983621836A5800C642F3 /* TextFieldView.xib */; };
+		9871983921836FAC00C642F3 /* FrameworksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9871983821836FAC00C642F3 /* FrameworksManager.swift */; };
 		9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9221663CC8003FC06F /* AppDelegate.swift */; };
 		9887FF9521663CC8003FC06F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887FF9421663CC8003FC06F /* MainVC.swift */; };
 		9887FF9821663CC8003FC06F /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9887FF9621663CC8003FC06F /* MainVC.storyboard */; };
@@ -132,6 +135,9 @@
 		98421D04217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestVolunteerDescriptionView.xib; sourceTree = "<group>"; };
 		98421D06217A46DB00BC34BE /* RequestVolunteerDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerDescriptionView.swift; sourceTree = "<group>"; };
 		98421D09217A482100BC34BE /* UIView + LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + LoadFromNib.swift"; sourceTree = "<group>"; };
+		9871983421836A4D00C642F3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		9871983621836A5800C642F3 /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
+		9871983821836FAC00C642F3 /* FrameworksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksManager.swift; sourceTree = "<group>"; };
 		9887FF8F21663CC8003FC06F /* iOS-BelieveInMiracle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-BelieveInMiracle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9887FF9221663CC8003FC06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9887FF9421663CC8003FC06F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -329,6 +335,8 @@
 			isa = PBXGroup;
 			children = (
 				98307C59217F600C0007D279 /* Buttons */,
+				9871983421836A4D00C642F3 /* TextFieldView.swift */,
+				9871983621836A5800C642F3 /* TextFieldView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +435,7 @@
 			children = (
 				9887FFBA21664C5E003FC06F /* ApplicationCoordinator.swift */,
 				9887FF9221663CC8003FC06F /* AppDelegate.swift */,
+				9871983821836FAC00C642F3 /* FrameworksManager.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -849,6 +858,7 @@
 				9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */,
 				988CCA002178E5B600E87CCD /* DonateInputMoneyVC.storyboard in Resources */,
 				98DAD47A217E396D00A605ED /* checked_done.json in Resources */,
+				9871983721836A5800C642F3 /* TextFieldView.xib in Resources */,
 				98BA73E7216D177F00886AD2 /* NavigationController.storyboard in Resources */,
 				9887FF9821663CC8003FC06F /* MainVC.storyboard in Resources */,
 				982CF08B2178F355002A235B /* RequestVolunteerVC.storyboard in Resources */,
@@ -871,6 +881,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -879,6 +890,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -955,6 +967,7 @@
 				982CF08A2178F355002A235B /* RequestVolunteerVC.swift in Sources */,
 				98A1E86D2176374700522557 /* CommonAssembly.swift in Sources */,
 				9887FFBD21664CA8003FC06F /* MainCoordinator.swift in Sources */,
+				9871983521836A4D00C642F3 /* TextFieldView.swift in Sources */,
 				982CF0972178F5F7002A235B /* RequestVolunterTypeBaseCellView.swift in Sources */,
 				98F0CB0321822B4D00066A4F /* SkyFloatingLabelTextField.swift in Sources */,
 				98A1E8962176563D00522557 /* URLFlowMixin.swift in Sources */,
@@ -987,6 +1000,7 @@
 				98A1E88F2176553800522557 /* WebViewConfigurationModel.swift in Sources */,
 				98A1E85321762B2D00522557 /* CellViewModelHeightable.swift in Sources */,
 				98F0CB0421822B4D00066A4F /* UITextField+fixCaretPosition.swift in Sources */,
+				9871983921836FAC00C642F3 /* FrameworksManager.swift in Sources */,
 				98A1E85821762B2D00522557 /* BaseTableManager.swift in Sources */,
 				982CF08C2178F355002A235B /* RequestVolunteerViewModel.swift in Sources */,
 				988CC9FE2178E5B600E87CCD /* DonateInputMoneyView.swift in Sources */,

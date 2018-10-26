@@ -19,7 +19,6 @@ final class ApplicationAssembly: Assembly {
             return coordinator
         }
         
-        
         container.register(RouterAbstract.self) { resolver in
             let rootController = resolver.resolve(NavigationController.self)!
             let router = Router(rootController: rootController)
@@ -38,6 +37,10 @@ final class ApplicationAssembly: Assembly {
         
         container.register(AppearanceManager.self) { _ in
             return AppearanceManager()
+        }
+        
+        container.register(FrameworksManager.self) { _ in
+            return FrameworksManager()
         }
     }
 }

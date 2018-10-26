@@ -11,8 +11,9 @@
 
 // Donate
 "donate.sms" = "Отправить SMS";
-"donate.sms.instruction" = "на короткий номер со словом ВЕРИМ (пробел) ваша сумма";
+"donate.sms.instruction" = "Cообщение на короткий номер 7715 со словом ВЕРИМ (пробел) ваша сумма";
 "donate.card" = "Оплата банковской картой";
+"donate.card.instruction" = "Перечислить пожертвование с банковской карты";
 
 // Volunterr
 "volunteer.hospitalVolunteer.title" = "Больничные волонтеры";
