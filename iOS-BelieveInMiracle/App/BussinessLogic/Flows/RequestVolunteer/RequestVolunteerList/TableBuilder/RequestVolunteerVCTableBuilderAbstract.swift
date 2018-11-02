@@ -11,6 +11,6 @@ import Foundation
 protocol RequestVolunteerVCTableBuilderAbstract {
     /// Create view models
     ///
-    func map(_ completion: @escaping EmptyCompletion,
-             onCheck: @escaping RequestVolunterTypeBaseCellViewModel.OnClick) -> [CellViewModel]
+    func map(_ completion: @escaping RequestVolunterTypeBaseCellViewModel.OnClick,
+             onCheck: @escaping RequestVolunterTypeBaseCellViewModel.OnClick) -> [RequestVolunterTypeBaseCellViewModel]
 }

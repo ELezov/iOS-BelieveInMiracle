@@ -52,6 +52,8 @@
 		988CC9FF2178E5B600E87CCD /* DonateInputMoneyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CC9FA2178E5B600E87CCD /* DonateInputMoneyVC.swift */; };
 		988CCA002178E5B600E87CCD /* DonateInputMoneyVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988CC9FB2178E5B600E87CCD /* DonateInputMoneyVC.storyboard */; };
 		988CCA012178E5B600E87CCD /* DonateInputMoneyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988CC9FC2178E5B600E87CCD /* DonateInputMoneyViewModel.swift */; };
+		989DA6D5218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989DA6D3218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift */; };
+		989DA6D6218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989DA6D4218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib */; };
 		98A1E85221762B2D00522557 /* CellViewModelActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1E84B21762B2C00522557 /* CellViewModelActionable.swift */; };
 		98A1E85321762B2D00522557 /* CellViewModelHeightable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1E84C21762B2D00522557 /* CellViewModelHeightable.swift */; };
 		98A1E85421762B2D00522557 /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A1E84D21762B2D00522557 /* TableManager.swift */; };
@@ -99,6 +101,7 @@
 		98BA7418216D262200886AD2 /* DonateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BA7413216D262200886AD2 /* DonateVC.storyboard */; };
 		98BA7419216D262200886AD2 /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA7414216D262200886AD2 /* DonateViewModel.swift */; };
 		98BA741E216D265800886AD2 /* DonateAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BA741D216D265800886AD2 /* DonateAssembly.swift */; };
+		98C7A9BF218B7202009E915A /* RequestVolunterTypeDescriptionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C7A9BE218B7202009E915A /* RequestVolunterTypeDescriptionCellViewModel.swift */; };
 		98DAD47A217E396D00A605ED /* checked_done.json in Resources */ = {isa = PBXBuildFile; fileRef = 98DAD479217E396D00A605ED /* checked_done.json */; };
 		98F0CAEA21821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F0CAE521821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift */; };
 		98F0CAEB21821A2D00066A4F /* RequestVolunteerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F0CAE621821A2D00066A4F /* RequestVolunteerInfoView.swift */; };
@@ -162,6 +165,8 @@
 		988CC9FA2178E5B600E87CCD /* DonateInputMoneyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateInputMoneyVC.swift; sourceTree = "<group>"; };
 		988CC9FB2178E5B600E87CCD /* DonateInputMoneyVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonateInputMoneyVC.storyboard; sourceTree = "<group>"; };
 		988CC9FC2178E5B600E87CCD /* DonateInputMoneyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateInputMoneyViewModel.swift; sourceTree = "<group>"; };
+		989DA6D3218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunterTypeDescriptionCellView.swift; sourceTree = "<group>"; };
+		989DA6D4218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestVolunterTypeDescriptionCellView.xib; sourceTree = "<group>"; };
 		98A1E84B21762B2C00522557 /* CellViewModelActionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModelActionable.swift; sourceTree = "<group>"; };
 		98A1E84C21762B2D00522557 /* CellViewModelHeightable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModelHeightable.swift; sourceTree = "<group>"; };
 		98A1E84D21762B2D00522557 /* TableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 		98BA7413216D262200886AD2 /* DonateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonateVC.storyboard; sourceTree = "<group>"; };
 		98BA7414216D262200886AD2 /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
 		98BA741D216D265800886AD2 /* DonateAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateAssembly.swift; sourceTree = "<group>"; };
+		98C7A9BE218B7202009E915A /* RequestVolunterTypeDescriptionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunterTypeDescriptionCellViewModel.swift; sourceTree = "<group>"; };
 		98DAD479217E396D00A605ED /* checked_done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checked_done.json; sourceTree = "<group>"; };
 		98F0CAE521821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerInfoViewModelAbstract.swift; sourceTree = "<group>"; };
 		98F0CAE621821A2D00066A4F /* RequestVolunteerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerInfoView.swift; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 		982CF0932178F5AF002A235B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				98C7A9BD218B71D3009E915A /* RequestVolunterTypeDescription */,
 				982CF0942178F5BA002A235B /* RequestVolunterTypeBase */,
 			);
 			path = Cell;
@@ -716,6 +723,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		98C7A9BD218B71D3009E915A /* RequestVolunterTypeDescription */ = {
+			isa = PBXGroup;
+			children = (
+				989DA6D3218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift */,
+				989DA6D4218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib */,
+				98C7A9BE218B7202009E915A /* RequestVolunterTypeDescriptionCellViewModel.swift */,
+			);
+			path = RequestVolunterTypeDescription;
+			sourceTree = "<group>";
+		};
 		98DAD478217E396500A605ED /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -865,6 +882,7 @@
 				98F0CAED21821A2D00066A4F /* RequestVolunteerInfoVC.storyboard in Resources */,
 				982CF0982178F5F7002A235B /* RequestVolunterTypeBaseCellView.xib in Resources */,
 				98A1E87B21763FBE00522557 /* Localizable.strings in Resources */,
+				989DA6D6218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib in Resources */,
 				98BA7403216D19BA00886AD2 /* AboutVC.storyboard in Resources */,
 				98421D05217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib in Resources */,
 				98A1E85D21762BA000522557 /* DonateItemListCellView.xib in Resources */,
@@ -976,6 +994,7 @@
 				98BA7400216D19BA00886AD2 /* AboutViewModelAbstract.swift in Sources */,
 				98A1E85721762B2D00522557 /* UITableView+DequeueCellViewModel.swift in Sources */,
 				98F69FB22178F8A800D7EAD3 /* RequestVolunteerVCTableBuilder.swift in Sources */,
+				989DA6D5218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift in Sources */,
 				98BA741E216D265800886AD2 /* DonateAssembly.swift in Sources */,
 				9887FFC121665554003FC06F /* NSObject + Extensions.swift in Sources */,
 				98A1E8692176328A00522557 /* DonateVCTableBuilder.swift in Sources */,
@@ -985,6 +1004,7 @@
 				98F0CB0521822B4D00066A4F /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				98BA73EC216D18C600886AD2 /* AssemblyFactory.swift in Sources */,
 				98A1E87F217641B200522557 /* Strings.swift in Sources */,
+				98C7A9BF218B7202009E915A /* RequestVolunterTypeDescriptionCellViewModel.swift in Sources */,
 				982CF0892178F355002A235B /* RequestVolunteerView.swift in Sources */,
 				98A1E88A2176553300522557 /* WebView.swift in Sources */,
 				98F0CAEA21821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift in Sources */,

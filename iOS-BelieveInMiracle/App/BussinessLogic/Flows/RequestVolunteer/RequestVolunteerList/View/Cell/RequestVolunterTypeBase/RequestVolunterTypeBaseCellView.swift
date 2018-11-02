@@ -23,11 +23,12 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     
     // MARK: - Outlets
     
+    var checkBox: LOTAnimatedSwitch?
+    
     @IBOutlet weak var checkBoxContainer: UIView!
     @IBOutlet weak var indicatorButton: UIButton!
     @IBOutlet weak var typeIconView: UIImageView!
     @IBOutlet weak var typeTitleLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var separatorView: UIView! {
         didSet {
@@ -64,7 +65,8 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
 fileprivate extension RequestVolunterTypeBaseCellView {
     
     func configureCheckbox() {
-        let checkBox = LOTAnimatedSwitch.init(named: "checked_done")
+        checkBox = LOTAnimatedSwitch.init(named: "checked_done")
+        guard let checkBox = checkBox else { return }
         checkBox.setOn(false, animated: false)
         checkBox.setProgressRangeForOffState(fromProgress: 0.2, toProgress: 0)
         checkBox.setProgressRangeForOnState(fromProgress: 0, toProgress: 1)

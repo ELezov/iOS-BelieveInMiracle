@@ -5,7 +5,9 @@ import UIKit
  */
 enum Color {
     
-    static let primaryLight = "#4FC3F7"
+    static let white = "#FFFFFF"
+    
+    static let primaryLight = "#b3e1f7"
     static let primaryDark = "#039BE5"
     static let secondaryLight = "#FFA726"
     static let secondaryDark = "#FB8C00"

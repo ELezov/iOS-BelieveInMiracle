@@ -62,7 +62,6 @@
                     <connections>
                         <outlet property="continueButton" destination="cYy-6B-dBB" id="qBb-a0-hWN"/>
                         <outlet property="continueContainer" destination="O95-Br-uv2" id="Mgj-RS-drc"/>
-                        <outlet property="continueContainerHeight" destination="zfR-Zp-n3L" id="2Jq-CB-53F"/>
                         <outlet property="tableView" destination="VDN-5L-QYN" id="JvY-E6-xxB"/>
                     </connections>
                 </viewController>

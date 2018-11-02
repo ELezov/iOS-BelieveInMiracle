@@ -19,14 +19,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="398" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qME-Za-cXX">
-                        <rect key="frame" x="8" y="89" width="382" height="18.5"/>
-                    </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-DX-qP6">
-                        <rect key="frame" x="8" y="4" width="382" height="88"/>
+                        <rect key="frame" x="8" y="4" width="382" height="103"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28w-3n-Ye3">
-                                <rect key="frame" x="131.5" y="16" width="192.5" height="56"/>
+                                <rect key="frame" x="131.5" y="16" width="192.5" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="iM8-f0-dgT"/>
                                 </constraints>
@@ -35,14 +32,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hnB-VQ-zvj">
-                                <rect key="frame" x="48" y="10.5" width="67.5" height="67.5"/>
+                                <rect key="frame" x="48" y="18" width="67.5" height="67.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67.5" id="82U-ju-PQQ"/>
                                     <constraint firstAttribute="width" constant="67.5" id="l97-kq-rVc"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bde-KM-UH6">
-                                <rect key="frame" x="332" y="19" width="50" height="50"/>
+                                <rect key="frame" x="332" y="26.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1ct-yf-bim"/>
                                     <constraint firstAttribute="width" constant="50" id="iGo-dy-a3z"/>
@@ -53,7 +50,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FL6-pe-h0Q">
-                                <rect key="frame" x="-16" y="4" width="80" height="80"/>
+                                <rect key="frame" x="-16" y="11.5" width="80" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="2fN-rU-dHV"/>
@@ -86,15 +83,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="fu6-DX-qP6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="8l0-za-3Ef"/>
-                    <constraint firstItem="qME-Za-cXX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Dbx-5T-IPf"/>
-                    <constraint firstAttribute="trailing" secondItem="qME-Za-cXX" secondAttribute="trailing" constant="8" id="FBe-Hi-rex"/>
                     <constraint firstAttribute="trailing" secondItem="fu6-DX-qP6" secondAttribute="trailing" constant="8" id="PUq-Eq-hVk"/>
                     <constraint firstItem="fu6-DX-qP6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="UeH-vF-cno"/>
                     <constraint firstAttribute="trailing" secondItem="jIn-hM-jkZ" secondAttribute="trailing" id="V8M-yj-z7K"/>
-                    <constraint firstItem="qME-Za-cXX" firstAttribute="top" secondItem="fu6-DX-qP6" secondAttribute="bottom" constant="-3" id="bf5-nw-Stk"/>
+                    <constraint firstItem="jIn-hM-jkZ" firstAttribute="top" secondItem="fu6-DX-qP6" secondAttribute="bottom" constant="8" id="Z9M-HZ-5Nl"/>
                     <constraint firstAttribute="bottom" secondItem="jIn-hM-jkZ" secondAttribute="bottom" id="jFP-Rw-oTY"/>
                     <constraint firstItem="jIn-hM-jkZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kjn-Lw-hE9"/>
-                    <constraint firstAttribute="bottom" secondItem="qME-Za-cXX" secondAttribute="bottom" constant="8" id="txl-SW-geC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -103,7 +97,6 @@
                 <outlet property="containerView" destination="fu6-DX-qP6" id="bHX-Lr-6gJ"/>
                 <outlet property="indicatorButton" destination="Bde-KM-UH6" id="0mL-5o-NBV"/>
                 <outlet property="separatorView" destination="jIn-hM-jkZ" id="g0w-KW-gKl"/>
-                <outlet property="stackView" destination="qME-Za-cXX" id="Knb-ru-mGI"/>
                 <outlet property="typeIconView" destination="hnB-VQ-zvj" id="8X5-3V-Tfr"/>
                 <outlet property="typeTitleLabel" destination="28w-3n-Ye3" id="iNM-h0-6Iy"/>
             </connections>

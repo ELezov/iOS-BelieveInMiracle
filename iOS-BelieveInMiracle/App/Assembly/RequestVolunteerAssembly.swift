@@ -36,7 +36,7 @@ final class RequestVolunteerAssembly: Assembly {
         container.register(RequestVolunteerView.self) { resolver in
             let controller = UIStoryboard.makeController(RequestVolunteerVC.self)
             controller.viewModel = resolver.resolve(RequestVolunteerViewModelAbstract.self)
-            controller.tableViewModel = resolver.resolve(TableManagerable.self)
+            //controller.tableViewModel = resolver.resolve(TableManagerable.self)
             controller.tableBuilder = resolver.resolve(RequestVolunteerVCTableBuilderAbstract.self)
             return controller
         }
