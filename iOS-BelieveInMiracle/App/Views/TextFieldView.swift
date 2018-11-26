@@ -61,7 +61,7 @@ class TextFieldView: UIView {
         textField.selectedTitleColor = UIColor(Color.textPrimaryLight)
         textField.selectedTitle = configModel.placeholder
         textField.lineColor = UIColor(Color.separator)
-        textField.selectedLineColor = UIColor(Color.textPrimaryLight)
+        textField.selectedLineColor = UIColor(Color.primaryDark)
         
         type = configModel.type
     }
@@ -79,6 +79,12 @@ class TextFieldView: UIView {
                 break
             }
             return
+        }
+        switch type {
+        case .text, .mail:
+            dynamicFill.value = true
+        default:
+            break
         }
         textField.errorMessage = ""
     }

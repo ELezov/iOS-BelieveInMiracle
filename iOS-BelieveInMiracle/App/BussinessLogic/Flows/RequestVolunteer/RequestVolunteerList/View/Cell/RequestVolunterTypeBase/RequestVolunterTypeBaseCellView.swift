@@ -28,7 +28,11 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     @IBOutlet weak var checkBoxContainer: UIView!
     @IBOutlet weak var indicatorButton: UIButton!
     @IBOutlet weak var typeIconView: UIImageView!
-    @IBOutlet weak var typeTitleLabel: UILabel!
+    @IBOutlet weak var typeTitleLabel: UILabel! {
+        didSet {
+            typeTitleLabel.font = FontStyle.body1.style()
+        }
+    }
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var separatorView: UIView! {
         didSet {

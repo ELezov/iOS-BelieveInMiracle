@@ -59,9 +59,11 @@ internal enum Asset {
   }
   internal enum Volunteer {
     internal static let adressVolunteer = ImageAsset(name: "adress_volunteer")
+    internal static let arrow = ImageAsset(name: "arrow")
     internal static let clownTherapy = ImageAsset(name: "clown_therapy")
     internal static let distanceVolunteer = ImageAsset(name: "distance_volunteer")
     internal static let eventVolunteer = ImageAsset(name: "event_volunteer")
+    internal static let help = ImageAsset(name: "help")
     internal static let hospitalVolunteer = ImageAsset(name: "hospital_volunteer")
   }
   internal static let facebook = ImageAsset(name: "facebook")
@@ -87,9 +89,11 @@ internal enum Asset {
     TabBar.money,
     TabBar.volonteer,
     Volunteer.adressVolunteer,
+    Volunteer.arrow,
     Volunteer.clownTherapy,
     Volunteer.distanceVolunteer,
     Volunteer.eventVolunteer,
+    Volunteer.help,
     Volunteer.hospitalVolunteer,
     facebook,
     icAttachMoneyBlack24dp,

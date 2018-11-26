@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
+//swiftlint:disable private_outlet
 class RequestVolunterTypeDescriptionCellView: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel! {
         didSet {
-            titleLabel.font = UIFont.systemFont(ofSize: 15.0)
+            titleLabel.font = FontStyle.subtitle2.style()
         }
     }
     

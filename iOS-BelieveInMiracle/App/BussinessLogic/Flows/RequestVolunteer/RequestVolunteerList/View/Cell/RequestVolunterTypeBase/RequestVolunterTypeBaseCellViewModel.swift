@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum VolunteerType{
+enum VolunteerType {
     case hospital
     case address
     case event

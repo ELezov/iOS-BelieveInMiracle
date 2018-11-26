@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		337CA9FA21AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F521AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift */; };
+		337CA9FB21AC57D800CD4A2F /* DonateWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F621AC57D800CD4A2F /* DonateWelcomeView.swift */; };
+		337CA9FC21AC57D800CD4A2F /* DonateWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F721AC57D800CD4A2F /* DonateWelcomeVC.swift */; };
+		337CA9FD21AC57D800CD4A2F /* DonateWelcomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 337CA9F821AC57D800CD4A2F /* DonateWelcomeVC.storyboard */; };
+		337CA9FE21AC57D800CD4A2F /* DonateWelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F921AC57D800CD4A2F /* DonateWelcomeViewModel.swift */; };
+		33F0CE9821AC5E17000B7A0D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0CE9721AC5E17000B7A0D /* Font.swift */; };
+		33F0CE9B21AC5E7E000B7A0D /* Corbel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F0CE9A21AC5E7E000B7A0D /* Corbel.ttf */; };
+		33F0CE9D21AC5E84000B7A0D /* Corbel-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F0CE9C21AC5E84000B7A0D /* Corbel-Italic.ttf */; };
+		33F0CE9F21AC5E8A000B7A0D /* Corbel-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33F0CE9E21AC5E8A000B7A0D /* Corbel-Bold.ttf */; };
+		33F0CEA121AC5FDD000B7A0D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F0CEA021AC5FDC000B7A0D /* Fonts.swift */; };
 		5A3BE5671E24E743BCB5837F /* Pods_iOS_BelieveInMiracle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */; };
 		982CF0882178F355002A235B /* RequestVolunteerViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF0832178F355002A235B /* RequestVolunteerViewModelAbstract.swift */; };
 		982CF0892178F355002A235B /* RequestVolunteerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982CF0842178F355002A235B /* RequestVolunteerView.swift */; };
@@ -117,6 +127,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		337CA9F521AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeViewModelAbstract.swift; sourceTree = "<group>"; };
+		337CA9F621AC57D800CD4A2F /* DonateWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeView.swift; sourceTree = "<group>"; };
+		337CA9F721AC57D800CD4A2F /* DonateWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeVC.swift; sourceTree = "<group>"; };
+		337CA9F821AC57D800CD4A2F /* DonateWelcomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonateWelcomeVC.storyboard; sourceTree = "<group>"; };
+		337CA9F921AC57D800CD4A2F /* DonateWelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeViewModel.swift; sourceTree = "<group>"; };
+		33F0CE9721AC5E17000B7A0D /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		33F0CE9A21AC5E7E000B7A0D /* Corbel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Corbel.ttf; sourceTree = "<group>"; };
+		33F0CE9C21AC5E84000B7A0D /* Corbel-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corbel-Italic.ttf"; sourceTree = "<group>"; };
+		33F0CE9E21AC5E8A000B7A0D /* Corbel-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corbel-Bold.ttf"; sourceTree = "<group>"; };
+		33F0CEA021AC5FDC000B7A0D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		40F206C330A1245083714BDA /* Pods-iOS-BelieveInMiracle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-BelieveInMiracle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle.debug.xcconfig"; sourceTree = "<group>"; };
 		8F92715826B156BF1178BCCB /* Pods-iOS-BelieveInMiracle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-BelieveInMiracle.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle.release.xcconfig"; sourceTree = "<group>"; };
 		982CF0832178F355002A235B /* RequestVolunteerViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerViewModelAbstract.swift; sourceTree = "<group>"; };
@@ -251,6 +271,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		336B1F7F21AC56BD00A3094D /* DonateWelcome */ = {
+			isa = PBXGroup;
+			children = (
+				337CA9F521AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift */,
+				337CA9F621AC57D800CD4A2F /* DonateWelcomeView.swift */,
+				337CA9F721AC57D800CD4A2F /* DonateWelcomeVC.swift */,
+				337CA9F821AC57D800CD4A2F /* DonateWelcomeVC.storyboard */,
+				337CA9F921AC57D800CD4A2F /* DonateWelcomeViewModel.swift */,
+			);
+			path = DonateWelcome;
+			sourceTree = "<group>";
+		};
+		33F0CE9921AC5E72000B7A0D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				33F0CE9A21AC5E7E000B7A0D /* Corbel.ttf */,
+				33F0CE9C21AC5E84000B7A0D /* Corbel-Italic.ttf */,
+				33F0CE9E21AC5E8A000B7A0D /* Corbel-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		982CF0802178E61E002A235B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +365,7 @@
 		98307C4F217F5C6A0007D279 /* Des */ = {
 			isa = PBXGroup;
 			children = (
+				33F0CE9721AC5E17000B7A0D /* Font.swift */,
 				98307C50217F5C930007D279 /* Colors */,
 			);
 			path = Des;
@@ -419,6 +462,7 @@
 		9887FFA621663D45003FC06F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				33F0CE9921AC5E72000B7A0D /* Fonts */,
 				98DAD478217E396500A605ED /* Lottie */,
 				98A1E86321762ED900522557 /* Generated */,
 				9887FF9921663CC9003FC06F /* Assets.xcassets */,
@@ -586,6 +630,7 @@
 		98A1E86321762ED900522557 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				33F0CEA021AC5FDC000B7A0D /* Fonts.swift */,
 				98A1E87E217641B200522557 /* Strings.swift */,
 				98A1E87121763CE100522557 /* Assets.swift */,
 			);
@@ -696,6 +741,7 @@
 		98BA740F216D25FC00886AD2 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
+				336B1F7F21AC56BD00A3094D /* DonateWelcome */,
 				988CC9F72178E59E00E87CCD /* DonateInputMoney */,
 				988CC9F62178E59000E87CCD /* DonateList */,
 				98A1E86E2176381F00522557 /* DonateFlowCoordinator.swift */,
@@ -870,8 +916,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A1E8882176553300522557 /* WebVC.storyboard in Resources */,
+				33F0CE9F21AC5E8A000B7A0D /* Corbel-Bold.ttf in Resources */,
 				98BA7418216D262200886AD2 /* DonateVC.storyboard in Resources */,
 				9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */,
+				337CA9FD21AC57D800CD4A2F /* DonateWelcomeVC.storyboard in Resources */,
+				33F0CE9D21AC5E84000B7A0D /* Corbel-Italic.ttf in Resources */,
+				33F0CE9B21AC5E7E000B7A0D /* Corbel.ttf in Resources */,
 				9887FF9A21663CC9003FC06F /* Assets.xcassets in Resources */,
 				988CCA002178E5B600E87CCD /* DonateInputMoneyVC.storyboard in Resources */,
 				98DAD47A217E396D00A605ED /* checked_done.json in Resources */,
@@ -901,7 +951,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -910,7 +962,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
@@ -1001,6 +1055,7 @@
 				98BA7407216D1A3200886AD2 /* ViewController.swift in Sources */,
 				9887FFB421664BE0003FC06F /* RouterAbstract.swift in Sources */,
 				98F69FB42178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift in Sources */,
+				33F0CE9821AC5E17000B7A0D /* Font.swift in Sources */,
 				98F0CB0521822B4D00066A4F /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				98BA73EC216D18C600886AD2 /* AssemblyFactory.swift in Sources */,
 				98A1E87F217641B200522557 /* Strings.swift in Sources */,
@@ -1008,6 +1063,7 @@
 				982CF0892178F355002A235B /* RequestVolunteerView.swift in Sources */,
 				98A1E88A2176553300522557 /* WebView.swift in Sources */,
 				98F0CAEA21821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift in Sources */,
+				33F0CEA121AC5FDD000B7A0D /* Fonts.swift in Sources */,
 				98F0CAEB21821A2D00066A4F /* RequestVolunteerInfoView.swift in Sources */,
 				9887FFBB21664C5E003FC06F /* ApplicationCoordinator.swift in Sources */,
 				988CCA012178E5B600E87CCD /* DonateInputMoneyViewModel.swift in Sources */,
@@ -1037,6 +1093,8 @@
 				98BA7404216D19BA00886AD2 /* AboutViewModel.swift in Sources */,
 				98A1E88321764C2300522557 /* GlobalConstants.swift in Sources */,
 				9887FFCA21665C3B003FC06F /* AboutFlowCoordinator.swift in Sources */,
+				337CA9FC21AC57D800CD4A2F /* DonateWelcomeVC.swift in Sources */,
+				337CA9FA21AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift in Sources */,
 				98421D0A217A482100BC34BE /* UIView + LoadFromNib.swift in Sources */,
 				988CC9FD2178E5B600E87CCD /* DonateInputMoneyViewModelAbstract.swift in Sources */,
 				98F0CAEC21821A2D00066A4F /* RequestVolunteerInfoVC.swift in Sources */,
@@ -1046,10 +1104,12 @@
 				98BA73E1216D164200886AD2 /* MainAssembly.swift in Sources */,
 				98A1E8892176553300522557 /* WebVC.swift in Sources */,
 				98BA73E8216D177F00886AD2 /* NavigationController.swift in Sources */,
+				337CA9FE21AC57D800CD4A2F /* DonateWelcomeViewModel.swift in Sources */,
 				982CF0882178F355002A235B /* RequestVolunteerViewModelAbstract.swift in Sources */,
 				9887FFB821664BE6003FC06F /* BaseCoordinator.swift in Sources */,
 				9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */,
 				98307C54217F5C9A0007D279 /* UIColor+Hex.swift in Sources */,
+				337CA9FB21AC57D800CD4A2F /* DonateWelcomeView.swift in Sources */,
 				98A1E85C21762BA000522557 /* DonateItemListCellView.swift in Sources */,
 				98BA740B216D1CEC00886AD2 /* ViewModelAbstract.swift in Sources */,
 				98BA7417216D262200886AD2 /* DonateVC.swift in Sources */,
@@ -1227,7 +1287,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "elezov.iOS-BelieveInMiracle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1247,7 +1307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "elezov.iOS-BelieveInMiracle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

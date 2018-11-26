@@ -53,5 +53,19 @@ final class RequestVolunteerAssembly: Assembly {
             controller.viewModel = resolver.resolve(RequestVolunteerInfoViewModelAbstract.self)
             return controller
         }
+        
+        // DonateWelcome
+        
+        container.register(DonateWelcomeViewModelAbstract.self) { _ in
+            let viewModel = DonateWelcomeViewModel()
+            return viewModel
+        }
+        
+        container.register(DonateWelcomeView.self) { resolver in
+            let controller = UIStoryboard.makeController(DonateWelcomeVC.self)
+            controller.viewModel = resolver.resolve(DonateWelcomeViewModelAbstract.self)
+            return controller
+        }
+
     }
 }

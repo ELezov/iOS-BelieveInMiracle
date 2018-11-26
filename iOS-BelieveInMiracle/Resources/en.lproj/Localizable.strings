@@ -8,6 +8,7 @@
 // Common
 
 "common.button.continue" = "Продолжить";
+"common.button.request.send" = "Отправить заявку";
 
 // Donate
 "donate.sms" = "Отправить SMS";
@@ -30,4 +31,16 @@
 
 "volunteer.clownTherapy.title" = "Клоунотерапия";
 "volunteer.clownTherapy.description" = "Стать больничным клоуном. Это НЕ аниматор. Это партнер по радости, душевный специалист, друг для всей семьи. ";
+
+"volunteer.request.title" = "Новая заявка в волонтеры через мобильное приложение";
+"volunteer.request.name" = "Имя";
+"volunteer.request.phone" = "Телефон";
+"volunteer.request.mail" = "email";
+"volunteer.request.question.name" = "Как вас зовут?";
+"volunteer.request.question.mail" = "Укажите ваш mail";
+"volunteer.request.question.phone" = "Контактный номер:";
+
+"volunteer.request.send.success" = "Заявка успешно отправлена";
+"volunteer.request.send.failure" = "Произошла ошибка, попробуйте позже";
+
 

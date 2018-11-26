@@ -8,7 +8,7 @@ enum Color {
     static let white = "#FFFFFF"
     
     static let primaryLight = "#b3e1f7"
-    static let primaryDark = "#039BE5"
+    static let primaryDark = "#007AFF"
     static let secondaryLight = "#FFA726"
     static let secondaryDark = "#FB8C00"
     
