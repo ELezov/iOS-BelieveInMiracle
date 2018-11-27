@@ -11,41 +11,30 @@ import UIKit
 final class RequestVolunteerVCTableBuilder:
 RequestVolunteerVCTableBuilderAbstract {
     
-    func map(_ completion: @escaping EmptyCompletion,
-             onCheck: @escaping RequestVolunterTypeBaseCellViewModel.OnClick) -> [CellViewModel] {
-        var result = [CellViewModel]()
-        let selectHandler: EmptyCompletion = {
-            completion()
-        }
+    func map(_ completion: @escaping RequestVolunterTypeBaseCellViewModel.OnClick,
+             onCheck: @escaping RequestVolunterTypeBaseCellViewModel.OnClick)
+        -> [RequestVolunterTypeBaseCellViewModel] {
+        var result = [RequestVolunterTypeBaseCellViewModel]()
+    
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.hospitalVolunteer.image,
-                                                           title: L10n.Volunteer.Hospitalvolunteer.title,
-                                                           description: L10n.Volunteer.Hospitalvolunteer.description,
+                                                           onIndicator: completion,
+                                                           type: .hospital,
                                                            tag: 0))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.adressVolunteer.image,
-                                                           title: L10n.Volunteer.Adressvolunteer.title,
-                                                           description: L10n.Volunteer.Adressvolunteer.description,
+                                                           onIndicator: completion,
+                                                           type: .address,
                                                            tag: 1))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.eventVolunteer.image,
-                                                           title: L10n.Volunteer.Eventvolunteer.title,
-                                                           description: L10n.Volunteer.Eventvolunteer.description,
+                                                           onIndicator: completion,
+                                                           type: .event,
                                                            tag: 2))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.distanceVolunteer.image,
-                                                           title: L10n.Volunteer.Distancevolunteer.title,
-                                                           description: L10n.Volunteer.Distancevolunteer.description,
+                                                           onIndicator: completion,
+                                                            type: .distance,
                                                            tag: 3))
         result.append(RequestVolunterTypeBaseCellViewModel(onClick: onCheck,
-                                                           onIndicator: selectHandler,
-                                                           icon: Asset.Volunteer.clownTherapy.image,
-                                                           title: L10n.Volunteer.Clowntherapy.title,
-                                                           description: L10n.Volunteer.Clowntherapy.description,
+                                                           onIndicator: completion,
+                                                           type: .clown,
                                                            tag: 4))
         return result
     }

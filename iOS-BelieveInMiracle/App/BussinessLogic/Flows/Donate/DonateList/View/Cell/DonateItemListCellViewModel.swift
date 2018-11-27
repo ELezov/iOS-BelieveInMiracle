@@ -14,7 +14,7 @@ CellViewModelActionableFasseles {
     
     var onClick: OnClick?
     
-    static let cellHeight: CGFloat = 120
+    static let cellHeight: CGFloat = 100
     
     let height: CGFloat = cellHeight
     
@@ -56,7 +56,11 @@ CellViewModelActionableFasseles {
     }
     
     func descriptionForDonate() -> String? {
-        guard donateType == .sms else { return nil }
-        return L10n.Donate.Sms.instruction
+        switch donateType {
+        case .card:
+            return L10n.Donate.Card.instruction
+        case .sms:
+            return L10n.Donate.Sms.instruction
+        }
     }
 }

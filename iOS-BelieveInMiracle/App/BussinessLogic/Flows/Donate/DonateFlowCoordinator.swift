@@ -24,10 +24,19 @@ URLFlowMixin {
     }
     
     func start() -> UINavigationController? {
-        return showDonate()
+        return showWelcomeDonate()
     }
     
-    private func showDonate() -> UINavigationController? {
+    private func showWelcomeDonate() -> UINavigationController? {
+        let controller = diContainer.resolve(DonateWelcomeView.self)
+        controller?.onDonateTapped = { [weak self] in
+            self?.showDonate()
+        }
+        router.setRootModule(controller)
+        return router.rootController
+    }
+    
+    private func showDonate() {
         let controller = diContainer.resolve(DonateView.self)
         controller?.onCardDonate = { [weak self] configModel in
             self?.openURLinWebView(urlModel: configModel)
@@ -35,8 +44,7 @@ URLFlowMixin {
         controller?.onSmsDonate = { [weak self] in
             self?.showInputMoneyScreen()
         }
-        router.setRootModule(controller)
-        return router.rootController
+        router.push(controller)
     }
     
     private func showInputMoneyScreen() {

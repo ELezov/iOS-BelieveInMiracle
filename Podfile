@@ -12,4 +12,8 @@ target 'iOS-BelieveInMiracle' do
   pod 'SnapKit'
   pod 'NVActivityIndicatorView'
   pod 'lottie-ios'
+  pod 'InputMask', '4.0.0'
+  pod 'IQKeyboardManager'
+  pod 'NotificationBannerSwift', '1.6.3'
+  pod 'MarqueeLabel/Swift', '3.1.6'
 end

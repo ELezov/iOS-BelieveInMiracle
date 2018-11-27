@@ -23,18 +23,27 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     
     // MARK: - Outlets
     
+    var checkBox: LOTAnimatedSwitch?
+    
     @IBOutlet weak var checkBoxContainer: UIView!
     @IBOutlet weak var indicatorButton: UIButton!
     @IBOutlet weak var typeIconView: UIImageView!
-    @IBOutlet weak var typeTitleLabel: UILabel!
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var typeTitleLabel: UILabel! {
+        didSet {
+            typeTitleLabel.font = FontStyle.body1.style()
+        }
+    }
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var separatorView: UIView! {
+        didSet {
+            separatorView.backgroundColor = UIColor(Color.separator)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
         configureCheckbox()
-        configureContainerView()
     }
     
     @objc
@@ -60,7 +69,8 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
 fileprivate extension RequestVolunterTypeBaseCellView {
     
     func configureCheckbox() {
-        let checkBox = LOTAnimatedSwitch.init(named: "checked_done")
+        checkBox = LOTAnimatedSwitch.init(named: "checked_done")
+        guard let checkBox = checkBox else { return }
         checkBox.setOn(false, animated: false)
         checkBox.setProgressRangeForOffState(fromProgress: 0.2, toProgress: 0)
         checkBox.setProgressRangeForOnState(fromProgress: 0, toProgress: 1)
@@ -69,13 +79,5 @@ fileprivate extension RequestVolunterTypeBaseCellView {
         checkBox.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
-    }
-    
-    func configureContainerView() {
-        containerView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        containerView.layer.shadowOpacity = 1
-        containerView.layer.shadowOffset = CGSize.zero
-        containerView.layer.shadowRadius = 2
-        containerView.layer.cornerRadius = 5
     }
 }

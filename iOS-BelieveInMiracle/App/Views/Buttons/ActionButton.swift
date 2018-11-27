@@ -56,7 +56,7 @@ class ActionButton: UIButton {
             setTitleColor(UIColor(Color.textPrimaryInverse), for: .normal)
             backgroundColor = UIColor(Color.primaryDark)
         case (.filled, .disabled):
-            setTitleColor(UIColor(Color.textPrimaryLight), for: .normal)
+            setTitleColor(UIColor(Color.textPrimaryInverse), for: .normal)
             backgroundColor = UIColor(Color.primaryLight)
         case (.blank, .enabled):
             setTitleColor(UIColor(Color.textPrimaryInverse), for: .normal)
@@ -64,10 +64,10 @@ class ActionButton: UIButton {
             layer.borderWidth = 1
             layer.borderColor = UIColor(Color.primaryDark).cgColor
         case (.blank, .disabled):
-            setTitleColor(UIColor(Color.textPrimaryLight), for: .normal)
-            backgroundColor = UIColor(Color.primaryDark)
+            setTitleColor(UIColor(Color.textPrimaryInverse), for: .normal)
+            backgroundColor = UIColor(Color.primaryLight)
             layer.borderWidth = 1
-            layer.borderColor = UIColor(Color.primaryDark).cgColor
+            layer.borderColor = UIColor(Color.primaryLight).cgColor
         }
     }
 }

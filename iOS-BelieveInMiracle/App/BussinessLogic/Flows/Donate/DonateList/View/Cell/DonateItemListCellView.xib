@@ -55,6 +55,7 @@
                     <constraint firstItem="Otv-WU-CTW" firstAttribute="bottom" secondItem="MG5-f2-S2w" secondAttribute="bottom" id="0ut-LD-vb0"/>
                     <constraint firstItem="kS8-lY-0A1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8tC-0e-D6F"/>
                     <constraint firstItem="MG5-f2-S2w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Dfe-Q2-rvj"/>
+                    <constraint firstItem="kS8-lY-0A1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Otv-WU-CTW" secondAttribute="bottom" constant="14" id="G2R-EG-o96"/>
                     <constraint firstItem="MG5-f2-S2w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ib0-Jy-jPo"/>
                     <constraint firstItem="Otv-WU-CTW" firstAttribute="leading" secondItem="MG5-f2-S2w" secondAttribute="trailing" constant="16" id="Ql1-oI-CJb"/>
                     <constraint firstAttribute="bottom" secondItem="kS8-lY-0A1" secondAttribute="bottom" id="RLR-OY-u24"/>
@@ -75,6 +76,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="card" width="81" height="79"/>
+        <image name="card" width="51" height="51"/>
     </resources>
 </document>

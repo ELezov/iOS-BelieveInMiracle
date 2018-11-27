@@ -23,12 +23,6 @@ class RequestVolunteerDescriptionView: UIView {
     
     func configure() {
         titleLabel.font = UIFont.systemFont(ofSize: 15.0)
-        layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        layer.shadowOpacity = 1
-        backgroundColor = UIColor.lightText
-        layer.shadowOffset = CGSize.zero
-        layer.shadowRadius = 2
-        layer.cornerRadius = 3
     }
 
 }

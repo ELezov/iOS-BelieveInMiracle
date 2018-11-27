@@ -36,9 +36,36 @@ final class RequestVolunteerAssembly: Assembly {
         container.register(RequestVolunteerView.self) { resolver in
             let controller = UIStoryboard.makeController(RequestVolunteerVC.self)
             controller.viewModel = resolver.resolve(RequestVolunteerViewModelAbstract.self)
-            controller.tableViewModel = resolver.resolve(TableManagerable.self)
+            //controller.tableViewModel = resolver.resolve(TableManagerable.self)
             controller.tableBuilder = resolver.resolve(RequestVolunteerVCTableBuilderAbstract.self)
             return controller
         }
+        
+        // RequestVolunteerInfo
+        
+        container.register(RequestVolunteerInfoViewModelAbstract.self) { _ in
+            let viewModel = RequestVolunteerInfoViewModel()
+            return viewModel
+        }
+        
+        container.register(RequestVolunteerInfoView.self) { resolver in
+            let controller = UIStoryboard.makeController(RequestVolunteerInfoVC.self)
+            controller.viewModel = resolver.resolve(RequestVolunteerInfoViewModelAbstract.self)
+            return controller
+        }
+        
+        // DonateWelcome
+        
+        container.register(DonateWelcomeViewModelAbstract.self) { _ in
+            let viewModel = DonateWelcomeViewModel()
+            return viewModel
+        }
+        
+        container.register(DonateWelcomeView.self) { resolver in
+            let controller = UIStoryboard.makeController(DonateWelcomeVC.self)
+            controller.viewModel = resolver.resolve(DonateWelcomeViewModelAbstract.self)
+            return controller
+        }
+
     }
 }

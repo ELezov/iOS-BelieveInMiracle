@@ -13,6 +13,11 @@ internal enum L10n {
     internal enum Button {
       /// Продолжить
       internal static let `continue` = L10n.tr("Localizable", "common.button.continue")
+
+      internal enum Request {
+        /// Отправить заявку
+        internal static let send = L10n.tr("Localizable", "common.button.request.send")
+      }
     }
   }
 
@@ -22,8 +27,13 @@ internal enum L10n {
     /// Отправить SMS
     internal static let sms = L10n.tr("Localizable", "donate.sms")
 
+    internal enum Card {
+      /// Перечислить пожертвование с банковской карты
+      internal static let instruction = L10n.tr("Localizable", "donate.card.instruction")
+    }
+
     internal enum Sms {
-      /// на короткий номер со словом ВЕРИМ (пробел) ваша сумма
+      /// Cообщение на короткий номер 7715 со словом ВЕРИМ (пробел) ваша сумма
       internal static let instruction = L10n.tr("Localizable", "donate.sms.instruction")
     }
   }
@@ -63,6 +73,33 @@ internal enum L10n {
       internal static let description = L10n.tr("Localizable", "volunteer.hospitalVolunteer.description")
       /// Больничные волонтеры
       internal static let title = L10n.tr("Localizable", "volunteer.hospitalVolunteer.title")
+    }
+
+    internal enum Request {
+      /// email
+      internal static let mail = L10n.tr("Localizable", "volunteer.request.mail")
+      /// Имя
+      internal static let name = L10n.tr("Localizable", "volunteer.request.name")
+      /// Телефон
+      internal static let phone = L10n.tr("Localizable", "volunteer.request.phone")
+      /// Новая заявка в волонтеры через мобильное приложение
+      internal static let title = L10n.tr("Localizable", "volunteer.request.title")
+
+      internal enum Question {
+        /// Укажите ваш mail
+        internal static let mail = L10n.tr("Localizable", "volunteer.request.question.mail")
+        /// Как вас зовут?
+        internal static let name = L10n.tr("Localizable", "volunteer.request.question.name")
+        /// Контактный номер:
+        internal static let phone = L10n.tr("Localizable", "volunteer.request.question.phone")
+      }
+
+      internal enum Send {
+        /// Произошла ошибка, попробуйте позже
+        internal static let failure = L10n.tr("Localizable", "volunteer.request.send.failure")
+        /// Заявка успешно отправлена
+        internal static let success = L10n.tr("Localizable", "volunteer.request.send.success")
+      }
     }
   }
 }
