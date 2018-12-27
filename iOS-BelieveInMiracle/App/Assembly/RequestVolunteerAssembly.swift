@@ -9,7 +9,7 @@
 import Foundation
 import Swinject
 
-//swiftlint:disable force_unwrapping
+//swiftlint:disable force_unwrapping function_body_length
 final class RequestVolunteerAssembly: Assembly {
     
     func assemble(container: Container) {
@@ -64,6 +64,22 @@ final class RequestVolunteerAssembly: Assembly {
         container.register(DonateWelcomeView.self) { resolver in
             let controller = UIStoryboard.makeController(DonateWelcomeVC.self)
             controller.viewModel = resolver.resolve(DonateWelcomeViewModelAbstract.self)
+            return controller
+        }
+        
+        // DonatePaymentView
+        
+        container.register(DonatePaymentViewModelAbstract.self) { resolver in
+            let cloudPaymentManager = resolver.resolve(CloudPaymentsManagerable.self)!
+            let networkService = resolver.resolve(NetworkService.self)!
+            let viewModel = DonatePaymentViewModel(networkService: networkService,
+                                                   cloudPaymentManager: cloudPaymentManager)
+            return viewModel
+        }
+        
+        container.register(DonatePaymentView.self) { resolver in
+            let controller = UIStoryboard.makeController(DonatePaymentVC.self)
+            controller.viewModel = resolver.resolve(DonatePaymentViewModelAbstract.self)
             return controller
         }
 

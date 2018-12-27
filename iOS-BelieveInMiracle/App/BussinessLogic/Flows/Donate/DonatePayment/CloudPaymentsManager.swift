@@ -14,41 +14,45 @@ protocol CloudPaymentsManagerable {
         cardNumber: String,
         expirationDate: String,
         cvvNumber: String) -> String?
-    
-    func detectTypeCard(cardNumber: String) -> CPCardType
-    
-    func isValid(cardNumber: String) -> Bool
+//
+//    func detectTypeCard(cardNumber: String) -> CPCardType
+//
+//    func isValid(cardNumber: String) -> Bool
 }
+
+
 
 class CloudPaymentsManager: CloudPaymentsManagerable {
     
-    let apiService: CPService
+    //let apiService: CPService
     let apiPublicId: String
     let apiSecret: String
+    let card: Card
     
     init(apiPublicId: String, apiSecret: String) {
         self.apiPublicId = apiPublicId
         self.apiSecret = apiSecret
-        self.apiService = CPService.init()
+        //self.apiService = CPService.init()
+        self.card = Card()
     }
     
     func makeSecurePacket(
         cardNumber: String,
         expirationDate: String,
         cvvNumber: String) -> String? {
-        let secureInfo = apiService.makeCardCryptogramPacket(
+        let secureInfo = card.makeCryptogramPacket(
             cardNumber,
             andExpDate: expirationDate,
             andCVV: cvvNumber,
-            andStorePublicID: apiPublicId)
+            andMerchantPublicID: apiPublicId)
         return secureInfo
     }
     
-    func detectTypeCard(cardNumber: String) -> CPCardType {
-        return CPService.cardType(fromCardNumber: cardNumber)
-    }
-    
-    func isValid(cardNumber: String) -> Bool {
-        return CPService.isCardNumberValid(cardNumber)
-    }
+//    func detectTypeCard(cardNumber: String) -> CPCardType {
+//        return CPService.cardType(fromCardNumber: cardNumber)
+//    }
+//    
+//    func isValid(cardNumber: String) -> Bool {
+//        return CPService.isCardNumberValid(cardNumber)
+//    }
 }

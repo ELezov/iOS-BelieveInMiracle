@@ -16,6 +16,15 @@
 "donate.card" = "Оплата банковской картой";
 "donate.card.instruction" = "Перечислить пожертвование с банковской карты";
 
+"donate.payment.errorWord" = "Ошибка";
+"donate.payment.enterCardNumber" = "Введите номер карты";
+"donate.payment.enterCorrectCardNumber" = "Введите корректный номер карты";
+"donate.payment.enterExpirationDate" = "Введите дату окончания действия карты в формате MM/YY";
+"donate.payment.enterCardHolder" = "Введите имя владельца карты";
+"donate.payment.enterCVVCode" = "Введите CVV код";
+"donate.payment.informationWord" = "Информация";
+"donate.payment.errorCreatingCryptoPacket" = "Ошибка при создании крипто-пакета";
+
 // Volunterr
 "volunteer.hospitalVolunteer.title" = "Больничные волонтеры";
 "volunteer.hospitalVolunteer.description" = "Работа с детьми, находящимися на лечении в региональных ЛПУ: творческие занятия и мастер-классы, педгогические и психологические занятия (при наличии компетенций и потребности у ребенка или родителя), модернизация больничной инфраструктуры детских лечебно - профилактических учреждений.";

@@ -16,4 +16,8 @@ target 'iOS-BelieveInMiracle' do
   pod 'IQKeyboardManager'
   pod 'NotificationBannerSwift', '1.6.3'
   pod 'MarqueeLabel/Swift', '3.1.6'
+  
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'AFNetworking', '~> 3.0'
 end

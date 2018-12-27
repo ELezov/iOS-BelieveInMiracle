@@ -33,5 +33,9 @@ final class CommonAssembly: Assembly {
         container.register(CloudPaymentsManagerable.self) { _ in
             return CloudPaymentsManager(apiPublicId: "", apiSecret: "")
         }
+        
+        container.register(NetworkService.self) { _ in
+            return NetworkService()
+        }
     }
 }
