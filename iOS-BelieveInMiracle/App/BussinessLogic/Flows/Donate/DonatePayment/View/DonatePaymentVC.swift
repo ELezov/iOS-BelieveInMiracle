@@ -7,10 +7,42 @@ enum PayType {
     case auth
 }
 
-
+//swiftlint:disable large_tuple
 final class DonatePaymentVC:
 ViewController,
 DonatePaymentView {
+    
+    private lazy var numberCardView: TextFieldView? = {
+        let configModel = TextFieldViewConfigurationModel(
+            placeholder: L10n.Donate.Payment.Card.number,
+            type: .creditCard)
+        let textField = TextFieldView.setup(configModel: configModel)
+        return textField
+    }()
+    
+    private lazy var holderNameView: TextFieldView? = {
+        let configModel = TextFieldViewConfigurationModel(
+            placeholder: L10n.Donate.Payment.Card.holder,
+            type: .text)
+        let textField = TextFieldView.setup(configModel: configModel)
+        return textField
+    }()
+    
+    private lazy var expDateView: TextFieldView? = {
+        let configModel = TextFieldViewConfigurationModel(
+            placeholder: L10n.Donate.Payment.Card.expiration,
+            type: .expDate)
+        let textField = TextFieldView.setup(configModel: configModel)
+        return textField
+    }()
+    
+    private lazy var cvvView: TextFieldView? = {
+        let configModel = TextFieldViewConfigurationModel(
+            placeholder: L10n.Donate.Payment.Card.cvv,
+            type: .cvv)
+        let textField = TextFieldView.setup(configModel: configModel)
+        return textField
+    }()
     
     var onApplePay: PaymentCompletion?
     
@@ -23,15 +55,32 @@ DonatePaymentView {
     // MARK: - Outlets
     
     @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var stackView: UIStackView!
+    
+    @IBOutlet private weak var buttonContinue: ActionButton! {
+        didSet {
+            buttonContinue.status = .enabled
+            buttonContinue.setTitle(L10n.Donate.Payment.Card.pay, for: .normal)
+        }
+    }
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet private weak var textFieldCardNumber: UITextField!
-    @IBOutlet private weak var textFieldExpDate: UITextField!
-    @IBOutlet private weak var textFieldHolderName: UITextField!
-    @IBOutlet private weak var textFieldCVV: UITextField!
     @IBOutlet private weak var buttonApplePay: UIButton!
     
+    @IBOutlet private weak var cardView: UIView!
+    
+    @IBOutlet private weak var labelNumberCard: UILabel!
+    @IBOutlet private weak var labelExpDate: UILabel!
+    @IBOutlet private weak var labelCardHolder: UILabel!
+    
+    @IBOutlet weak var imageViewPaymentIcon: UIImageView! {
+        didSet {
+            imageViewPaymentIcon.contentMode = .scaleAspectFit
+        }
+    }
+    
     // Платежные системы для Apple Pay
-    let supportedPaymentNetworks = [PKPaymentNetwork.visa, PKPaymentNetwork.masterCard]
+    let supportedPaymentNetworks = [PKPaymentNetwork.visa,
+                                    PKPaymentNetwork.masterCard]
     let applePayMerchantID = "merchant.com.YOURDOMAIN" // Ваш ID для Apple Pay!
     
     
@@ -39,15 +88,7 @@ DonatePaymentView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textFieldCardNumber.delegate = self
-        textFieldExpDate.delegate = self
-        
-        self.loadingIndicator.isHidden = true
-        title = "Cloud Payments"
-        
-        buttonApplePay.isHidden = !PKPaymentAuthorizationViewController
-            .canMakePayments(usingNetworks: supportedPaymentNetworks) // Проверяем возможно ли использовать Apple Pay
+        configureUI()
     }
 
     
@@ -55,41 +96,7 @@ DonatePaymentView {
     
     @IBAction private func onPayClick(_ sender: Any) {
         
-        // Получаем введенные данные банковской карты
-        guard let cardNumber = textFieldCardNumber.text, !cardNumber.isEmpty else {
-            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
-                                    subtitle: L10n.Donate.Payment.enterCardNumber,
-                                    style: .danger).show()
-            return
-        }
-        
-        if !Card.isCardNumberValid(cardNumber) {
-            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
-                                    subtitle: L10n.Donate.Payment.enterCorrectCardNumber,
-                                    style: .danger).show()
-            return
-        }
-        
-        guard let expDate = textFieldExpDate.text, expDate.count == 5 else {
-            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
-                                    subtitle: L10n.Donate.Payment.enterExpirationDate,
-                                    style: .danger).show()
-            return
-        }
-        
-        guard let holderName = textFieldHolderName.text, !holderName.isEmpty else {
-            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
-                                    subtitle: L10n.Donate.Payment.enterCardHolder,
-                                    style: .danger).show()
-            return
-        }
-        
-        guard let cvv = textFieldCVV.text, !cvv.isEmpty else {
-            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
-                                    subtitle: L10n.Donate.Payment.enterCVVCode,
-                                    style: .danger).show()
-            return
-        }
+        guard let (cardNumber, holderName, expDate, cvv) = getPaymentInfoAndValid() else { return }
 
         // Создаем криптограмму карточных данных
         // Чтобы создать криптограмму необходим PublicID (свой PublicID можно посмотреть в личном кабинете и затем заменить в файле Constants)
@@ -103,7 +110,7 @@ DonatePaymentView {
                                     style: .danger).show()
             return
         }
-        
+
         // Используя методы API выполняем оплату по криптограмме
         // (charge (для одностадийного платежа) или auth (для двухстадийного))
         switch payType {
@@ -114,6 +121,45 @@ DonatePaymentView {
             auth(cardCryptogramPacket: packet,
                  cardHolderName: holderName)
         }
+    }
+    
+    func getPaymentInfoAndValid() -> (cardNumber: String, holderName: String, expDate: String, cvv: String)? {
+        // Получаем введенные данные банковской карты
+        guard let cardNumber = numberCardView?.textWithoutMask, !cardNumber.isEmpty else {
+            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
+                                    subtitle: L10n.Donate.Payment.enterCardNumber,
+                                    style: .danger).show()
+            return nil
+        }
+        
+        if !Card.isCardNumberValid(cardNumber) {
+            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
+                                    subtitle: L10n.Donate.Payment.enterCorrectCardNumber,
+                                    style: .danger).show()
+            return nil
+        }
+        
+        guard let expDate = expDateView?.text, expDateView?.dynamicFill.value ?? false else {
+            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
+                                    subtitle: L10n.Donate.Payment.enterExpirationDate,
+                                    style: .danger).show()
+            return nil
+        }
+        
+        guard let holderName = holderNameView?.text, !holderName.isEmpty else {
+            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
+                                    subtitle: L10n.Donate.Payment.enterCardHolder,
+                                    style: .danger).show()
+            return nil
+        }
+        
+        guard let cvv = cvvView?.text, cvvView?.dynamicFill.value ?? false else {
+            NotificationBanner.init(title: L10n.Donate.Payment.errorWord,
+                                    subtitle: L10n.Donate.Payment.enterCVVCode,
+                                    style: .danger).show()
+            return nil
+        }
+        return (cardNumber, holderName, expDate, cvv)
     }
     
     @IBAction private func onApplePayClick(_ sender: Any) {
@@ -170,49 +216,6 @@ extension DonatePaymentVC: UIWebViewDelegate {
             return false
         }
         return true
-    }
-}
-
-extension DonatePaymentVC: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
-        switch textField {
-            // Пример определения типа платежной системы по номеру карты:
-        // Определяем тип во время ввода номера карты и выводим данные в лог
-        case textFieldCardNumber:
-            print(Card.cardType(toString: Card.cardType(fromCardNumber: textField.text)))
-            return true
-        case textFieldExpDate:
-            // original answer https://stackoverflow.com/a/47077265
-            if range.length > 0 {
-                return true
-            }
-            if string.isEmpty {
-                return false
-            }
-            if range.location > 4 {
-                return false
-            }
-            var originalText = textField.text
-            let replacementText = string.replacingOccurrences(of: " ", with: "")
-            
-            // Verify entered text is a numeric value
-            if !CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: replacementText)) {
-                return false
-            }
-            
-            // Put / after 2 digit
-            if range.location == 2 {
-                originalText?.append("/")
-                textField.text = originalText
-            }
-            return true
-            
-        default:
-            return true
-        }
     }
 }
 
@@ -346,10 +349,75 @@ private extension DonatePaymentVC {
             PKPaymentSummaryItem(label: "Рубль", amount: 1) // Информация о товаре (название и цена)
         ]
         guard
-            let vc = PKPaymentAuthorizationViewController(paymentRequest: request)
+            let viewController = PKPaymentAuthorizationViewController(paymentRequest: request)
             else { return }
         
-        vc.delegate = self
-        self.present(vc, animated: true)
+        viewController.delegate = self
+        self.present(viewController, animated: true)
+    }
+}
+
+
+// MARK: - Configure UI
+fileprivate extension DonatePaymentVC {
+    
+    func configureUI() {
+        self.loadingIndicator.isHidden = true
+        title = "!Cloud Payments"
+        configureCardView()
+        configureInputs()
+        buttonApplePay.isHidden = !PKPaymentAuthorizationViewController
+            .canMakePayments(usingNetworks: supportedPaymentNetworks) // Проверяем возможно ли использовать Apple Pay
+    }
+    
+    func configureCardView() {
+        cardView.backgroundColor = UIColor.init(Color.primaryDark)
+        cardView.layer.cornerRadius = 8
+        labelNumberCard.font = UIFont.systemFont(ofSize: 20)
+        labelNumberCard.textColor = UIColor(Color.textPrimaryInverse)
+        labelExpDate.textColor = UIColor(Color.textPrimaryInverse)
+        labelExpDate.font = UIFont.systemFont(ofSize: 15)
+        labelCardHolder.textColor = UIColor(Color.textPrimaryInverse)
+        labelCardHolder.font = FontStyle.body2.style()
+    }
+    
+    func configureInputs() {
+        guard let nView = numberCardView else { return }
+        stackView.addArrangedSubview(nView)
+        nView.dynamicChange.bindAndFire(self) { [weak self] text in
+            let cardType = Card.cardType(fromCardNumber: nView.textWithoutMask)
+            var currentPaymentImage: Image?
+            switch cardType {
+            case Maestro:
+                currentPaymentImage = Asset.Donate.Payment.maestro.image
+            case Mir:
+                currentPaymentImage = Asset.Donate.Payment.mir.image
+            case Visa:
+                currentPaymentImage = Asset.Donate.Payment.visa.image
+            case MasterCard:
+                currentPaymentImage = Asset.Donate.Payment.mastercard.image
+            default:
+                currentPaymentImage = nil
+            }
+            self?.imageViewPaymentIcon.image = currentPaymentImage
+            self?.labelNumberCard.text = text.new.isEmpty ?
+                "0000 0000 0000 0000" : text.new
+        }
+        
+        guard let hView = holderNameView else { return }
+        hView.dynamicChange.bindAndFire(self) { [weak self] text in
+            self?.labelCardHolder.text = text.new.isEmpty ?
+                "CARDHOLDER NAME" : text.new
+        }
+        stackView.addArrangedSubview(hView)
+        
+        guard let eView = expDateView else { return }
+        stackView.addArrangedSubview(eView)
+        eView.dynamicChange.bindAndFire(self) { [weak self] text in
+            self?.labelExpDate.text = text.new.isEmpty ? "00/00" : text.new
+        }
+        
+        guard let cView = cvvView else { return }
+        stackView.addArrangedSubview(cView)
     }
 }

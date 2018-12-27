@@ -49,6 +49,12 @@ internal enum Asset {
   }
   internal enum Donate {
     internal static let card = ImageAsset(name: "card")
+    internal enum Payment {
+      internal static let maestro = ImageAsset(name: "maestro")
+      internal static let mastercard = ImageAsset(name: "mastercard")
+      internal static let mir = ImageAsset(name: "mir")
+      internal static let visa = ImageAsset(name: "visa")
+    }
     internal static let phone = ImageAsset(name: "phone")
   }
   internal enum TabBar {
@@ -83,6 +89,10 @@ internal enum Asset {
   internal static let allImages: [ImageAsset] = [
     Common.indicator,
     Donate.card,
+    Donate.Payment.maestro,
+    Donate.Payment.mastercard,
+    Donate.Payment.mir,
+    Donate.Payment.visa,
     Donate.phone,
     TabBar.info,
     TabBar.kids,

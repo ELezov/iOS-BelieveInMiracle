@@ -49,6 +49,19 @@ internal enum L10n {
       internal static let errorWord = L10n.tr("Localizable", "donate.payment.errorWord")
       /// Информация
       internal static let informationWord = L10n.tr("Localizable", "donate.payment.informationWord")
+
+      internal enum Card {
+        /// Код безопасности (CVV)
+        internal static let cvv = L10n.tr("Localizable", "donate.payment.card.cvv")
+        /// Срок действия карты (mm/yy)
+        internal static let expiration = L10n.tr("Localizable", "donate.payment.card.expiration")
+        /// Имя держателя карты
+        internal static let holder = L10n.tr("Localizable", "donate.payment.card.holder")
+        /// Номер карты
+        internal static let number = L10n.tr("Localizable", "donate.payment.card.number")
+        /// Перевести
+        internal static let pay = L10n.tr("Localizable", "donate.payment.card.pay")
+      }
     }
 
     internal enum Sms {

@@ -15,6 +15,9 @@ class TextFieldView: UIView {
     enum MaskType {
         case none
         case phone
+        case credtiCard
+        case expDate
+        case cvv
     }
     
     enum ErrorType: String {
@@ -26,7 +29,11 @@ class TextFieldView: UIView {
     
     
     var dynamicFill: Dynamic<Bool> = Dynamic(false)
+    var dynamicChange: Dynamic<String> = Dynamic("")
     var text: String = ""
+    var textWithoutMask: String {
+        return maskedResult?.extractedValue ?? text
+    }
     
     private var maskFormat: MaskFormat = .none
     private var maskedResult: Mask.Result?
@@ -68,6 +75,7 @@ class TextFieldView: UIView {
     
     func setText(_ text: String) {
         textField.text = text
+        dynamicChange.value = text
         self.text = text
         guard validate(text) else {
             switch type {
@@ -116,7 +124,7 @@ extension TextFieldView: UITextFieldDelegate {
             return true
         }
         let masked = mask(input: newString, format: maskFormat.rawValue)
-        
+    
         setText(masked?.formattedText.string ?? "")
         if let isFilled = masked?.complete {
             maskedResult = masked
@@ -136,13 +144,16 @@ extension TextFieldView: UITextFieldDelegate {
 fileprivate extension TextFieldView {
     
     enum MaskFormat: String {
-        case none = ""
-        case phone = "+7 ([000]) [000]-[00]-[00]"
+        case none       = ""
+        case phone      = "+7 ([000]) [000]-[00]-[00]"
+        case creditCard = "[0000] [0000] [0000] [0000]"
+        case expDate    = "[00]/[00]"
+        case cvv        = "[000]"
     }
     
     enum MaskHint: String {
-        case none = ""
-        case phone = "+7 (000) 000-00-00"
+        case none =     ""
+        case phone =    "+7 (000) 000-00-00"
     }
 
     
@@ -163,6 +174,12 @@ fileprivate extension TextFieldView {
             maskType = .none
         case .phone:
             maskType = .phone
+        case .creditCard:
+            maskType = .credtiCard
+        case .expDate:
+            maskType = .expDate
+        case .cvv:
+            maskType = .cvv
         }
     }
     
@@ -170,7 +187,13 @@ fileprivate extension TextFieldView {
         switch maskType {
         case .phone:
             maskFormat = .phone
-        default:
+        case .credtiCard:
+            maskFormat = .creditCard
+        case .expDate:
+            maskFormat = .expDate
+        case .cvv:
+            maskFormat = .cvv
+        case .none:
             break
         }
     }
@@ -179,6 +202,12 @@ fileprivate extension TextFieldView {
         switch maskType {
         case .phone:
             textField.keyboardType = .phonePad
+        case .credtiCard:
+            textField.keyboardType = .decimalPad
+        case .expDate:
+            textField.keyboardType = .decimalPad
+        case .cvv:
+            textField.keyboardType = .decimalPad
         default:
             break
         }
@@ -198,6 +227,8 @@ extension TextFieldView {
     
     enum RegexType: String {
         case emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        case cvvRegex   = "^[0-9]{3,4}$"
+        case expDate    = "^[0-9]{2}/[0-9]{2}$"
     }
     
     func validate(_ value: String) -> Bool {
@@ -207,6 +238,12 @@ extension TextFieldView {
             return true
         case .mail:
             return validate(value, type: .emailRegex)
+        case .creditCard:
+            return true
+        case .cvv:
+            return validate(value, type: .cvvRegex)
+        case .expDate:
+            return validate(value, type: .expDate)
         }
     }
     
@@ -225,4 +262,7 @@ enum TextFieldType {
     case mail
     case phone
     case text
+    case creditCard
+    case expDate
+    case cvv
 }

@@ -25,6 +25,12 @@
 "donate.payment.informationWord" = "Информация";
 "donate.payment.errorCreatingCryptoPacket" = "Ошибка при создании крипто-пакета";
 
+"donate.payment.card.number" = "Номер карты";
+"donate.payment.card.holder" = "Имя держателя карты";
+"donate.payment.card.expiration" = "Срок действия карты (mm/yy)";
+"donate.payment.card.cvv" = "Код безопасности (CVV)";
+"donate.payment.card.pay" = "Перевести";
+
 // Volunterr
 "volunteer.hospitalVolunteer.title" = "Больничные волонтеры";
 "volunteer.hospitalVolunteer.description" = "Работа с детьми, находящимися на лечении в региональных ЛПУ: творческие занятия и мастер-классы, педгогические и психологические занятия (при наличии компетенций и потребности у ребенка или родителя), модернизация больничной инфраструктуры детских лечебно - профилактических учреждений.";
