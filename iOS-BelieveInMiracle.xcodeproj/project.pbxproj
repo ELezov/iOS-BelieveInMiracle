@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333CBCA321D656430059444F /* iCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333CBCA221D656430059444F /* iCreditCard.swift */; };
 		337CA9FA21AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F521AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift */; };
 		337CA9FB21AC57D800CD4A2F /* DonateWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F621AC57D800CD4A2F /* DonateWelcomeView.swift */; };
 		337CA9FC21AC57D800CD4A2F /* DonateWelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337CA9F721AC57D800CD4A2F /* DonateWelcomeVC.swift */; };
@@ -142,6 +143,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333CBCA221D656430059444F /* iCreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCreditCard.swift; sourceTree = "<group>"; };
 		337CA9F521AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeViewModelAbstract.swift; sourceTree = "<group>"; };
 		337CA9F621AC57D800CD4A2F /* DonateWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeView.swift; sourceTree = "<group>"; };
 		337CA9F721AC57D800CD4A2F /* DonateWelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateWelcomeVC.swift; sourceTree = "<group>"; };
@@ -305,6 +307,14 @@
 				8F92715826B156BF1178BCCB /* Pods-iOS-BelieveInMiracle.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		333CBCA121D656300059444F /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				333CBCA221D656430059444F /* iCreditCard.swift */,
+			);
+			path = CreditCard;
 			sourceTree = "<group>";
 		};
 		336B1F7F21AC56BD00A3094D /* DonateWelcome */ = {
@@ -524,6 +534,7 @@
 		98307C57217F60000007D279 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				333CBCA121D656300059444F /* CreditCard */,
 				98307C59217F600C0007D279 /* Buttons */,
 				9871983421836A4D00C642F3 /* TextFieldView.swift */,
 				9871983621836A5800C642F3 /* TextFieldView.xib */,
@@ -1245,6 +1256,7 @@
 				98F0CAF221821AEF00066A4F /* RequestVolunteerInfoConfigurationModel.swift in Sources */,
 				98A1E86F2176381F00522557 /* DonateFlowCoordinator.swift in Sources */,
 				33B1FB0B21ADAC4E00080630 /* TransactionResponse.swift in Sources */,
+				333CBCA321D656430059444F /* iCreditCard.swift in Sources */,
 				98F0CAEE21821A2D00066A4F /* RequestVolunteerInfoViewModel.swift in Sources */,
 				982CF0922178F3FF002A235B /* RequestVolunteerFlowCoordinator.swift in Sources */,
 				988CC9FF2178E5B600E87CCD /* DonateInputMoneyVC.swift in Sources */,

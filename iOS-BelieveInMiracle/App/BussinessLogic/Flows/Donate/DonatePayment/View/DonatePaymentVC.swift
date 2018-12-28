@@ -12,6 +12,27 @@ final class DonatePaymentVC:
 ViewController,
 DonatePaymentView {
     
+    private lazy var cardView: CreditCardView = {
+        return CreditCardView(cardStyleWithBackgroundImage: .withBothBankIcon,
+                              withCardImage: UIImage(named: "simpleBackgroundImage"),
+                              pinIcon: .chip2,
+                              creditIcons: .maestroIcon)
+    }()
+    
+    private lazy var buttonContinue: ActionButton = {
+        let button = ActionButton(frame: CGRect.zero)
+        button.status = .enabled
+        button.setTitle(L10n.Donate.Payment.Card.pay, for: .normal)
+        return button
+    }()
+    
+    private lazy var applePayButton: ActionButton = {
+        let button = ActionButton(frame: CGRect.zero)
+        button.status = .enabled
+        button.setTitle("!Apple Pay", for: .normal)
+        return button
+    }()
+    
     private lazy var numberCardView: TextFieldView? = {
         let configModel = TextFieldViewConfigurationModel(
             placeholder: L10n.Donate.Payment.Card.number,
@@ -56,27 +77,7 @@ DonatePaymentView {
     
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var stackView: UIStackView!
-    
-    @IBOutlet private weak var buttonContinue: ActionButton! {
-        didSet {
-            buttonContinue.status = .enabled
-            buttonContinue.setTitle(L10n.Donate.Payment.Card.pay, for: .normal)
-        }
-    }
     @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet private weak var buttonApplePay: UIButton!
-    
-    @IBOutlet private weak var cardView: UIView!
-    
-    @IBOutlet private weak var labelNumberCard: UILabel!
-    @IBOutlet private weak var labelExpDate: UILabel!
-    @IBOutlet private weak var labelCardHolder: UILabel!
-    
-    @IBOutlet weak var imageViewPaymentIcon: UIImageView! {
-        didSet {
-            imageViewPaymentIcon.contentMode = .scaleAspectFit
-        }
-    }
     
     // Платежные системы для Apple Pay
     let supportedPaymentNetworks = [PKPaymentNetwork.visa,
@@ -94,7 +95,7 @@ DonatePaymentView {
     
     // MARK: - Actions
     
-    @IBAction private func onPayClick(_ sender: Any) {
+    @objc func onPayClick() {
         
         guard let (cardNumber, holderName, expDate, cvv) = getPaymentInfoAndValid() else { return }
 
@@ -162,7 +163,7 @@ DonatePaymentView {
         return (cardNumber, holderName, expDate, cvv)
     }
     
-    @IBAction private func onApplePayClick(_ sender: Any) {
+    func onApplePayClick() {
         showApplePayPayment(merchantId: applePayMerchantID, paymentNetworks: supportedPaymentNetworks)
     }
 }
@@ -357,56 +358,57 @@ private extension DonatePaymentVC {
     }
 }
 
-
 // MARK: - Configure UI
 fileprivate extension DonatePaymentVC {
     
     func configureUI() {
         self.loadingIndicator.isHidden = true
         title = "!Cloud Payments"
-        configureCardView()
         configureInputs()
-        buttonApplePay.isHidden = !PKPaymentAuthorizationViewController
-            .canMakePayments(usingNetworks: supportedPaymentNetworks) // Проверяем возможно ли использовать Apple Pay
-    }
-    
-    func configureCardView() {
-        cardView.backgroundColor = UIColor.init(Color.primaryDark)
-        cardView.layer.cornerRadius = 8
-        labelNumberCard.font = UIFont.systemFont(ofSize: 20)
-        labelNumberCard.textColor = UIColor(Color.textPrimaryInverse)
-        labelExpDate.textColor = UIColor(Color.textPrimaryInverse)
-        labelExpDate.font = UIFont.systemFont(ofSize: 15)
-        labelCardHolder.textColor = UIColor(Color.textPrimaryInverse)
-        labelCardHolder.font = FontStyle.body2.style()
+//        buttonApplePay.isHidden = !PKPaymentAuthorizationViewController
+//            .canMakePayments(usingNetworks: supportedPaymentNetworks) // Проверяем возможно ли использовать Apple Pay
     }
     
     func configureInputs() {
+        let containerCardView = UIView()
+        containerCardView.addSubview(cardView)
+        stackView.addArrangedSubview(containerCardView)
+        
+        containerCardView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(20)
+            make.height.equalTo(220)
+        }
+        
+        cardView.snp.makeConstraints({ (make) in
+            make.top.left.equalToSuperview().offset(16)
+            make.right.bottom.equalToSuperview().offset(-16)
+        })
+        
         guard let nView = numberCardView else { return }
         stackView.addArrangedSubview(nView)
         nView.dynamicChange.bindAndFire(self) { [weak self] text in
             let cardType = Card.cardType(fromCardNumber: nView.textWithoutMask)
-            var currentPaymentImage: Image?
+            var creditType: CreditIcons = .undefined
             switch cardType {
             case Maestro:
-                currentPaymentImage = Asset.Donate.Payment.maestro.image
+                creditType = .maestroIcon
             case Mir:
-                currentPaymentImage = Asset.Donate.Payment.mir.image
+                creditType = .westernUnionIcon
             case Visa:
-                currentPaymentImage = Asset.Donate.Payment.visa.image
+                creditType = .visaIcon
             case MasterCard:
-                currentPaymentImage = Asset.Donate.Payment.mastercard.image
+                creditType = .masterCard
             default:
-                currentPaymentImage = nil
+                creditType = .undefined
             }
-            self?.imageViewPaymentIcon.image = currentPaymentImage
-            self?.labelNumberCard.text = text.new.isEmpty ?
+            self?.cardView.creditCardNumbers.text = text.new.isEmpty ?
                 "0000 0000 0000 0000" : text.new
+            self?.cardView.updateCreditIcon(creditIcon: creditType)
         }
         
         guard let hView = holderNameView else { return }
         hView.dynamicChange.bindAndFire(self) { [weak self] text in
-            self?.labelCardHolder.text = text.new.isEmpty ?
+            self?.cardView.cardholderLabel.text = text.new.isEmpty ?
                 "CARDHOLDER NAME" : text.new
         }
         stackView.addArrangedSubview(hView)
@@ -414,10 +416,25 @@ fileprivate extension DonatePaymentVC {
         guard let eView = expDateView else { return }
         stackView.addArrangedSubview(eView)
         eView.dynamicChange.bindAndFire(self) { [weak self] text in
-            self?.labelExpDate.text = text.new.isEmpty ? "00/00" : text.new
+            self?.cardView.creditCardLastUsage.text = text.new.isEmpty ? "00/00" : text.new
         }
         
         guard let cView = cvvView else { return }
         stackView.addArrangedSubview(cView)
+        
+        let fillView = UIView()
+        stackView.addArrangedSubview(fillView)
+        fillView.snp.makeConstraints { make in
+            make.height.equalTo(16)
+        }
+        
+        stackView.addArrangedSubview(buttonContinue)
+        buttonContinue.snp.makeConstraints { make in
+            make.height.equalTo(56)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
+        buttonContinue.addTarget(self, action: #selector(onPayClick), for: .touchUpInside)
     }
 }

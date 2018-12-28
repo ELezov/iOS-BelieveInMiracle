@@ -45,6 +45,36 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Common {
+    internal enum ICard {
+      internal static let americanExpressIcon = ImageAsset(name: "americanExpressIcon")
+      internal static let bitcoinIcon = ImageAsset(name: "bitcoinIcon")
+      internal static let bluePayIcon = ImageAsset(name: "bluePayIcon")
+      internal static let cvsIcon = ImageAsset(name: "cVSIcon")
+      internal static let chip1 = ImageAsset(name: "chip1")
+      internal static let chip2 = ImageAsset(name: "chip2")
+      internal static let chip3 = ImageAsset(name: "chip3")
+      internal static let cirrusIcon = ImageAsset(name: "cirrusIcon")
+      internal static let citiIcon = ImageAsset(name: "citiIcon")
+      internal static let clickBank = ImageAsset(name: "clickBank")
+      internal static let creditCardBackground = ImageAsset(name: "creditCardBackground")
+      internal static let googleWalletIcon = ImageAsset(name: "googleWalletIcon")
+      internal static let hsbcIcon = ImageAsset(name: "hsbcIcon")
+      internal static let kredikartTaslak = ImageAsset(name: "kredikartTaslak")
+      internal static let maestro2Icon = ImageAsset(name: "maestro2Icon")
+      internal static let maestroIcon = ImageAsset(name: "maestroIcon")
+      internal static let masterCard = ImageAsset(name: "masterCard")
+      internal static let masterCardDetail = ImageAsset(name: "masterCardDetail")
+      internal static let masterCardMini = ImageAsset(name: "masterCardMini")
+      internal static let moneygramIcon = ImageAsset(name: "moneygramIcon")
+      internal static let paypal2Icon = ImageAsset(name: "paypal2Icon")
+      internal static let paypalIcon = ImageAsset(name: "paypalIcon")
+      internal static let simpleBackgroundImage = ImageAsset(name: "simpleBackgroundImage")
+      internal static let visaIcon = ImageAsset(name: "visaIcon")
+      internal static let visaIconBigger = ImageAsset(name: "visaIconBigger")
+      internal static let visaIconText = ImageAsset(name: "visaIconText")
+      internal static let wepayIcon = ImageAsset(name: "wepayIcon")
+      internal static let westernUnionIcon = ImageAsset(name: "westernUnionIcon")
+    }
     internal static let indicator = ImageAsset(name: "indicator")
   }
   internal enum Donate {
@@ -87,6 +117,34 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    Common.ICard.americanExpressIcon,
+    Common.ICard.bitcoinIcon,
+    Common.ICard.bluePayIcon,
+    Common.ICard.cvsIcon,
+    Common.ICard.chip1,
+    Common.ICard.chip2,
+    Common.ICard.chip3,
+    Common.ICard.cirrusIcon,
+    Common.ICard.citiIcon,
+    Common.ICard.clickBank,
+    Common.ICard.creditCardBackground,
+    Common.ICard.googleWalletIcon,
+    Common.ICard.hsbcIcon,
+    Common.ICard.kredikartTaslak,
+    Common.ICard.maestro2Icon,
+    Common.ICard.maestroIcon,
+    Common.ICard.masterCard,
+    Common.ICard.masterCardDetail,
+    Common.ICard.masterCardMini,
+    Common.ICard.moneygramIcon,
+    Common.ICard.paypal2Icon,
+    Common.ICard.paypalIcon,
+    Common.ICard.simpleBackgroundImage,
+    Common.ICard.visaIcon,
+    Common.ICard.visaIconBigger,
+    Common.ICard.visaIconText,
+    Common.ICard.wepayIcon,
+    Common.ICard.westernUnionIcon,
     Common.indicator,
     Donate.card,
     Donate.Payment.maestro,

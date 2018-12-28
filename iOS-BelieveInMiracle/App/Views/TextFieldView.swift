@@ -31,12 +31,14 @@ class TextFieldView: UIView {
     var dynamicFill: Dynamic<Bool> = Dynamic(false)
     var dynamicChange: Dynamic<String> = Dynamic("")
     var text: String = ""
-    var textWithoutMask: String {
-        return maskedResult?.extractedValue ?? text
-    }
+    var textWithoutMask: String = ""
     
     private var maskFormat: MaskFormat = .none
-    private var maskedResult: Mask.Result?
+    private var maskedResult: Mask.Result? {
+        didSet {
+            textWithoutMask = maskedResult?.extractedValue ?? text
+        }
+    }
     
     var type: TextFieldType = .text {
         didSet {
@@ -109,11 +111,6 @@ extension TextFieldView: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         
-        guard !string.isEmpty else {
-            dynamicFill.value = false
-            return true
-        }
-        
         guard !maskFormat.rawValue.isEmpty else {
             return true
         }
@@ -129,6 +126,11 @@ extension TextFieldView: UITextFieldDelegate {
         if let isFilled = masked?.complete {
             maskedResult = masked
             dynamicFill.value = isFilled
+        }
+        
+        if string.isEmpty {
+            dynamicFill.value = false
+            setText(newString)
         }
 
         return false
