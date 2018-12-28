@@ -133,7 +133,7 @@ class CreditCardView: UIView {
     lazy var cardholderLabel: UILabel = {
         let label: UILabel = UILabel()
         label.text = "CARDHOLDER"
-        label.font = UIFont.init(name: "Avenir-Black", size: 20)
+        label.font = UIFont.init(name: "Avenir-Black", size: 15)
         label.textColor = UIColor.white
         return label
     }()
@@ -418,6 +418,7 @@ class CreditCardView: UIView {
         
         cardholderLabel.snp.makeConstraints({ (make) in
             make.left.equalTo(creditCardNumbers)
+            make.right.equalTo(cardBrandImageViewBottom.snp.left).offset(-10)
             make.bottom.equalTo(self.snp.bottom).offset(-10)
         })
     }

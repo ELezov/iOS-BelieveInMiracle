@@ -380,8 +380,8 @@ fileprivate extension DonatePaymentVC {
         }
         
         cardView.snp.makeConstraints({ (make) in
-            make.top.left.equalToSuperview().offset(16)
-            make.right.bottom.equalToSuperview().offset(-16)
+            make.top.left.equalToSuperview().offset(8)
+            make.right.bottom.equalToSuperview().offset(-8)
         })
         
         guard let nView = numberCardView else { return }
