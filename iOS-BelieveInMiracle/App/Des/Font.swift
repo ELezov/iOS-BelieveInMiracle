@@ -37,7 +37,7 @@ fileprivate extension FontStyle {
         case .subtitle1:
             return FontFamily.Corbel.regular.font(size: 12)
         case .subtitle2:
-            return FontFamily.Corbel.italic.font(size: 16)
+            return FontFamily.Corbel.regular.font(size: 16)
         case .button:
             return FontFamily.Corbel.regular.font(size: 15)
         case .buttonColored:

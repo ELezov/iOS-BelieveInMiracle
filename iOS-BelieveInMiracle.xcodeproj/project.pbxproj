@@ -140,6 +140,7 @@
 		98F0CB0521822B4D00066A4F /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F0CB0221822B4D00066A4F /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		98F69FB22178F8A800D7EAD3 /* RequestVolunteerVCTableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F69FB12178F8A700D7EAD3 /* RequestVolunteerVCTableBuilder.swift */; };
 		98F69FB42178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F69FB32178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift */; };
+		D51A7A7921E29CCA00AAADA0 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A7A7821E29CCA00AAADA0 /* UIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -285,6 +286,7 @@
 		98F0CB0221822B4D00066A4F /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		98F69FB12178F8A700D7EAD3 /* RequestVolunteerVCTableBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerVCTableBuilder.swift; sourceTree = "<group>"; };
 		98F69FB32178F8B200D7EAD3 /* RequestVolunteerVCTableBuilderAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestVolunteerVCTableBuilderAbstract.swift; sourceTree = "<group>"; };
+		D51A7A7821E29CCA00AAADA0 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		D618ED1EC3042E42C25C2907 /* Pods_iOS_BelieveInMiracle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_BelieveInMiracle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -517,6 +519,7 @@
 			children = (
 				33F0CE9721AC5E17000B7A0D /* Font.swift */,
 				98307C50217F5C930007D279 /* Colors */,
+				D51A7A7821E29CCA00AAADA0 /* UIConstants.swift */,
 			);
 			path = Des;
 			sourceTree = "<group>";
@@ -1209,6 +1212,7 @@
 				982CF0972178F5F7002A235B /* RequestVolunterTypeBaseCellView.swift in Sources */,
 				98F0CB0321822B4D00066A4F /* SkyFloatingLabelTextField.swift in Sources */,
 				98A1E8962176563D00522557 /* URLFlowMixin.swift in Sources */,
+				D51A7A7921E29CCA00AAADA0 /* UIConstants.swift in Sources */,
 				9887FFAE21664B73003FC06F /* MainView.swift in Sources */,
 				33B1FAEE21ADA85200080630 /* Transaction.swift in Sources */,
 				98BA740C216D1CEC00886AD2 /* ViewModel.swift in Sources */,

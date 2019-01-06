@@ -375,13 +375,13 @@ fileprivate extension DonatePaymentVC {
         stackView.addArrangedSubview(containerCardView)
         
         containerCardView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(20)
-            make.height.equalTo(220)
+            make.top.equalToSuperview().offset(UIConstants.Margin.default)
+            make.height.equalTo(UIScreen.main.bounds.size.width * 0.6)
         }
         
         cardView.snp.makeConstraints({ (make) in
-            make.top.left.equalToSuperview().offset(8)
-            make.right.bottom.equalToSuperview().offset(-8)
+            make.top.left.equalToSuperview().offset(UIConstants.Margin.small)
+            make.right.bottom.equalToSuperview().offset(-UIConstants.Margin.small)
         })
         
         guard let nView = numberCardView else { return }
@@ -425,15 +425,15 @@ fileprivate extension DonatePaymentVC {
         let fillView = UIView()
         stackView.addArrangedSubview(fillView)
         fillView.snp.makeConstraints { make in
-            make.height.equalTo(16)
+            make.height.equalTo(UIConstants.Margin.default)
         }
         
         stackView.addArrangedSubview(buttonContinue)
         buttonContinue.snp.makeConstraints { make in
             make.height.equalTo(56)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.bottom.equalToSuperview().offset(-16)
+            make.left.equalToSuperview().offset(UIConstants.Margin.default)
+            make.right.equalToSuperview().offset(-UIConstants.Margin.default)
+            make.bottom.equalToSuperview().offset(-UIConstants.Margin.default)
         }
         buttonContinue.addTarget(self, action: #selector(onPayClick), for: .touchUpInside)
     }

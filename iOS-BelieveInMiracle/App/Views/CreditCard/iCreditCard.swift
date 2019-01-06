@@ -11,6 +11,12 @@ import UIKit
 //swiftlint:disable cyclomatic_complexity type_body_length function_body_length
 class CreditCardView: UIView {
     
+    enum Constants {
+        enum Height {
+            static let separator: CGFloat = 0.0
+        }
+    }
+    
     lazy var contentView: UIView = {
         let view: UIView = UIView()
         view.backgroundColor = UIColor.clear
@@ -319,8 +325,8 @@ class CreditCardView: UIView {
         })
         
         chipIconImageView.snp.makeConstraints({ (make) in
-            make.height.equalTo(40)
-            make.width.equalTo(60)
+            make.height.equalTo(30)
+            make.width.equalTo(45)
             make.left.equalTo(self.snp.left).offset(15)
             make.bottom.equalTo(self.snp.centerY)
         })
@@ -362,7 +368,7 @@ class CreditCardView: UIView {
             topSeparator.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.snp.left)
                 make.right.equalTo(self.snp.right)
-                make.height.equalTo(2)
+                make.height.equalTo(Constants.Height.separator)
                 make.top.equalTo(cardBrandName.snp.bottom).offset(1)
             })
         } else if style == .withBottomBankIcon {
@@ -376,7 +382,7 @@ class CreditCardView: UIView {
             topSeparator.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.snp.left)
                 make.right.equalTo(self.snp.right)
-                make.height.equalTo(2)
+                make.height.equalTo(Constants.Height.separator)
                 make.top.equalTo(self.snp.top).offset(41)
             })
         } else if style == .withTopBankIcon {
@@ -390,7 +396,7 @@ class CreditCardView: UIView {
             topSeparator.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.snp.left)
                 make.right.equalTo(self.snp.right)
-                make.height.equalTo(2)
+                make.height.equalTo(Constants.Height.separator)
                 make.top.equalTo(cardBrandImageView.snp.bottom).offset(1)
             })
         } else {
@@ -411,7 +417,7 @@ class CreditCardView: UIView {
             topSeparator.snp.makeConstraints({ (make) in
                 make.left.equalTo(self.snp.left)
                 make.right.equalTo(self.snp.right)
-                make.height.equalTo(2)
+                make.height.equalTo(Constants.Height.separator)
                 make.top.equalTo(cardBrandImageView.snp.bottom).offset(1)
             })
         }
