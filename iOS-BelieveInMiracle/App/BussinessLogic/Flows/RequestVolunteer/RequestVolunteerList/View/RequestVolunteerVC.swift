@@ -10,7 +10,6 @@ RequestVolunteerView {
         didSet {
             tableView.separatorStyle = .none
             tableView.dataSource = self
-            //tableViewModel?.tableView = tableView
             tableView.register(nibModels: [RequestVolunterTypeBaseCellViewModel.self,
                                            RequestVolunterTypeDescriptionCellViewModel.self])
         }
@@ -30,8 +29,6 @@ RequestVolunteerView {
     
     var viewModel: RequestVolunteerViewModelAbstract?
     var tableBuilder: RequestVolunteerVCTableBuilderAbstract?
-    //var tableViewModel: TableManagerable?
-    
     var tableViewModels = [CellViewModel]()
     
     var checkArray: [Bool]?
@@ -40,8 +37,6 @@ RequestVolunteerView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.statusBarStyle = .lightContent
-        setNeedsStatusBarAppearanceUpdate()
         configureTableView()
     }
     
@@ -90,7 +85,7 @@ fileprivate extension RequestVolunteerVC {
             case .expanded:
                 guard
                     let index = self.tableViewModels.index(
-                    where: { ($0 as? RequestVolunterTypeBaseCellViewModel) === model  }),
+                    where: { ($0 as? RequestVolunterTypeBaseCellViewModel) === model }),
                     let _ = self.tableViewModels[index + 1] as? RequestVolunterTypeDescriptionCellViewModel
                 else { return }
                 let descriptionIndex = index + 1
@@ -109,6 +104,5 @@ fileprivate extension RequestVolunteerVC {
         checkArray = Array(repeating: false, count: items.count)
         tableViewModels = items
         tableView.reloadData()
-        //tableViewModel?.setNewItems([items])
     }
 }

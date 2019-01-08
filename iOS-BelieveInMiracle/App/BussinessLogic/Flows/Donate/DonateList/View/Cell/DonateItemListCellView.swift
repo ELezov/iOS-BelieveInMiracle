@@ -16,20 +16,20 @@ class DonateItemListCellView: UITableViewCell {
             iconImageView.contentMode = .scaleAspectFit
         }
     }
-    @IBOutlet weak var titleLabel: UILabel! {
+    @IBOutlet weak var titleLabel: LabelTitle1! {
         didSet {
-            titleLabel.textColor = UIColor(Color.textPrimaryDark)
+            titleLabel.textColor = UIColor(Color.Base.primaryDark)
         }
     }
-    @IBOutlet weak var descriptionLabel: UILabel! {
+    @IBOutlet weak var descriptionLabel: LabelSubtitle1! {
         didSet {
-            descriptionLabel.font = UIFont.systemFont(ofSize: 12.0)
-            descriptionLabel.textColor = UIColor(Color.textPrimaryLight)
+            
+            descriptionLabel.textColor = UIColor(Color.Text.primaryLight)
         }
     }
     @IBOutlet weak var separatorView: UIView! {
         didSet {
-            separatorView.backgroundColor = UIColor(Color.separator)
+            separatorView.backgroundColor = UIColor(Color.Base.separator)
         }
     }
     

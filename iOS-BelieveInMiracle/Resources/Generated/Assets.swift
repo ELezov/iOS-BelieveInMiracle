@@ -44,6 +44,11 @@ internal struct ColorAsset {
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal enum About {
+    internal static let facebook = ImageAsset(name: "facebook")
+    internal static let instagram = ImageAsset(name: "instagram")
+    internal static let vkontakte = ImageAsset(name: "vkontakte")
+  }
   internal enum Common {
     internal enum ICard {
       internal static let americanExpressIcon = ImageAsset(name: "americanExpressIcon")
@@ -117,6 +122,9 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    About.facebook,
+    About.instagram,
+    About.vkontakte,
     Common.ICard.americanExpressIcon,
     Common.ICard.bitcoinIcon,
     Common.ICard.bluePayIcon,

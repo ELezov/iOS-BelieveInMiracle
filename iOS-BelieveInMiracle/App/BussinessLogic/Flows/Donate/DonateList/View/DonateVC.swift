@@ -10,7 +10,7 @@ DonateView {
         didSet {
             tableView.separatorStyle = .none
             tableView.register(nibModels: [DonateItemListCellViewModel.self])
-            tableView.backgroundColor = UIColor(Color.backgroundLight)
+            tableView.backgroundColor = UIColor(Color.Base.white)
             tableViewModel?.tableView = tableView
         }
     }

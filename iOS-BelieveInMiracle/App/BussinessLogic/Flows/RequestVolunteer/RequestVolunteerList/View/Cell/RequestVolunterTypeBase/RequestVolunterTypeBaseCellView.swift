@@ -36,7 +36,7 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var separatorView: UIView! {
         didSet {
-            separatorView.backgroundColor = UIColor(Color.separator)
+            separatorView.backgroundColor = UIColor(Color.Base.separator)
         }
     }
     

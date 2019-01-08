@@ -18,7 +18,7 @@ class RequestVolunterTypeDescriptionCellView: UITableViewCell {
     
     @IBOutlet weak var separatorView: UIView! {
         didSet {
-            separatorView.backgroundColor = UIColor(Color.separator)
+            separatorView.backgroundColor = UIColor(Color.Base.separator)
         }
     }
     

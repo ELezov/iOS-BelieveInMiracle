@@ -13,4 +13,8 @@ enum GlobalConstants {
     static let merchantApiPass = "50dfb1df0cb5c84528e9d3772f7ce04e" // Test host
     
     static let cloudpaymentsURL = "http://cloudpayments.ru/"
+    
+    enum Social {
+        static let urlVk = "https://vk.com/deti39"
+    }
 }

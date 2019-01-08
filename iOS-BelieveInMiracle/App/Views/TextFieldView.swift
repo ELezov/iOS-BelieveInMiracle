@@ -64,13 +64,13 @@ class TextFieldView: UIView {
         textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         textField.placeholder = configModel.placeholder
-        textField.placeholderColor = UIColor(Color.separator)
+        textField.placeholderColor = UIColor(Color.Base.separator)
         textField.title = configModel.placeholder
-        textField.titleColor = UIColor(Color.textPrimaryLight)
-        textField.selectedTitleColor = UIColor(Color.textPrimaryLight)
+        textField.titleColor = UIColor(Color.Text.primaryLight)
+        textField.selectedTitleColor = UIColor(Color.Text.primaryLight)
         textField.selectedTitle = configModel.placeholder
-        textField.lineColor = UIColor(Color.separator)
-        textField.selectedLineColor = UIColor(Color.primaryDark)
+        textField.lineColor = UIColor(Color.Base.separator)
+        textField.selectedLineColor = UIColor(Color.Base.primaryDark)
         
         type = configModel.type
     }

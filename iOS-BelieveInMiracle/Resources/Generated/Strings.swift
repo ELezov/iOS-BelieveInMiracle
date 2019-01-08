@@ -8,6 +8,33 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum About {
+    /// О фонде
+    internal static let title = L10n.tr("Localizable", "about.title")
+
+    internal enum Programms {
+      /// Наши программы:
+      internal static let title = L10n.tr("Localizable", "about.programms.title")
+    }
+
+    internal enum Social {
+      /// Мы в соцсетях:
+      internal static let title = L10n.tr("Localizable", "about.social.title")
+    }
+
+    internal enum Top {
+      /// Благотворительный центр «Верю в чудо» – Калининградская общественная молодёжная благотворительная организация.
+      internal static let title = L10n.tr("Localizable", "about.top.title")
+    }
+
+    internal enum We {
+      /// Свыше 10 лет центр помогает детям с тяжелыми излечимыми и неизлечимыми заболеваниями, детям-сиротам, детям, оставшимся без попечения родителей, содействует детским медицинским и социальным учреждениям, развивает волонтёрство и благотворительность, помогает повышению компетенции медицинских и социальных работников. Ежегодно центр оказывает помощь в среднем 12 500 детям и их семьям. Сегодня команда «Верю в чудо» состоит из волонтёров и сотрудников, хотя до 2012 года в организации трудились только добровольцы. Волонтёрскими силами решается большая часть задач, что делает центр «Верю в чудо» не только уникальной в плане консолидации сил и стремлений неравнодушных людей площадкой, но и позволяет оказывать существенную, в т.ч. материальную помощь нуждающимся семьям с болеющими детьми. В 2017 году центр стал учредителем медицинского благотворительного учреждения «Хоспис для детей и молодых взрослых «Дом Фрупполо»». Строительство в Калининграде детского хосписа идет параллельно с системной работой по сопровождению детей в рамках существующих благотворительных программ.
+      internal static let description = L10n.tr("Localizable", "about.we.description")
+      /// О нас:
+      internal static let title = L10n.tr("Localizable", "about.we.title")
+    }
+  }
+
   internal enum Common {
 
     internal enum Button {

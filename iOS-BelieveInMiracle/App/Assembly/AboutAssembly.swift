@@ -27,7 +27,14 @@ final class AboutAssembly: Assembly {
         container.register(AboutView.self) { resolver in
             let controller = UIStoryboard.makeController(AboutVC.self)
             controller.viewModel = resolver.resolve(AboutViewModelAbstract.self)
+            controller.tableViewModel = resolver.resolve(TableManagerable.self)
+            controller.tableBuilder = resolver.resolve(AboutVCTableBuilderAbstract.self)
             return controller
         }
+        
+        container.register(AboutVCTableBuilderAbstract.self) { _ in
+            return AboutVCTableBuilder()
+        }
+        
     }
 }

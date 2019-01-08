@@ -13,7 +13,7 @@ DonateWelcomeView {
     @IBOutlet weak var lDescription: UILabel! {
         didSet {
             lDescription.font = FontStyle.h2.style()
-            lDescription.textColor = UIColor(Color.primaryDark)
+            lDescription.textColor = UIColor(Color.Base.primaryDark)
         }
     }
     @IBOutlet private weak var ivPoster: UIImageView! {
@@ -33,7 +33,7 @@ DonateWelcomeView {
     @IBOutlet private weak var lSubtitle: UILabel! {
         didSet {
             lSubtitle.font = FontStyle.subtitle2.style()
-            lSubtitle.textColor = UIColor(Color.textPrimaryDark)
+            lSubtitle.textColor = UIColor(Color.Base.primaryDark)
         }
     }
     

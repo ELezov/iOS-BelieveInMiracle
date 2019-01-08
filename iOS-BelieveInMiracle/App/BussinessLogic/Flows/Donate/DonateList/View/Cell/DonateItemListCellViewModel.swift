@@ -14,7 +14,7 @@ CellViewModelActionableFasseles {
     
     var onClick: OnClick?
     
-    static let cellHeight: CGFloat = 100
+    static let cellHeight: CGFloat = 64
     
     let height: CGFloat = cellHeight
     

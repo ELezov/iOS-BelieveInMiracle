@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="KGk-i7-Jjw" customClass="AboutSocialCellView" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="117"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="116.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!Мы в соцсетях:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMI-ad-WVQ" customClass="LabelH2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="32" y="0.0" width="313" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="ckL-9N-OpS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Pqq-xY-mzQ">
+                        <rect key="frame" x="98.5" y="36" width="180" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-7b-CWE">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="A0V-vx-0OY"/>
+                                    <constraint firstAttribute="height" constant="60" id="jUs-TG-v7S"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="vk"/>
+                                <connections>
+                                    <action selector="vkDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iQB-Hp-9RM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-wT-oes">
+                                <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                                <state key="normal" title="Button" image="facebook"/>
+                                <connections>
+                                    <action selector="facebookDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3it-kR-dS6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-ys-Mgb">
+                                <rect key="frame" x="120" y="0.0" width="60" height="60"/>
+                                <state key="normal" title="Button" image="instagram"/>
+                                <connections>
+                                    <action selector="instagramDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yiy-xS-PYn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="kWG-Lg-Vb1"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pqq-xY-mzQ" secondAttribute="trailing" constant="16" id="HqC-fZ-ypf"/>
+                    <constraint firstItem="EMI-ad-WVQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="a5M-kA-sZQ"/>
+                    <constraint firstItem="Pqq-xY-mzQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aJm-EJ-1Nc"/>
+                    <constraint firstAttribute="bottom" secondItem="Pqq-xY-mzQ" secondAttribute="bottom" constant="16" id="gQr-dS-QIu"/>
+                    <constraint firstAttribute="trailing" secondItem="EMI-ad-WVQ" secondAttribute="trailing" constant="32" id="hfc-rH-LV0"/>
+                    <constraint firstItem="EMI-ad-WVQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lY7-B3-R3y"/>
+                    <constraint firstItem="Pqq-xY-mzQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sha-ea-zfZ"/>
+                    <constraint firstItem="Pqq-xY-mzQ" firstAttribute="top" secondItem="EMI-ad-WVQ" secondAttribute="bottom" constant="16" id="tiy-rY-Ibw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lTitle" destination="EMI-ad-WVQ" id="UmB-nZ-kNV"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="90.404797601199405"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="facebook" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="instagram" width="96" height="96"/>
+        <image name="vk" width="18.239999771118164" height="19.200000762939453"/>
+    </resources>
+</document>
