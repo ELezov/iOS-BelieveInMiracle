@@ -28,9 +28,19 @@ open class BaseLabel: UILabel {
     
     final func prepareAppearance() {
         font = type(of: self).font()
+        textColor = type(of: self).currentStyle().color()
     }
     
     open class func font() -> UIFont {
-        return UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        return UIFont.initFrom(style: currentStyle())
     }
+    
+    open class func lineSpacing() -> CGFloat {
+        return currentStyle().lineSpacing()
+    }
+    
+    class func currentStyle() -> FontStyle {
+        return .h1
+    }
+    
 }

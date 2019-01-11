@@ -20,10 +20,6 @@ class AboutTopCellView: TableViewCell {
         }
     }
     
-    @IBOutlet weak var lDescription: UILabel! {
-        didSet {
-            lDescription.font = FontStyle.h2.style()
-        }
-    }
+    @IBOutlet weak var lDescription: LabelMain1!
     
 }

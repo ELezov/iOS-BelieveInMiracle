@@ -53,21 +53,21 @@ class ActionButton: UIButton {
         isUserInteractionEnabled = status == .enabled
         switch (style, status) {
         case (.filled, .enabled):
-            setTitleColor(UIColor(Color.Text.primaryInverse), for: .normal)
-            backgroundColor = UIColor(Color.Base.primaryDark)
+            setTitleColor(Color.Text.primaryInverse, for: .normal)
+            backgroundColor = Color.Base.primaryDark
         case (.filled, .disabled):
-            setTitleColor(UIColor(Color.Text.primaryInverse), for: .normal)
-            backgroundColor = UIColor(Color.Base.primaryLight)
+            setTitleColor(Color.Text.primaryInverse, for: .normal)
+            backgroundColor = Color.Base.primaryLight
         case (.blank, .enabled):
-            setTitleColor(UIColor(Color.Text.primaryInverse), for: .normal)
-            backgroundColor = UIColor(Color.Text.primaryLight)
+            setTitleColor(Color.Text.primaryInverse, for: .normal)
+            backgroundColor = Color.Text.primaryLight
             layer.borderWidth = 1
-            layer.borderColor = UIColor(Color.Base.primaryDark).cgColor
+            layer.borderColor = Color.Base.primaryDark.cgColor
         case (.blank, .disabled):
-            setTitleColor(UIColor(Color.Text.primaryInverse), for: .normal)
-            backgroundColor = UIColor(Color.Base.primaryLight)
+            setTitleColor(Color.Text.primaryInverse, for: .normal)
+            backgroundColor = Color.Base.primaryLight
             layer.borderWidth = 1
-            layer.borderColor = UIColor(Color.Base.primaryLight).cgColor
+            layer.borderColor = Color.Base.primaryLight.cgColor
         }
     }
 }

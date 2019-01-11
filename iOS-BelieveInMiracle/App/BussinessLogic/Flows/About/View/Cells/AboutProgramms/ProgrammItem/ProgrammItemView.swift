@@ -25,11 +25,10 @@ final class ProgrammItemView: UniversalSetupableView {
         return view
     }()
 
-    let label: LabelSubtitle1 = {
-        let label = LabelSubtitle1()
+    let label: LabelMain2 = {
+        let label = LabelMain2()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.textColor = UIColor(Color.Text.primaryDark)
         return label
     }()
 

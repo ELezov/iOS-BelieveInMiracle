@@ -18,6 +18,13 @@ PODS:
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - HyperioniOS/AttributesInspector (1.0.2):
+    - HyperioniOS/Core
+  - HyperioniOS/Core (1.0.2)
+  - HyperioniOS/Measurements (1.0.2):
+    - HyperioniOS/Core
+  - HyperioniOS/SlowAnimations (1.0.2):
+    - HyperioniOS/Core
   - InputMask (4.0.0)
   - IQKeyboardManager (6.2.0)
   - lottie-ios (2.5.2)
@@ -38,6 +45,10 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Alamofire (~> 4.7)
   - AlamofireObjectMapper (~> 5.0)
+  - HyperioniOS/AttributesInspector
+  - HyperioniOS/Core
+  - HyperioniOS/Measurements
+  - HyperioniOS/SlowAnimations
   - InputMask (= 4.0.0)
   - IQKeyboardManager
   - lottie-ios
@@ -54,6 +65,7 @@ SPEC REPOS:
     - AFNetworking
     - Alamofire
     - AlamofireObjectMapper
+    - HyperioniOS
     - InputMask
     - IQKeyboardManager
     - lottie-ios
@@ -70,6 +82,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  HyperioniOS: 2397937925b2d57ec28182ac979879b0da2658ee
   InputMask: e3fe4ee45ce70241fd76684c1e9d6f98e1492eab
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
@@ -82,6 +95,6 @@ SPEC CHECKSUMS:
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   Swinject: f7f15a9672e99328c1f07f277091087917215700
 
-PODFILE CHECKSUM: 919ccbfae4dccc5ea9562eec3ce8aa7016bd723d
+PODFILE CHECKSUM: 667d3ef31924c10e0b4ff57926aab5c1fb05e27a
 
 COCOAPODS: 1.5.3

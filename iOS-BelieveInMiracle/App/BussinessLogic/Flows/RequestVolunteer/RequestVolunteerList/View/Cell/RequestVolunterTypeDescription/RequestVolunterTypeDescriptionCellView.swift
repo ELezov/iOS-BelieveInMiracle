@@ -10,15 +10,11 @@ import UIKit
 //swiftlint:disable private_outlet
 class RequestVolunterTypeDescriptionCellView: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel! {
-        didSet {
-            titleLabel.font = FontStyle.subtitle2.style()
-        }
-    }
+    @IBOutlet weak var titleLabel: LabelMain2!
     
     @IBOutlet weak var separatorView: UIView! {
         didSet {
-            separatorView.backgroundColor = UIColor(Color.Base.separator)
+            separatorView.backgroundColor = Color.Base.separator
         }
     }
     

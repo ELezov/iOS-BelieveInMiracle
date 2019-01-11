@@ -14,35 +14,66 @@ import UIKit
 
 @IBDesignable
 class LabelH1: BaseLabel {
-    override class func font() -> UIFont {
-        return UIFont.initFrom(style: .h1)
+    
+    override class func currentStyle() -> FontStyle {
+        return .h1
     }
 }
 
 @IBDesignable
 class LabelH2: BaseLabel {
-    override class func font() -> UIFont {
-        return UIFont.initFrom(style: .h2)
+    
+    override class func currentStyle() -> FontStyle {
+        return .h2
     }
 }
 
 @IBDesignable
-class LabelTitle1: BaseLabel {
-    override class func font() -> UIFont {
-        return UIFont.initFrom(style: .title1)
+class LabelH3: BaseLabel {
+    
+    override class func currentStyle() -> FontStyle {
+        return .h3
     }
 }
 
 @IBDesignable
-class LabelSubtitle1: BaseLabel {
+class LabelH4: BaseLabel {
     override class func font() -> UIFont {
-        return UIFont.initFrom(style: .subtitle1)
+        return UIFont.initFrom(style: .h4)
+    }
+    override class func currentStyle() -> FontStyle {
+        return .h3
     }
 }
 
 @IBDesignable
-class LabelSubtitle2: BaseLabel {
-    override class func font() -> UIFont {
-        return UIFont.initFrom(style: .subtitle2)
+class LabelMain1: BaseLabel {
+    
+    override class func currentStyle() -> FontStyle {
+        return .main1
+    }
+}
+
+@IBDesignable
+class LabelMain2: BaseLabel {
+
+    override class func currentStyle() -> FontStyle {
+        return .main2
+    }
+}
+
+@IBDesignable
+class LabelMain3: BaseLabel {
+
+    override class func currentStyle() -> FontStyle {
+        return .main3
+    }
+}
+
+@IBDesignable
+class LabelInput: BaseLabel {
+
+    override class func currentStyle() -> FontStyle {
+        return .input
     }
 }

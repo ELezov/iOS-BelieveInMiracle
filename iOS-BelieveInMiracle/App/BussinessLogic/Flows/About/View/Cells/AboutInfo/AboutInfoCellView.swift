@@ -18,7 +18,7 @@ class AboutInfoCellView: TableViewCell {
         }
     }
     
-    @IBOutlet private weak var lDescription: LabelSubtitle2! {
+    @IBOutlet private weak var lDescription: LabelMain1! {
         didSet {
             lDescription.text = L10n.About.We.description
         }

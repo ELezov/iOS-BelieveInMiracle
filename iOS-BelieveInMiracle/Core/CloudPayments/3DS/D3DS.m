@@ -31,6 +31,7 @@
                   baseURL:[response URL]];
     } else {
         NSString *messageString = [NSString stringWithFormat:@"Unable to load 3DS autorization page.\nStatus code: %d", (unsigned int)[response statusCode]];
+        NSLog(@"%@", messageString);
     }
 }
 

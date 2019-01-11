@@ -12,15 +12,14 @@ fileprivate extension AppearanceManager {
     
     func configureTabBar() {
         UITabBar.appearance().barTintColor = UIColor.white
-        UITabBar.appearance().tintColor = UIColor(Color.Base.primaryDark)
+        UITabBar.appearance().tintColor = Color.Base.primaryDark
     }
     
     func configureNavigationBar() {
-        UINavigationBar.appearance().barTintColor = UIColor(Color.Base.white)
-        UINavigationBar.appearance().tintColor = UIColor(Color.Base.primaryDark)
+        UINavigationBar.appearance().barTintColor = Color.Base.white
+        UINavigationBar.appearance().tintColor = Color.Base.primaryDark
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor(Color.Text.primaryDark)]
-        //UINavigationBar.appearance().isTranslucent = false
+            NSAttributedStringKey.foregroundColor: Color.Text.primaryDark]
         UINavigationBar.appearance().barStyle = .black
     }
 }

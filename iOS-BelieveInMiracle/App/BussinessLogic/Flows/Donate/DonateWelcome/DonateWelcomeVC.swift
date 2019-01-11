@@ -10,12 +10,7 @@ DonateWelcomeView {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lDescription: UILabel! {
-        didSet {
-            lDescription.font = FontStyle.h2.style()
-            lDescription.textColor = UIColor(Color.Base.primaryDark)
-        }
-    }
+    @IBOutlet weak var lDescription: LabelH1!
     @IBOutlet private weak var ivPoster: UIImageView! {
         didSet {
             ivPoster.image = Asset.Volunteer.help.image
@@ -30,12 +25,7 @@ DonateWelcomeView {
         }
     }
     
-    @IBOutlet private weak var lSubtitle: UILabel! {
-        didSet {
-            lSubtitle.font = FontStyle.subtitle2.style()
-            lSubtitle.textColor = UIColor(Color.Base.primaryDark)
-        }
-    }
+    @IBOutlet private weak var lSubtitle: LabelMain3!
     
     @IBOutlet private weak var ivArrowIcon: UIImageView! {
         didSet {
