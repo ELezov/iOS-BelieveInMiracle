@@ -16,6 +16,10 @@ final class CommonAssembly: Assembly {
             return BaseTableManager()
         }.inObjectScope(.transient)
         
+        container.register(TablePaginable.self) { _ in
+            return PagingTableManager()
+        }.inObjectScope(.transient)
+        
         // UrlWebView
         
         container.register(WebView.self) { (resolver: Resolver, configModel: WebViewConfigurationModel) in

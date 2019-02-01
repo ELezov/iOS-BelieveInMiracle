@@ -17,9 +17,14 @@ target 'iOS-BelieveInMiracle' do
   pod 'NotificationBannerSwift', '1.6.3'
   pod 'MarqueeLabel/Swift', '3.1.6'
   
+  
+  # Networking
   pod 'Alamofire', '~> 4.7'
+  pod 'Moya'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'AFNetworking', '~> 3.0'
+  
+  pod 'Kingfisher', '~> 5.0'
   
   
   pod "HyperioniOS/Core", :configurations => ['Debug']

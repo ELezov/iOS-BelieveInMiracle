@@ -19,6 +19,12 @@ final class MainCoordinator: BaseCoordinator & MainCoordinatorOutput {
     func showContainerScreen() -> UIViewController? {
         guard let mainView = diContainer.resolve(MainView.self)
             else { return nil }
+        
+        guard let kidsFlowCoordinator = diContainer.resolve(KidsFlowCoordinator.self),
+            let kidsListVC: UIViewController = kidsFlowCoordinator.start() else {
+                return nil
+        }
+        
         guard let aboutFlowCoordinator = diContainer.resolve(AboutFlowCoordinator.self),
             let aboutVC: UIViewController = aboutFlowCoordinator.start() else {
                 return nil
@@ -34,10 +40,11 @@ final class MainCoordinator: BaseCoordinator & MainCoordinatorOutput {
                 return nil
         }
         
+        addDependency(kidsFlowCoordinator)
         addDependency(aboutFlowCoordinator)
         addDependency(donateFlowCoordinator)
         addDependency(requestVolunteerFlowCoordinator)
-        mainView.controllers = [requestVolunteerVC, donateVC, aboutVC]
+        mainView.controllers = [kidsListVC, requestVolunteerVC, donateVC, aboutVC]
         return mainView.toPresent()
     }
 }

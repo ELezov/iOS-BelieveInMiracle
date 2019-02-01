@@ -19,7 +19,8 @@ struct AssemblyFactory {
                 MainAssembly(),
                 AboutAssembly(),
                 DonateAssembly(),
-                RequestVolunteerAssembly()
+                RequestVolunteerAssembly(),
+                KidsAssembly()
             ]
         )
         return assembler.resolver

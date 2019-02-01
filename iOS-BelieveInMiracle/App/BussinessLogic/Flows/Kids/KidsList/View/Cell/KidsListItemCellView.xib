@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="KGk-i7-Jjw" customClass="KidsListItemCellView" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Kxb-Um-ae0">
+                        <rect key="frame" x="8" y="28" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="d2g-4p-nvF"/>
+                            <constraint firstAttribute="width" constant="64" id="tJ4-WU-ZiX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxR-Fw-1Lt" customClass="LabelMain2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="88" y="46.5" width="239" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="nlX-Z3-ziu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPq-he-LeX" customClass="LabelH3" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="88" y="16" width="239" height="12.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I6-01-gFr" customClass="LabelH4" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="88" y="30.5" width="239" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="rLZ-lq-c2n"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAs-on-5jP" customClass="LabelMain1" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="88" y="82.5" width="239" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pBC-Z5-U8F"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aAs-on-5jP" secondAttribute="bottom" constant="16" id="0bY-28-Vg0"/>
+                    <constraint firstItem="aAs-on-5jP" firstAttribute="leading" secondItem="TxR-Fw-1Lt" secondAttribute="leading" id="7Mv-Ta-toU"/>
+                    <constraint firstItem="TxR-Fw-1Lt" firstAttribute="top" secondItem="2I6-01-gFr" secondAttribute="bottom" constant="4" id="8Bt-Qc-YUP"/>
+                    <constraint firstItem="TxR-Fw-1Lt" firstAttribute="leading" secondItem="rPq-he-LeX" secondAttribute="leading" id="9EJ-rf-eXS"/>
+                    <constraint firstItem="rPq-he-LeX" firstAttribute="leading" secondItem="Kxb-Um-ae0" secondAttribute="trailing" constant="16" id="Ap7-En-Iss"/>
+                    <constraint firstItem="2I6-01-gFr" firstAttribute="leading" secondItem="rPq-he-LeX" secondAttribute="leading" id="Cgg-Qp-2lY"/>
+                    <constraint firstItem="aAs-on-5jP" firstAttribute="trailing" secondItem="TxR-Fw-1Lt" secondAttribute="trailing" id="Nmh-KQ-65l"/>
+                    <constraint firstItem="Kxb-Um-ae0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VBc-nk-Wsc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rPq-he-LeX" secondAttribute="trailing" constant="32" id="Ywv-nY-DID"/>
+                    <constraint firstItem="TxR-Fw-1Lt" firstAttribute="trailing" secondItem="rPq-he-LeX" secondAttribute="trailing" id="aWA-ng-o1K"/>
+                    <constraint firstItem="rPq-he-LeX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gE2-e1-CUU"/>
+                    <constraint firstItem="2I6-01-gFr" firstAttribute="top" secondItem="rPq-he-LeX" secondAttribute="bottom" constant="2" id="h7H-kt-TWf"/>
+                    <constraint firstItem="2I6-01-gFr" firstAttribute="trailing" secondItem="rPq-he-LeX" secondAttribute="trailing" id="hV1-J4-flR"/>
+                    <constraint firstItem="aAs-on-5jP" firstAttribute="top" secondItem="TxR-Fw-1Lt" secondAttribute="bottom" constant="8" id="i4C-Ww-lSj"/>
+                    <constraint firstItem="Kxb-Um-ae0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mtd-6y-1Tw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivPhoto" destination="Kxb-Um-ae0" id="Dtg-dZ-NZD"/>
+                <outlet property="lAge" destination="2I6-01-gFr" id="0Kj-5m-j0w"/>
+                <outlet property="lBalance" destination="aAs-on-5jP" id="M7M-eZ-xeQ"/>
+                <outlet property="lDiagnoz" destination="TxR-Fw-1Lt" id="lWC-Yo-avR"/>
+                <outlet property="lName" destination="rPq-he-LeX" id="2ZK-3V-mYw"/>
+            </connections>
+            <point key="canvasLocation" x="130.40000000000001" y="129.53523238380811"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="main_logo" width="264.72000122070312" height="170.8800048828125"/>
+    </resources>
+</document>

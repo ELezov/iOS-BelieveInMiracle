@@ -37,21 +37,21 @@
                                     <constraint firstAttribute="width" constant="60" id="A0V-vx-0OY"/>
                                     <constraint firstAttribute="height" constant="60" id="jUs-TG-v7S"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="vk"/>
+                                <state key="normal" title="Button" image="main_logo"/>
                                 <connections>
                                     <action selector="vkDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iQB-Hp-9RM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-wT-oes">
                                 <rect key="frame" x="60" y="0.0" width="60" height="60"/>
-                                <state key="normal" title="Button" image="facebook"/>
+                                <state key="normal" title="Button" image="main_logo"/>
                                 <connections>
                                     <action selector="facebookDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3it-kR-dS6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-ys-Mgb">
                                 <rect key="frame" x="120" y="0.0" width="60" height="60"/>
-                                <state key="normal" title="Button" image="instagram"/>
+                                <state key="normal" title="Button" image="main_logo"/>
                                 <connections>
                                     <action selector="instagramDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yiy-xS-PYn"/>
                                 </connections>
@@ -75,14 +75,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="fbButton" destination="Ibc-wT-oes" id="p7K-Vj-M2j"/>
+                <outlet property="instaButton" destination="DBu-ys-Mgb" id="HV7-1f-zdR"/>
                 <outlet property="lTitle" destination="EMI-ad-WVQ" id="UmB-nZ-kNV"/>
+                <outlet property="vkButton" destination="Mdr-7b-CWE" id="McP-Uk-39V"/>
             </connections>
             <point key="canvasLocation" x="132" y="90.404797601199405"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="facebook" width="19.200000762939453" height="19.200000762939453"/>
-        <image name="instagram" width="96" height="96"/>
-        <image name="vk" width="18.239999771118164" height="19.200000762939453"/>
+        <image name="main_logo" width="264.72000122070312" height="170.8800048828125"/>
     </resources>
 </document>

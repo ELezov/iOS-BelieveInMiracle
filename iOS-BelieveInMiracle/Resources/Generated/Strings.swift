@@ -97,6 +97,21 @@ internal enum L10n {
     }
   }
 
+  internal enum Kids {
+    /// Наши дети
+    internal static let title = L10n.tr("Localizable", "kids.title")
+
+    internal enum List {
+
+      internal enum Item {
+        /// Собрано %@ из %@
+        internal static func balance(_ p1: String, _ p2: String) -> String {
+          return L10n.tr("Localizable", "kids.list.item.balance", p1, p2)
+        }
+      }
+    }
+  }
+
   internal enum Volunteer {
 
     internal enum Adressvolunteer {

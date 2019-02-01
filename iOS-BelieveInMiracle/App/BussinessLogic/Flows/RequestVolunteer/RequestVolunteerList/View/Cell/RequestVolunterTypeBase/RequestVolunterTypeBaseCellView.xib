@@ -95,6 +95,7 @@
             <connections>
                 <outlet property="checkBoxContainer" destination="FL6-pe-h0Q" id="laR-Fb-bff"/>
                 <outlet property="containerView" destination="fu6-DX-qP6" id="bHX-Lr-6gJ"/>
+                <outlet property="heightConstraintSeparatorView" destination="EPg-p3-zVH" id="SbJ-PT-3fK"/>
                 <outlet property="indicatorButton" destination="Bde-KM-UH6" id="0mL-5o-NBV"/>
                 <outlet property="separatorView" destination="jIn-hM-jkZ" id="g0w-KW-gKl"/>
                 <outlet property="typeIconView" destination="hnB-VQ-zvj" id="8X5-3V-Tfr"/>

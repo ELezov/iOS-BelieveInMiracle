@@ -10,6 +10,15 @@ import UIKit
 
 //swiftlint:disable private_outlet
 class DonateItemListCellView: UITableViewCell {
+    
+    // MARK: Outlets
+    
+    @IBOutlet weak var heightConstraintSeparatorView: NSLayoutConstraint! {
+        didSet {
+            heightConstraintSeparatorView.constant = 0.5
+        }
+    }
+    
 
     @IBOutlet weak var iconImageView: UIImageView! {
         didSet {

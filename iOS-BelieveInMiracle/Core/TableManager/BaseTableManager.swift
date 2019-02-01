@@ -33,17 +33,21 @@ class BaseTableManager: NSObject, TableManagerable, TableManagerApendable, UITab
         appendItems(items: items, section: nil)
     }
     
+    
     func appendItems(items: [CellViewModel], section: Int?) {
-        let section = self.sections.count - 1
-        guard self.items.count < section else {
+        let section: Int = section ?? self.sections.count
+        guard self.items.count - 1 <= section else {
             assertionFailure("section not found")
             return
         }
         let startRange = self.items[section].count
         self.items[section].append(contentsOf: items)
         let endRange = self.items[section].count
-        let indexPaths = (startRange..<endRange).map { IndexPath(row: $0, section: section) }
-        tableView?.reloadRows(at: indexPaths, with: .none)
+        let indexPaths = (startRange..<endRange).map {
+            IndexPath(row: $0,
+                      section: section)
+        }
+        tableView?.insertRows(at: indexPaths, with: .none)
     }
     
     func appendItems(_ items: [[CellViewModel]]) {

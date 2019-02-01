@@ -1,6 +1,10 @@
 import Foundation
 
 enum GlobalConstants {
+    
+    enum Base {
+        static let baseURL = "https://www.deti39.com/wp-json/wp/v2"
+    }
 
     static let smsCodeForDonate = "7715"
     static let donateLink = "https://www.deti39.com/donate/"

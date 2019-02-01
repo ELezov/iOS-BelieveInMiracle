@@ -48,6 +48,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="heightConstraintSeparatorView" destination="vhF-X5-FKG" id="xy9-e4-7dl"/>
                 <outlet property="separatorView" destination="7Lt-0B-LLV" id="mpf-Fn-xaV"/>
                 <outlet property="titleLabel" destination="Jep-ol-PpI" id="AMe-I5-CBu"/>
             </connections>

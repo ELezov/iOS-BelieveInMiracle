@@ -12,6 +12,29 @@ class AboutSocialCellView: TableViewCell {
     
     var onSocial: SocialTypeCompletion?
     
+    // MARK: - Outlest
+    
+    @IBOutlet private weak var vkButton: UIButton! {
+        didSet {
+            vkButton.setImage(Asset.About.vkontakte.image,
+                              for: .normal)
+        }
+    }
+    
+    @IBOutlet private weak var fbButton: UIButton! {
+        didSet {
+            fbButton.setImage(Asset.About.facebook.image,
+                              for: .normal)
+        }
+    }
+    
+    @IBOutlet private weak var instaButton: UIButton! {
+        didSet {
+            instaButton.setImage(Asset.About.instagram.image,
+                                 for: .normal)
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction private func vkDidTapped(_ sender: Any) {

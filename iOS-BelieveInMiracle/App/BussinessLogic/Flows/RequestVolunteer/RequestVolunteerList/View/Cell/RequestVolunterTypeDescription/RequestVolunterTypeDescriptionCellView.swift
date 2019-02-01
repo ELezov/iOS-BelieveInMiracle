@@ -12,6 +12,11 @@ class RequestVolunterTypeDescriptionCellView: UITableViewCell {
     
     @IBOutlet weak var titleLabel: LabelMain2!
     
+    @IBOutlet weak var heightConstraintSeparatorView: NSLayoutConstraint! {
+        didSet {
+            heightConstraintSeparatorView.constant = 0.5
+        }
+    }
     @IBOutlet weak var separatorView: UIView! {
         didSet {
             separatorView.backgroundColor = Color.Base.separator

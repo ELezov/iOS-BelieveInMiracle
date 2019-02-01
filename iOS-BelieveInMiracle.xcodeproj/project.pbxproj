@@ -159,6 +159,27 @@
 		D51A7AA521E2C83500AAADA0 /* AboutSocialCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A7AA421E2C83500AAADA0 /* AboutSocialCellViewModel.swift */; };
 		D51A7AA721E2CB2F00AAADA0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A7AA621E2CB2F00AAADA0 /* TableViewCell.swift */; };
 		D51A7AA921E2D03000AAADA0 /* SocialNetworkFlowMixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A7AA821E2D03000AAADA0 /* SocialNetworkFlowMixin.swift */; };
+		D54F9CF621F1295D00DDFC64 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F9CF521F1295D00DDFC64 /* String + Extensions.swift */; };
+		D5B7523D21E8E56100C8C276 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7523C21E8E56100C8C276 /* Kid.swift */; };
+		D5B7524021E8E96A00C8C276 /* KidsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7523F21E8E96A00C8C276 /* KidsApi.swift */; };
+		D5B7524221E8E9F000C8C276 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524121E8E9F000C8C276 /* NetworkManager.swift */; };
+		D5B7524621E8ECCF00C8C276 /* fetchAll.json in Resources */ = {isa = PBXBuildFile; fileRef = D5B7524521E8ECCF00C8C276 /* fetchAll.json */; };
+		D5B7524821E8F05800C8C276 /* KidsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524721E8F05800C8C276 /* KidsNetworkManager.swift */; };
+		D5B7524A21E8F22900C8C276 /* KidsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524921E8F22900C8C276 /* KidsResult.swift */; };
+		D5B7524D21E8F40D00C8C276 /* KidsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524C21E8F40D00C8C276 /* KidsFlowCoordinator.swift */; };
+		D5B7525421E8F51900C8C276 /* KidsListViewModelAbstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524F21E8F51900C8C276 /* KidsListViewModelAbstract.swift */; };
+		D5B7525521E8F51900C8C276 /* KidsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7525021E8F51900C8C276 /* KidsListView.swift */; };
+		D5B7525621E8F51900C8C276 /* KidsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7525121E8F51900C8C276 /* KidsListVC.swift */; };
+		D5B7525721E8F51900C8C276 /* KidsListVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B7525221E8F51900C8C276 /* KidsListVC.storyboard */; };
+		D5B7525821E8F51900C8C276 /* KidsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7525321E8F51900C8C276 /* KidsListViewModel.swift */; };
+		D5B7525C21E8F54C00C8C276 /* KidsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7525B21E8F54C00C8C276 /* KidsAssembly.swift */; };
+		D5B7526021E914FD00C8C276 /* KidsListItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7525E21E914FD00C8C276 /* KidsListItemCellView.swift */; };
+		D5B7526121E914FD00C8C276 /* KidsListItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B7525F21E914FD00C8C276 /* KidsListItemCellView.xib */; };
+		D5B7526321E9170100C8C276 /* KidsListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7526221E9170100C8C276 /* KidsListItemCellViewModel.swift */; };
+		D5B7526621E91C1500C8C276 /* PagingTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7526521E91C1500C8C276 /* PagingTableManager.swift */; };
+		D5B7526E21EA1FCA00C8C276 /* LoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7526C21EA1FCA00C8C276 /* LoadingCellView.swift */; };
+		D5B7526F21EA1FCA00C8C276 /* LoadingCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B7526D21EA1FCA00C8C276 /* LoadingCellView.xib */; };
+		D5B7527121EA208E00C8C276 /* LoadingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7527021EA208E00C8C276 /* LoadingCellViewModel.swift */; };
 		D5CDB3C221E3413F0021EC1A /* UIFont + Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDB3C121E3413F0021EC1A /* UIFont + Style.swift */; };
 		D5CDB3C421E342A40021EC1A /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDB3C321E342A40021EC1A /* BaseLabel.swift */; };
 		D5CDB3C621E342BF0021EC1A /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CDB3C521E342BF0021EC1A /* Labels.swift */; };
@@ -326,6 +347,27 @@
 		D51A7AA421E2C83500AAADA0 /* AboutSocialCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSocialCellViewModel.swift; sourceTree = "<group>"; };
 		D51A7AA621E2CB2F00AAADA0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D51A7AA821E2D03000AAADA0 /* SocialNetworkFlowMixin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkFlowMixin.swift; sourceTree = "<group>"; };
+		D54F9CF521F1295D00DDFC64 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		D5B7523C21E8E56100C8C276 /* Kid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
+		D5B7523F21E8E96A00C8C276 /* KidsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsApi.swift; sourceTree = "<group>"; };
+		D5B7524121E8E9F000C8C276 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D5B7524521E8ECCF00C8C276 /* fetchAll.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchAll.json; sourceTree = "<group>"; };
+		D5B7524721E8F05800C8C276 /* KidsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsNetworkManager.swift; sourceTree = "<group>"; };
+		D5B7524921E8F22900C8C276 /* KidsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsResult.swift; sourceTree = "<group>"; };
+		D5B7524C21E8F40D00C8C276 /* KidsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsFlowCoordinator.swift; sourceTree = "<group>"; };
+		D5B7524F21E8F51900C8C276 /* KidsListViewModelAbstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListViewModelAbstract.swift; sourceTree = "<group>"; };
+		D5B7525021E8F51900C8C276 /* KidsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListView.swift; sourceTree = "<group>"; };
+		D5B7525121E8F51900C8C276 /* KidsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListVC.swift; sourceTree = "<group>"; };
+		D5B7525221E8F51900C8C276 /* KidsListVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KidsListVC.storyboard; sourceTree = "<group>"; };
+		D5B7525321E8F51900C8C276 /* KidsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListViewModel.swift; sourceTree = "<group>"; };
+		D5B7525B21E8F54C00C8C276 /* KidsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsAssembly.swift; sourceTree = "<group>"; };
+		D5B7525E21E914FD00C8C276 /* KidsListItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListItemCellView.swift; sourceTree = "<group>"; };
+		D5B7525F21E914FD00C8C276 /* KidsListItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KidsListItemCellView.xib; sourceTree = "<group>"; };
+		D5B7526221E9170100C8C276 /* KidsListItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsListItemCellViewModel.swift; sourceTree = "<group>"; };
+		D5B7526521E91C1500C8C276 /* PagingTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTableManager.swift; sourceTree = "<group>"; };
+		D5B7526C21EA1FCA00C8C276 /* LoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellView.swift; sourceTree = "<group>"; };
+		D5B7526D21EA1FCA00C8C276 /* LoadingCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCellView.xib; sourceTree = "<group>"; };
+		D5B7527021EA208E00C8C276 /* LoadingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellViewModel.swift; sourceTree = "<group>"; };
 		D5CDB3C121E3413F0021EC1A /* UIFont + Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Style.swift"; sourceTree = "<group>"; };
 		D5CDB3C321E342A40021EC1A /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D5CDB3C521E342BF0021EC1A /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
@@ -453,12 +495,12 @@
 		33B1FB0121ADAC2A00080630 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				33B1FB0221ADAC2F00080630 /* Network */,
+				33B1FB0221ADAC2F00080630 /* CloudPayments */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		33B1FB0221ADAC2F00080630 /* Network */ = {
+		33B1FB0221ADAC2F00080630 /* CloudPayments */ = {
 			isa = PBXGroup;
 			children = (
 				33B1FB0421ADAC4800080630 /* Api.swift */,
@@ -466,7 +508,7 @@
 				33B1FB0621ADAC4800080630 /* NetworkService.swift */,
 				33B1FB0321ADAC3600080630 /* Responses */,
 			);
-			path = Network;
+			path = CloudPayments;
 			sourceTree = "<group>";
 		};
 		33B1FB0321ADAC3600080630 /* Responses */ = {
@@ -637,6 +679,8 @@
 		9887FFA421663D35003FC06F /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D5B7523E21E8E95B00C8C276 /* Network */,
+				D5B7523B21E8E54F00C8C276 /* Entity */,
 				98307C57217F60000007D279 /* Views */,
 				98307C4F217F5C6A0007D279 /* Des */,
 				9887FFC621665BB5003FC06F /* Assembly */,
@@ -693,6 +737,7 @@
 		9887FFA921663D83003FC06F /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				D5B7524B21E8F3FD00C8C276 /* Kids */,
 				982CF0822178F335002A235B /* RequestVolunteer */,
 				98A1E8932176561C00522557 /* Helpers */,
 				98A1E8842176552B00522557 /* Common */,
@@ -756,6 +801,7 @@
 				98421D00217A376400BC34BE /* UIStackView + Extensions.swift */,
 				98421D09217A482100BC34BE /* UIView + LoadFromNib.swift */,
 				D5CDB3C121E3413F0021EC1A /* UIFont + Style.swift */,
+				D54F9CF521F1295D00DDFC64 /* String + Extensions.swift */,
 			);
 			path = ExtendedBehaviour;
 			sourceTree = "<group>";
@@ -781,6 +827,7 @@
 				98BA741D216D265800886AD2 /* DonateAssembly.swift */,
 				98A1E86C2176374700522557 /* CommonAssembly.swift */,
 				982CF08F2178F3C0002A235B /* RequestVolunteerAssembly.swift */,
+				D5B7525B21E8F54C00C8C276 /* KidsAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -807,6 +854,7 @@
 		98A1E84A21762B1F00522557 /* TableManager */ = {
 			isa = PBXGroup;
 			children = (
+				D5B7526421E91BDC00C8C276 /* Paging */,
 				98A1E85121762B2D00522557 /* BaseTableManager.swift */,
 				98A1E84F21762B2D00522557 /* CellViewModel.swift */,
 				98A1E84B21762B2C00522557 /* CellViewModelActionable.swift */,
@@ -1139,6 +1187,109 @@
 			path = AboutSocial;
 			sourceTree = "<group>";
 		};
+		D5B7523B21E8E54F00C8C276 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7523C21E8E56100C8C276 /* Kid.swift */,
+				D5B7524921E8F22900C8C276 /* KidsResult.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D5B7523E21E8E95B00C8C276 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7524321E8ECB000C8C276 /* Samples */,
+				D5B7523F21E8E96A00C8C276 /* KidsApi.swift */,
+				D5B7524121E8E9F000C8C276 /* NetworkManager.swift */,
+				D5B7524721E8F05800C8C276 /* KidsNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D5B7524321E8ECB000C8C276 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7524421E8ECBD00C8C276 /* Kids */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		D5B7524421E8ECBD00C8C276 /* Kids */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7524521E8ECCF00C8C276 /* fetchAll.json */,
+			);
+			path = Kids;
+			sourceTree = "<group>";
+		};
+		D5B7524B21E8F3FD00C8C276 /* Kids */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7524E21E8F41600C8C276 /* KidsList */,
+				D5B7524C21E8F40D00C8C276 /* KidsFlowCoordinator.swift */,
+			);
+			path = Kids;
+			sourceTree = "<group>";
+		};
+		D5B7524E21E8F41600C8C276 /* KidsList */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7525A21E8F52400C8C276 /* Models */,
+				D5B7525921E8F52000C8C276 /* View */,
+			);
+			path = KidsList;
+			sourceTree = "<group>";
+		};
+		D5B7525921E8F52000C8C276 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7525D21E914E700C8C276 /* Cell */,
+				D5B7525021E8F51900C8C276 /* KidsListView.swift */,
+				D5B7525121E8F51900C8C276 /* KidsListVC.swift */,
+				D5B7525221E8F51900C8C276 /* KidsListVC.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5B7525A21E8F52400C8C276 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7524F21E8F51900C8C276 /* KidsListViewModelAbstract.swift */,
+				D5B7525321E8F51900C8C276 /* KidsListViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5B7525D21E914E700C8C276 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7525E21E914FD00C8C276 /* KidsListItemCellView.swift */,
+				D5B7525F21E914FD00C8C276 /* KidsListItemCellView.xib */,
+				D5B7526221E9170100C8C276 /* KidsListItemCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D5B7526421E91BDC00C8C276 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7526921EA1C7100C8C276 /* Cell */,
+				D5B7526521E91C1500C8C276 /* PagingTableManager.swift */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		D5B7526921EA1C7100C8C276 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D5B7526C21EA1FCA00C8C276 /* LoadingCellView.swift */,
+				D5B7526D21EA1FCA00C8C276 /* LoadingCellView.xib */,
+				D5B7527021EA208E00C8C276 /* LoadingCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1208,6 +1359,7 @@
 				337CA9FD21AC57D800CD4A2F /* DonateWelcomeVC.storyboard in Resources */,
 				D51A7A7E21E2A6DE00AAADA0 /* AboutTopCellView.xib in Resources */,
 				D51A7A9C21E2C69400AAADA0 /* AboutInfoCellView.xib in Resources */,
+				D5B7524621E8ECCF00C8C276 /* fetchAll.json in Resources */,
 				33F0CE9D21AC5E84000B7A0D /* Corbel-Italic.ttf in Resources */,
 				33F0CE9B21AC5E7E000B7A0D /* Corbel.ttf in Resources */,
 				33B1FAE921ADA71500080630 /* DonatePaymentVC.storyboard in Resources */,
@@ -1224,7 +1376,10 @@
 				982CF0982178F5F7002A235B /* RequestVolunterTypeBaseCellView.xib in Resources */,
 				98A1E87B21763FBE00522557 /* Localizable.strings in Resources */,
 				989DA6D6218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.xib in Resources */,
+				D5B7525721E8F51900C8C276 /* KidsListVC.storyboard in Resources */,
+				D5B7526121E914FD00C8C276 /* KidsListItemCellView.xib in Resources */,
 				98BA7403216D19BA00886AD2 /* AboutVC.storyboard in Resources */,
+				D5B7526F21EA1FCA00C8C276 /* LoadingCellView.xib in Resources */,
 				98421D05217A46CC00BC34BE /* RequestVolunteerDescriptionView.xib in Resources */,
 				98A1E85D21762BA000522557 /* DonateItemListCellView.xib in Resources */,
 			);
@@ -1246,10 +1401,13 @@
 				"${BUILT_PRODUCTS_DIR}/HyperioniOS/HyperioniOS.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -1262,10 +1420,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyperioniOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
@@ -1287,7 +1448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
 		};
 		98A1E86121762DB100522557 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1346,13 +1507,17 @@
 				9871983521836A4D00C642F3 /* TextFieldView.swift in Sources */,
 				982CF0972178F5F7002A235B /* RequestVolunterTypeBaseCellView.swift in Sources */,
 				98F0CB0321822B4D00066A4F /* SkyFloatingLabelTextField.swift in Sources */,
+				D5B7524A21E8F22900C8C276 /* KidsResult.swift in Sources */,
 				98A1E8962176563D00522557 /* URLFlowMixin.swift in Sources */,
 				D51A7A9121E2B71900AAADA0 /* AboutProgrammsCellViewModel.swift in Sources */,
 				D51A7A7921E29CCA00AAADA0 /* UIConstants.swift in Sources */,
 				9887FFAE21664B73003FC06F /* MainView.swift in Sources */,
+				D5B7524D21E8F40D00C8C276 /* KidsFlowCoordinator.swift in Sources */,
 				33B1FAEE21ADA85200080630 /* Transaction.swift in Sources */,
+				D5B7524821E8F05800C8C276 /* KidsNetworkManager.swift in Sources */,
 				98BA740C216D1CEC00886AD2 /* ViewModel.swift in Sources */,
 				98BA7400216D19BA00886AD2 /* AboutViewModelAbstract.swift in Sources */,
+				D5B7524021E8E96A00C8C276 /* KidsApi.swift in Sources */,
 				98A1E85721762B2D00522557 /* UITableView+DequeueCellViewModel.swift in Sources */,
 				98F69FB22178F8A800D7EAD3 /* RequestVolunteerVCTableBuilder.swift in Sources */,
 				989DA6D5218A0D3000F5D9E9 /* RequestVolunterTypeDescriptionCellView.swift in Sources */,
@@ -1373,6 +1538,7 @@
 				D51A7A8521E2A9F400AAADA0 /* AboutProgrammsCellView.swift in Sources */,
 				33B1FAFF21ADABA400080630 /* D3DS.m in Sources */,
 				98A1E88A2176553300522557 /* WebView.swift in Sources */,
+				D5B7525621E8F51900C8C276 /* KidsListVC.swift in Sources */,
 				98F0CAEA21821A2D00066A4F /* RequestVolunteerInfoViewModelAbstract.swift in Sources */,
 				33F0CEA121AC5FDD000B7A0D /* Fonts.swift in Sources */,
 				D51A7A8021E2A95D00AAADA0 /* AboutTopCellViewModel.swift in Sources */,
@@ -1391,11 +1557,13 @@
 				98A1E85F21762BB000522557 /* DonateItemListCellViewModel.swift in Sources */,
 				98A1E88F2176553800522557 /* WebViewConfigurationModel.swift in Sources */,
 				98A1E85321762B2D00522557 /* CellViewModelHeightable.swift in Sources */,
+				D5B7526E21EA1FCA00C8C276 /* LoadingCellView.swift in Sources */,
 				98F0CB0421822B4D00066A4F /* UITextField+fixCaretPosition.swift in Sources */,
 				9871983921836FAC00C642F3 /* FrameworksManager.swift in Sources */,
 				98A1E85821762B2D00522557 /* BaseTableManager.swift in Sources */,
 				982CF08C2178F355002A235B /* RequestVolunteerViewModel.swift in Sources */,
 				988CC9FE2178E5B600E87CCD /* DonateInputMoneyView.swift in Sources */,
+				D5B7524221E8E9F000C8C276 /* NetworkManager.swift in Sources */,
 				982CF09A2178F600002A235B /* RequestVolunterTypeBaseCellViewModel.swift in Sources */,
 				98A1E86A2176328A00522557 /* DonateVCTableBuilderAbstract.swift in Sources */,
 				982CF0902178F3C0002A235B /* RequestVolunteerAssembly.swift in Sources */,
@@ -1404,10 +1572,12 @@
 				98F0CAF221821AEF00066A4F /* RequestVolunteerInfoConfigurationModel.swift in Sources */,
 				98A1E86F2176381F00522557 /* DonateFlowCoordinator.swift in Sources */,
 				33B1FB0B21ADAC4E00080630 /* TransactionResponse.swift in Sources */,
+				D5B7527121EA208E00C8C276 /* LoadingCellViewModel.swift in Sources */,
 				333CBCA321D656430059444F /* iCreditCard.swift in Sources */,
 				98F0CAEE21821A2D00066A4F /* RequestVolunteerInfoViewModel.swift in Sources */,
 				982CF0922178F3FF002A235B /* RequestVolunteerFlowCoordinator.swift in Sources */,
 				988CC9FF2178E5B600E87CCD /* DonateInputMoneyVC.swift in Sources */,
+				D5B7526321E9170100C8C276 /* KidsListItemCellViewModel.swift in Sources */,
 				98BA7404216D19BA00886AD2 /* AboutViewModel.swift in Sources */,
 				98A1E88321764C2300522557 /* GlobalConstants.swift in Sources */,
 				9887FFCA21665C3B003FC06F /* AboutFlowCoordinator.swift in Sources */,
@@ -1415,8 +1585,10 @@
 				337CA9FC21AC57D800CD4A2F /* DonateWelcomeVC.swift in Sources */,
 				337CA9FA21AC57D800CD4A2F /* DonateWelcomeViewModelAbstract.swift in Sources */,
 				D51A7A9E21E2C6A200AAADA0 /* AboutInfoCellViewModel.swift in Sources */,
+				D5B7525421E8F51900C8C276 /* KidsListViewModelAbstract.swift in Sources */,
 				98421D0A217A482100BC34BE /* UIView + LoadFromNib.swift in Sources */,
 				988CC9FD2178E5B600E87CCD /* DonateInputMoneyViewModelAbstract.swift in Sources */,
+				D5B7525521E8F51900C8C276 /* KidsListView.swift in Sources */,
 				98F0CAEC21821A2D00066A4F /* RequestVolunteerInfoVC.swift in Sources */,
 				98BA7401216D19BA00886AD2 /* AboutView.swift in Sources */,
 				33B1FAEA21ADA71500080630 /* DonatePaymentViewModel.swift in Sources */,
@@ -1431,6 +1603,7 @@
 				982CF0882178F355002A235B /* RequestVolunteerViewModelAbstract.swift in Sources */,
 				9887FFB821664BE6003FC06F /* BaseCoordinator.swift in Sources */,
 				9887FF9321663CC8003FC06F /* AppDelegate.swift in Sources */,
+				D54F9CF621F1295D00DDFC64 /* String + Extensions.swift in Sources */,
 				98307C54217F5C9A0007D279 /* UIColor+Hex.swift in Sources */,
 				33B1FAE721ADA71500080630 /* DonatePaymentView.swift in Sources */,
 				337CA9FB21AC57D800CD4A2F /* DonateWelcomeView.swift in Sources */,
@@ -1444,7 +1617,10 @@
 				D51A7A8F21E2B03D00AAADA0 /* AboutVCTableBuilderAbstract.swift in Sources */,
 				33B1FAE621ADA71500080630 /* DonatePaymentViewModelAbstract.swift in Sources */,
 				98BA7417216D262200886AD2 /* DonateVC.swift in Sources */,
+				D5B7523D21E8E56100C8C276 /* Kid.swift in Sources */,
+				D5B7526621E91C1500C8C276 /* PagingTableManager.swift in Sources */,
 				98A1E8902176553800522557 /* WebViewModel.swift in Sources */,
+				D5B7526021E914FD00C8C276 /* KidsListItemCellView.swift in Sources */,
 				98307C5B217F60250007D279 /* ActionButton.swift in Sources */,
 				98307C56217F5C9A0007D279 /* Colors.swift in Sources */,
 				9887FFB521664BE0003FC06F /* Presentable.swift in Sources */,
@@ -1454,8 +1630,10 @@
 				D51A7AA921E2D03000AAADA0 /* SocialNetworkFlowMixin.swift in Sources */,
 				98BA73E3216D171900886AD2 /* ApplicationAssembly.swift in Sources */,
 				9887FFC821665C15003FC06F /* UIStoryboard+ViewController.swift in Sources */,
+				D5B7525C21E8F54C00C8C276 /* KidsAssembly.swift in Sources */,
 				98BA7419216D262200886AD2 /* DonateViewModel.swift in Sources */,
 				98A1E8812176464600522557 /* Appereance.swift in Sources */,
+				D5B7525821E8F51900C8C276 /* KidsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

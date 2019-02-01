@@ -30,6 +30,11 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     @IBOutlet weak var typeIconView: UIImageView!
     @IBOutlet weak var typeTitleLabel: LabelH3!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var heightConstraintSeparatorView: NSLayoutConstraint! {
+        didSet {
+            heightConstraintSeparatorView.constant = 0.5
+        }
+    }
     @IBOutlet weak var separatorView: UIView! {
         didSet {
             separatorView.backgroundColor = Color.Base.separator

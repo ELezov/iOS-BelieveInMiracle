@@ -27,8 +27,14 @@ PODS:
     - HyperioniOS/Core
   - InputMask (4.0.0)
   - IQKeyboardManager (6.2.0)
+  - Kingfisher (5.1.0)
   - lottie-ios (2.5.2)
   - MarqueeLabel/Swift (3.1.6)
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
   - NotificationBannerSwift (1.6.3):
     - MarqueeLabel/Swift
     - SnapKit (~> 4.0)
@@ -36,6 +42,7 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
   - ObjectMapper (3.4.1)
+  - Result (4.0.0)
   - SnapKit (4.0.1)
   - SwiftGen (5.3.0)
   - SwiftLint (0.27.0)
@@ -51,8 +58,10 @@ DEPENDENCIES:
   - HyperioniOS/SlowAnimations
   - InputMask (= 4.0.0)
   - IQKeyboardManager
+  - Kingfisher (~> 5.0)
   - lottie-ios
   - MarqueeLabel/Swift (= 3.1.6)
+  - Moya
   - NotificationBannerSwift (= 1.6.3)
   - NVActivityIndicatorView
   - SnapKit
@@ -68,11 +77,14 @@ SPEC REPOS:
     - HyperioniOS
     - InputMask
     - IQKeyboardManager
+    - Kingfisher
     - lottie-ios
     - MarqueeLabel
+    - Moya
     - NotificationBannerSwift
     - NVActivityIndicatorView
     - ObjectMapper
+    - Result
     - SnapKit
     - SwiftGen
     - SwiftLint
@@ -85,16 +97,19 @@ SPEC CHECKSUMS:
   HyperioniOS: 2397937925b2d57ec28182ac979879b0da2658ee
   InputMask: e3fe4ee45ce70241fd76684c1e9d6f98e1492eab
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   MarqueeLabel: 0c41f08ef5773e29c0f71064a8fa788a2fd8b365
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   NotificationBannerSwift: b231e4c3244848ef300e1c53ce027b9756b9b06f
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   Swinject: f7f15a9672e99328c1f07f277091087917215700
 
-PODFILE CHECKSUM: 667d3ef31924c10e0b4ff57926aab5c1fb05e27a
+PODFILE CHECKSUM: c93a2b6a98926aa05b47bf0af625862a93429d62
 
 COCOAPODS: 1.5.3
