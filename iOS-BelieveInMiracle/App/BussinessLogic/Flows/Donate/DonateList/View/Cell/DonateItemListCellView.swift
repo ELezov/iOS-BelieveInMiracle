@@ -9,7 +9,7 @@
 import UIKit
 
 //swiftlint:disable private_outlet
-class DonateItemListCellView: UITableViewCell {
+class DonateItemListCellView: BaseCell {
     
     // MARK: Outlets
     
@@ -31,11 +31,6 @@ class DonateItemListCellView: UITableViewCell {
         didSet {
             separatorView.backgroundColor = Color.Base.separator
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        selectionStyle = .none
     }
     
 }

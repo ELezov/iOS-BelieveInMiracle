@@ -15,6 +15,8 @@ protocol Paginable {
     var onPagingEvent: EmptyCompletion? { get set }
     
     var loadingVM: CellViewModel { get set }
+    
+    func reload()
 }
 
 class PagingTableManager: BaseTableManager, Paginable {
@@ -23,6 +25,12 @@ class PagingTableManager: BaseTableManager, Paginable {
     
     var onPagingEvent: EmptyCompletion?
     var shouldShowLoading: Bool = false
+    
+    func reload() {
+        items = [[]]
+        shouldShowLoading = true
+        tableView?.reloadData()
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = items[section].count

@@ -81,9 +81,12 @@ extension Kid: Decodable {
         descriptionText = try container.decodeIfPresent(String.self, forKey: .descriptionText)
         status = try container.decodeIfPresent(String.self, forKey: .status)
         
-        //let cont = try container.decodeIfPresent(KidImage.self, forKey: .img)
-        //image = cont?.url
-        image = nil
+        do {
+           let cont = try container.decodeIfPresent(KidImage.self, forKey: .img)
+           image = cont?.url
+        } catch _ {
+           image = nil
+        }
     }
 }
 

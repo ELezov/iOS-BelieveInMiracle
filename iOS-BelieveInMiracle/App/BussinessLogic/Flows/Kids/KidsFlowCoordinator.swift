@@ -30,8 +30,15 @@ BaseCoordinator {
     
     private func showKidsList() -> UINavigationController? {
         let controller = diContainer.resolve(KidsListView.self)
+        controller?.onShowDetails = { [weak self] configModel in
+            self?.showKidDetails(configModel: configModel)
+        }
         router.setRootModule(controller)
         return router.rootController
     }
+    
+    private func showKidDetails(configModel: KidDetailsConfigurationModel) {
+        let controller = diContainer.resolve(KidDetailsView.self, argument: configModel)
+        router.push(controller)
+    }
 }
-

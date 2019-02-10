@@ -20,6 +20,10 @@ final class CommonAssembly: Assembly {
             return PagingTableManager()
         }.inObjectScope(.transient)
         
+        container.register(TableParallaxable.self) { _ in
+            return ParallaxTableManager()
+        }.inObjectScope(.transient)
+        
         // UrlWebView
         
         container.register(WebView.self) { (resolver: Resolver, configModel: WebViewConfigurationModel) in

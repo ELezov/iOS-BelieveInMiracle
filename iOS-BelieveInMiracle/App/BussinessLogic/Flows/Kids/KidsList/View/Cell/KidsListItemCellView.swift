@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 //swiftlint:disable private_outlet
-class KidsListItemCellView: UITableViewCell {
+class KidsListItemCellView: BaseCell {
     
     // MARK: - Outlets
     
@@ -19,10 +19,5 @@ class KidsListItemCellView: UITableViewCell {
     @IBOutlet weak var lDiagnoz: LabelMain2!
     @IBOutlet weak var lAge: LabelH4!
     @IBOutlet weak var lBalance: LabelMain1!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
 }

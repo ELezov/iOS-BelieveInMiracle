@@ -3,6 +3,8 @@ import UIKit
 final class KidsListVC:
 ViewController,
 KidsListView {
+    var onShowDetails: KidCompletion?
+    
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
@@ -45,11 +47,13 @@ KidsListView {
     }
     
     @objc func updateKidsList(_ sender: Any) {
-        print("haha")
+        page = 0
+        self.tableViewModel?.reload()
     }
     
     func fetchKids() {
         kidsNetworkManager?.getKids(page: page) { [weak self] kids in
+            self?.refreshControl?.endRefreshing()
             guard
                 let `self` = self,
                 let kids = kids
@@ -59,7 +63,13 @@ KidsListView {
             }
             
             self.allKids.append(contentsOf: self.filterKids(kids: kids))
-            let cellVMs = self.allKids.map({ return KidsListItemCellViewModel(kid: $0) })
+            let cellVMs = self.allKids.map({
+                return KidsListItemCellViewModel(onClick: { [weak self] model in
+                    let configModel = KidDetailsConfigurationModel(kid: model.kid)
+                        self?.onShowDetails?(configModel)
+                    },
+                kid: $0)}
+            )
             self.tableViewModel?.setNewItems([cellVMs])//.appendItems(items: cellVMs, section: 0)
             //setNewItems([cellVMs])//(items: cellVMs, section: 0)
         }

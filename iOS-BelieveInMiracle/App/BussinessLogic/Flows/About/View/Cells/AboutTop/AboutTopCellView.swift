@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutTopCellView: TableViewCell {
+class AboutTopCellView: BaseCell {
     
     
     // MARK: - Outlets

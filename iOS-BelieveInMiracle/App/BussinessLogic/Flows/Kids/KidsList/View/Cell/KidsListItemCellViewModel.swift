@@ -10,7 +10,9 @@ import UIKit
 
 struct KidsListItemCellViewModel:
 CellViewModelFaceless,
-CellViewModelHeightable {
+CellViewModelHeightable,
+CellViewModelActionableFasseles {
+    var onClick: ((KidsListItemCellViewModel) -> Void)?
     
     static let cellHeight: CGFloat = 120
     

@@ -107,6 +107,7 @@ internal enum Asset {
     internal static let help = ImageAsset(name: "help")
     internal static let hospitalVolunteer = ImageAsset(name: "hospital_volunteer")
   }
+  internal static let background = ImageAsset(name: "background")
   internal static let facebook = ImageAsset(name: "facebook")
   internal static let icAttachMoneyBlack24dp = ImageAsset(name: "ic_attach_money_black_24dp")
   internal static let icChildCareBlack24dp = ImageAsset(name: "ic_child_care_black_24dp")
@@ -171,6 +172,7 @@ internal enum Asset {
     Volunteer.eventVolunteer,
     Volunteer.help,
     Volunteer.hospitalVolunteer,
+    background,
     facebook,
     icAttachMoneyBlack24dp,
     icChildCareBlack24dp,

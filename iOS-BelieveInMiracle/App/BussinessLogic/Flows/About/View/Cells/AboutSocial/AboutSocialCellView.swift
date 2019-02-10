@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutSocialCellView: TableViewCell {
+class AboutSocialCellView: BaseCell {
     
     var onSocial: SocialTypeCompletion?
     

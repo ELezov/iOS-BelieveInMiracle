@@ -10,7 +10,7 @@ import UIKit
 import Lottie
 
 //swiftlint:disable private_outlet
-class RequestVolunterTypeBaseCellView: UITableViewCell {
+class RequestVolunterTypeBaseCellView: BaseCell {
     
     // MARK: - Constants
     
@@ -43,7 +43,6 @@ class RequestVolunterTypeBaseCellView: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
         configureCheckbox()
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutInfoCellView: TableViewCell {
+class AboutInfoCellView: BaseCell {
     
     // MARK: - Outlets
     

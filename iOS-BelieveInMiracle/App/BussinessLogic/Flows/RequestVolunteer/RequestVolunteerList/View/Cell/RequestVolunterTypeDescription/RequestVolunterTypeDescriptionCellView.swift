@@ -8,7 +8,7 @@
 
 import UIKit
 //swiftlint:disable private_outlet
-class RequestVolunterTypeDescriptionCellView: UITableViewCell {
+class RequestVolunterTypeDescriptionCellView: BaseCell {
     
     @IBOutlet weak var titleLabel: LabelMain2!
     
@@ -21,17 +21,6 @@ class RequestVolunterTypeDescriptionCellView: UITableViewCell {
         didSet {
             separatorView.backgroundColor = Color.Base.separator
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

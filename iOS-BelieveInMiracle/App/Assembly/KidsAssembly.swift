@@ -19,6 +19,8 @@ final class KidsAssembly: Assembly {
             return coordinator
         }
         
+        // KidList
+        
         container.register(KidsListViewModelAbstract.self) { _ in
             let viewModel = KidsListViewModel()
             return viewModel
@@ -28,6 +30,20 @@ final class KidsAssembly: Assembly {
             let controller = UIStoryboard.makeController(KidsListVC.self)
             controller.viewModel = resolver.resolve(KidsListViewModelAbstract.self)
             controller.tableViewModel = resolver.resolve(TablePaginable.self)
+            return controller
+        }
+        
+        // KidDetails
+        
+        container.register(KidDetailsViewModelAbstract.self) { (resolver, configModel: KidDetailsConfigurationModel) in
+            let viewModel = KidDetailsViewModel(configModel: configModel)
+            return viewModel
+        }
+        
+        container.register(KidDetailsView.self) { (resolver, configModel: KidDetailsConfigurationModel) in
+            let controller = UIStoryboard.makeController(KidDetailsVC.self)
+            controller.viewModel = resolver.resolve(KidDetailsViewModelAbstract.self, argument: configModel)
+            controller.tableViewModel = resolver.resolve(TableParallaxable.self)
             return controller
         }
     }

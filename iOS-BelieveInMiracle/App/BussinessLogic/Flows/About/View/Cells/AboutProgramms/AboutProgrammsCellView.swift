@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutProgrammsCellView: TableViewCell {
+class AboutProgrammsCellView: BaseCell {
     
     // MARK: - Outlets
     

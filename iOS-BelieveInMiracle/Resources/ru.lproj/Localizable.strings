@@ -1,10 +1,10 @@
-/*
- Localizable.strings
- iOS-BelieveInMiracle
- 
- Created by Eugene Lezov on 16.10.2018.
- Copyright © 2018 Eugene Lezov. All rights reserved.
- */
+/* 
+  Localizable.strings
+  iOS-BelieveInMiracle
+
+  Created by Eugene Lezov on 16.10.2018.
+  Copyright © 2018 Eugene Lezov. All rights reserved.
+*/
 // Common
 
 "common.button.continue" = "Продолжить";
@@ -71,5 +71,4 @@
 
 "kids.list.item.balance" = "Собрано %@ из %@";
 "kids.title" = "Наши дети";
-
 
