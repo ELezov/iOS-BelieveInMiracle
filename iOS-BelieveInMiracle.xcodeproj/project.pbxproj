@@ -163,6 +163,9 @@
 		D558CB1B220F891800F5DA57 /* UIApplicationStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558CB1A220F891800F5DA57 /* UIApplicationStatusBar.swift */; };
 		D558CB1D220F8B5900F5DA57 /* UIImage + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558CB1C220F8B5900F5DA57 /* UIImage + Extensions.swift */; };
 		D558CB20220F8BDF00F5DA57 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558CB1F220F8BDF00F5DA57 /* BaseCell.swift */; };
+		D5B270B5221C65FE0055327A /* KidDetailsHelpButtonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B270B3221C65FE0055327A /* KidDetailsHelpButtonCellView.swift */; };
+		D5B270B6221C65FE0055327A /* KidDetailsHelpButtonCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5B270B4221C65FE0055327A /* KidDetailsHelpButtonCellView.xib */; };
+		D5B270B8221C660B0055327A /* KidDetailsHelpButtonCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B270B7221C660B0055327A /* KidDetailsHelpButtonCellViewModel.swift */; };
 		D5B7523D21E8E56100C8C276 /* Kid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7523C21E8E56100C8C276 /* Kid.swift */; };
 		D5B7524021E8E96A00C8C276 /* KidsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7523F21E8E96A00C8C276 /* KidsApi.swift */; };
 		D5B7524221E8E9F000C8C276 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B7524121E8E9F000C8C276 /* NetworkManager.swift */; };
@@ -370,6 +373,9 @@
 		D558CB1A220F891800F5DA57 /* UIApplicationStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationStatusBar.swift; sourceTree = "<group>"; };
 		D558CB1C220F8B5900F5DA57 /* UIImage + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extensions.swift"; sourceTree = "<group>"; };
 		D558CB1F220F8BDF00F5DA57 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		D5B270B3221C65FE0055327A /* KidDetailsHelpButtonCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsHelpButtonCellView.swift; sourceTree = "<group>"; };
+		D5B270B4221C65FE0055327A /* KidDetailsHelpButtonCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KidDetailsHelpButtonCellView.xib; sourceTree = "<group>"; };
+		D5B270B7221C660B0055327A /* KidDetailsHelpButtonCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDetailsHelpButtonCellViewModel.swift; sourceTree = "<group>"; };
 		D5B7523C21E8E56100C8C276 /* Kid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kid.swift; sourceTree = "<group>"; };
 		D5B7523F21E8E96A00C8C276 /* KidsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidsApi.swift; sourceTree = "<group>"; };
 		D5B7524121E8E9F000C8C276 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -1236,6 +1242,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D5B270B2221C65DD0055327A /* KidDetailsHelpButton */ = {
+			isa = PBXGroup;
+			children = (
+				D5B270B3221C65FE0055327A /* KidDetailsHelpButtonCellView.swift */,
+				D5B270B4221C65FE0055327A /* KidDetailsHelpButtonCellView.xib */,
+				D5B270B7221C660B0055327A /* KidDetailsHelpButtonCellViewModel.swift */,
+			);
+			path = KidDetailsHelpButton;
+			sourceTree = "<group>";
+		};
 		D5B7523B21E8E54F00C8C276 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1372,21 +1388,22 @@
 		D5E6B365220A3FFC0020041B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D5B270B2221C65DD0055327A /* KidDetailsHelpButton */,
 				D5E6B376220A4BCD0020041B /* KidDetailsDescription */,
 				D5E6B36F220A48830020041B /* KidDetailsDiagnosis */,
-				D5E6B36E220A48670020041B /*   KidDetailsName */,
+				D5E6B36E220A48670020041B /* KidDetailsName */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D5E6B36E220A48670020041B /*   KidDetailsName */ = {
+		D5E6B36E220A48670020041B /* KidDetailsName */ = {
 			isa = PBXGroup;
 			children = (
 				D5E6B366220A401C0020041B /* KidDetailsNameCellView.swift */,
 				D5E6B367220A401C0020041B /* KidDetailsNameCellView.xib */,
 				D5E6B36A220A40290020041B /* KidDetailsNameCellViewModel.swift */,
 			);
-			path = "  KidDetailsName";
+			path = KidDetailsName;
 			sourceTree = "<group>";
 		};
 		D5E6B36F220A48830020041B /* KidDetailsDiagnosis */ = {
@@ -1480,6 +1497,7 @@
 				D5E6B369220A401C0020041B /* KidDetailsNameCellView.xib in Resources */,
 				D5E6B373220A48C50020041B /* KidDetailsDiagnosisCellView.xib in Resources */,
 				337CA9FD21AC57D800CD4A2F /* DonateWelcomeVC.storyboard in Resources */,
+				D5B270B6221C65FE0055327A /* KidDetailsHelpButtonCellView.xib in Resources */,
 				D51A7A7E21E2A6DE00AAADA0 /* AboutTopCellView.xib in Resources */,
 				D51A7A9C21E2C69400AAADA0 /* AboutInfoCellView.xib in Resources */,
 				D5B7524621E8ECCF00C8C276 /* fetchAll.json in Resources */,
@@ -1522,7 +1540,6 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/HyperioniOS/HyperioniOS.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/InputMask/InputMask.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -1533,7 +1550,6 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/StretchHeader/StretchHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
@@ -1542,7 +1558,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyperioniOS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InputMask.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -1553,7 +1568,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StretchHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
@@ -1574,7 +1588,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
 		};
 		98A1E86121762DB100522557 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1654,6 +1668,8 @@
 				D5E6B375220A48DD0020041B /* KidDetailsDiagnosisCellViewModel.swift in Sources */,
 				98BA741E216D265800886AD2 /* DonateAssembly.swift in Sources */,
 				D51A7A8A21E2AEE400AAADA0 /* ProgrammItemView.swift in Sources */,
+				D5B270B8221C660B0055327A /* KidDetailsHelpButtonCellViewModel.swift in Sources */,
+				D5B270B5221C65FE0055327A /* KidDetailsHelpButtonCellView.swift in Sources */,
 				D5C07FE62204A163000C68CE /* KidDetailsVC.swift in Sources */,
 				9887FFC121665554003FC06F /* NSObject + Extensions.swift in Sources */,
 				98A1E8692176328A00522557 /* DonateVCTableBuilder.swift in Sources */,

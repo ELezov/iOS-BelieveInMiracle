@@ -12,13 +12,13 @@ class AboutInfoCellView: BaseCell {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var lTitle: LabelH2! {
+    @IBOutlet private weak var lTitle: LabelMain2! {
         didSet {
             lTitle.text = L10n.About.We.title
         }
     }
     
-    @IBOutlet private weak var lDescription: LabelMain1! {
+    @IBOutlet private weak var lDescription: LabelMain2! {
         didSet {
             lDescription.text = L10n.About.We.description
         }

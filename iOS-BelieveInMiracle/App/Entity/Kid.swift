@@ -21,6 +21,7 @@ struct Kid {
     let descriptionText: String?
     let status: String?
     let image: String?
+    let linkHelp: String?
     
     var ageString: String {
         let dateFormatter = DateFormatter()
@@ -65,6 +66,7 @@ extension Kid: Decodable {
         case descriptionText = "opisanie_rebenka"
         case status = "khod_lecheniya"
         case img
+        case linkHelp = "link_help"
     }
     
     init(from decoder: Decoder) throws {
@@ -87,6 +89,7 @@ extension Kid: Decodable {
         } catch _ {
            image = nil
         }
+        linkHelp = try container.decodeIfPresent(String.self, forKey: .linkHelp)
     }
 }
 

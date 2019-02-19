@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="377" height="116.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!Мы в соцсетях:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMI-ad-WVQ" customClass="LabelH2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!Мы в соцсетях:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMI-ad-WVQ" customClass="LabelMain2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
                         <rect key="frame" x="32" y="0.0" width="313" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="ckL-9N-OpS"/>

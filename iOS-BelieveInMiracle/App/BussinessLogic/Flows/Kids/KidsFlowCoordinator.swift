@@ -12,7 +12,8 @@ import Foundation
 import Swinject
 
 final class KidsFlowCoordinator:
-BaseCoordinator {
+BaseCoordinator,
+URLFlowMixin {
     
     var finishFlow: DefaultFinishHandler?
     
@@ -39,6 +40,9 @@ BaseCoordinator {
     
     private func showKidDetails(configModel: KidDetailsConfigurationModel) {
         let controller = diContainer.resolve(KidDetailsView.self, argument: configModel)
+        controller?.onShowHelp = { [weak self] urlString in
+            self?.openURL(urlString: urlString)
+        }
         router.push(controller)
     }
 }

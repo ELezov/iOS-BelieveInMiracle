@@ -14,19 +14,25 @@ protocol SocialNetworkFlowMixin: class {
     var router: RouterAbstract { get }
     var diContainer: Resolver { get }
     
-    func openVK(urlString: String)
+    func differentApp(appUrlString: String?,
+                      safariURLString: String)
 }
 
 extension SocialNetworkFlowMixin where Self: BaseCoordinator {
     
-    func openVK(urlString: String) {
-        guard
-            let appURL = URL(string: "vk://\(urlString)"),
-            let safariURL = URL(string: urlString)
-        else { return }
+    func differentApp(appUrlString: String?,
+                      safariURLString: String) {
+        guard let safariURL = URL(string: safariURLString) else { return }
         
-        if UIApplication.shared.canOpenURL(appURL) {
-            UIApplication.shared.open(appURL)
+        guard
+            let appUrlString = appUrlString,
+            let appUrl = URL(string: appUrlString)
+        else {
+            UIApplication.shared.open(safariURL)
+            return
+        }
+        if UIApplication.shared.canOpenURL(appUrl) {
+            UIApplication.shared.open(appUrl)
         } else {
             UIApplication.shared.open(safariURL)
         }

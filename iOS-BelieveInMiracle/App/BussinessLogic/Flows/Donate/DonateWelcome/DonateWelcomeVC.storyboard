@@ -27,7 +27,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ndu-bw-QfW">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-8h-9nw" customClass="LabelH1" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-8h-9nw" customClass="LabelMain1" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="14" width="311" height="72"/>
                                                         <string key="text">Свыше 10 лет мы помогаем детям 
 жить свободно от боли</string>
@@ -100,15 +100,15 @@
                                                 <rect key="frame" x="0.0" y="548" width="375" height="50"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-r9-anP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="50"/>
+                                                        <rect key="frame" x="75" y="0.0" width="125" height="50"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="aeV-r9-anP" secondAttribute="bottom" id="CuM-E4-DMA"/>
-                                                    <constraint firstItem="aeV-r9-anP" firstAttribute="leading" secondItem="NQy-rz-aIr" secondAttribute="leading" id="apZ-SS-FWI"/>
                                                     <constraint firstAttribute="height" constant="50" id="iow-XU-KcQ"/>
                                                     <constraint firstItem="aeV-r9-anP" firstAttribute="width" secondItem="NQy-rz-aIr" secondAttribute="width" multiplier="1:3" id="kIh-xi-VT4"/>
                                                     <constraint firstItem="aeV-r9-anP" firstAttribute="top" secondItem="NQy-rz-aIr" secondAttribute="top" id="ndg-AC-JQq"/>
+                                                    <constraint firstItem="aeV-r9-anP" firstAttribute="centerX" secondItem="NQy-rz-aIr" secondAttribute="centerX" constant="-50" id="oju-85-UHz"/>
                                                 </constraints>
                                             </view>
                                         </subviews>

@@ -23,8 +23,9 @@ SocialNetworkFlowMixin {
     
     private func showAbout() -> UINavigationController? {
         let controller = diContainer.resolve(AboutView.self)
-        controller?.onOpenVK = { [weak self] in
-            self?.openVK(urlString: GlobalConstants.Social.urlVk)
+        controller?.onOpenSocial = { [weak self] appUrlString, safariUrlString in
+            self?.differentApp(appUrlString: appUrlString,
+                               safariURLString: safariUrlString)
         }
         router.setRootModule(controller)
         return router.rootController

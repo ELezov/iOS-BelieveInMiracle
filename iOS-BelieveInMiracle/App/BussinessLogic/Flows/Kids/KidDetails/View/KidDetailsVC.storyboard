@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GjZ-gW-1LG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="05S-AX-JGI"/>
+                    <navigationItem key="navigationItem" id="05S-AX-JGI"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="9qZ-vm-ima" id="c3J-7a-xFb"/>

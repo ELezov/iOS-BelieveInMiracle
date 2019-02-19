@@ -20,6 +20,6 @@ class AboutTopCellView: BaseCell {
         }
     }
     
-    @IBOutlet weak var lDescription: LabelMain1!
+    @IBOutlet weak var lDescription: LabelMain2!
     
 }

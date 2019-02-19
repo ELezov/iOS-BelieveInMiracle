@@ -19,6 +19,16 @@ enum GlobalConstants {
     static let cloudpaymentsURL = "http://cloudpayments.ru/"
     
     enum Social {
-        static let urlVk = "https://vk.com/deti39"
+        enum App {
+            static let vk = "vk://vk.com/deti39"
+            static let instagram = "instagram://user?username=deti39"
+        }
+        enum Browser {
+            static let vk = "https://vk.com/deti39"
+            static let facebook = "https://www.facebook.com/veruvchudo39"
+            static let instagram = "https://www.instagram.com/deti39/"
+            
+        }
+
     }
 }

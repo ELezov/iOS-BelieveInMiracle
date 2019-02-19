@@ -10,7 +10,7 @@ DonateWelcomeView {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lDescription: LabelH1!
+    @IBOutlet weak var lDescription: LabelMain1!
     @IBOutlet private weak var ivPoster: UIImageView! {
         didSet {
             ivPoster.image = Asset.Volunteer.help.image

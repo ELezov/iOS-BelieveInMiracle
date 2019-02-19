@@ -25,11 +25,4 @@ target 'iOS-BelieveInMiracle' do
   pod 'AFNetworking', '~> 3.0'
   
   pod 'Kingfisher', '~> 5.0'
-  
-  
-  pod "HyperioniOS/Core", :configurations => ['Debug']
-  #"Configurations => Debug" ensures it is only included in debug builds. Add any configurations you would like Hyperion to be included in.
-  pod 'HyperioniOS/AttributesInspector', :configurations => ['Debug'] # Optional plugin
-  pod 'HyperioniOS/Measurements', :configurations => ['Debug'] # Optional plugin
-  pod 'HyperioniOS/SlowAnimations', :configurations => ['Debug'] # Optional plugin
 end

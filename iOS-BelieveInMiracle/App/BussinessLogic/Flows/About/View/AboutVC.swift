@@ -3,8 +3,8 @@ import UIKit
 final class AboutVC:
 ViewController,
 AboutView {
-    
-    var onOpenVK: EmptyCompletion?
+
+    var onOpenSocial: ((String?, String) -> Void)?
     
     // MARK: - Public Variable
     
@@ -39,9 +39,14 @@ fileprivate extension AboutVC {
         let socialComplection: SocialTypeCompletion = { [weak self] type in
             switch type {
             case .vk:
-                self?.onOpenVK?()
-            default:
-                break
+                self?.onOpenSocial?(GlobalConstants.Social.App.vk,
+                                    GlobalConstants.Social.Browser.vk)
+            case .instagram:
+                self?.onOpenSocial?(GlobalConstants.Social.App.instagram,
+                                    GlobalConstants.Social.Browser.instagram)
+            case .facebook:
+                self?.onOpenSocial?(nil,
+                                    GlobalConstants.Social.Browser.facebook)
             }
         }
         

@@ -22,3 +22,10 @@ extension String {
         return self.isEmpty ? nil : self
     }
 }
+
+extension String {
+    /// Кодирует текст для использования в NSURL
+    func encodeURLString() -> String {
+        return self.removingPercentEncoding?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    }
+}

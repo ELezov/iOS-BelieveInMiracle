@@ -10,4 +10,5 @@ protocol KidDetailsViewModelAbstract: ViewModelAbstract {
     var kidDiagnosis: String? { get }
     var kidDescription: String? { get }
     var kidImageUrl: String? { get }
+    var linkHelped: String? { get }
 }

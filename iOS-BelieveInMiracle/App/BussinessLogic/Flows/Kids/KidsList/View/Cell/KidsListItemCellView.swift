@@ -15,9 +15,9 @@ class KidsListItemCellView: BaseCell {
     // MARK: - Outlets
     
     @IBOutlet weak var ivPhoto: UIImageView!
-    @IBOutlet weak var lName: LabelH3!
-    @IBOutlet weak var lDiagnoz: LabelMain2!
-    @IBOutlet weak var lAge: LabelH4!
-    @IBOutlet weak var lBalance: LabelMain1!
+    @IBOutlet weak var lName: LabelH2!
+    @IBOutlet weak var lDiagnoz: LabelMain4!
+    @IBOutlet weak var lAge: LabelH3!
+    @IBOutlet weak var lBalance: LabelMain2!
     
 }

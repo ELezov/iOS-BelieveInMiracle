@@ -6,6 +6,8 @@ final class KidDetailsVC:
 ViewController,
 KidDetailsView, UITableViewDelegate {
     
+    var onShowHelp: StringCompletion?
+    
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableViewModel?.tableView = tableView
@@ -13,7 +15,8 @@ KidDetailsView, UITableViewDelegate {
             tableView.separatorStyle = .none
             tableView.register(nibModels: [KidDetailsNameCellViewModel.self,
                                            KidDetailsDiagnosisCellViewModel.self,
-                                           KidDetailsDescriptionCellViewModel.self])
+                                           KidDetailsDescriptionCellViewModel.self,
+                                           KidDetailsHelpButtonCellViewModel.self])
         }
     }
     
@@ -36,6 +39,7 @@ KidDetailsView, UITableViewDelegate {
 fileprivate extension KidDetailsVC {
     
     func configureNavBarBackgroundWithColor(alpha: CGFloat) {
+        title = (alpha == 1) ? viewModel?.kidFullName : nil
         let color = UIColor.white.withAlphaComponent(alpha)
         let image = UIImage.from(color: color)
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
@@ -49,6 +53,7 @@ fileprivate extension KidDetailsVC {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = .clear
         self.navigationController?.navigationBar.isTranslucent = true
+        self.title = nil
     }
 
     
@@ -67,6 +72,15 @@ fileprivate extension KidDetailsVC {
         if let descriptionText = viewModel?.kidDescription {
             let cellVM = KidDetailsDescriptionCellViewModel(onClick: nil,
                                                             descriptionText: descriptionText)
+            cellVMs.append(cellVM)
+        }
+        
+        if let linkHelped = viewModel?.linkHelped {
+            let cellVM = KidDetailsHelpButtonCellViewModel(
+                onClick: { [weak self] in
+                    self?.onShowHelp?(linkHelped)
+                },
+                buttonText: "Помочь ребенку")
             cellVMs.append(cellVM)
         }
         

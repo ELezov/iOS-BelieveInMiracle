@@ -25,8 +25,8 @@ class DonateItemListCellView: BaseCell {
             iconImageView.contentMode = .scaleAspectFit
         }
     }
-    @IBOutlet weak var titleLabel: LabelH3!
-    @IBOutlet weak var descriptionLabel: LabelMain2!
+    @IBOutlet weak var titleLabel: LabelH2!
+    @IBOutlet weak var descriptionLabel: LabelMain4!
     @IBOutlet weak var separatorView: UIView! {
         didSet {
             separatorView.backgroundColor = Color.Base.separator

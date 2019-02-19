@@ -23,4 +23,8 @@ final class KidDetailsViewModel: ViewModel, KidDetailsViewModelAbstract {
     var kidImageUrl: String? {
         return configModel.kid.image
     }
+    
+    var linkHelped: String? {
+        return configModel.kid.linkHelp
+    }
 }

@@ -25,8 +25,8 @@ final class ProgrammItemView: UniversalSetupableView {
         return view
     }()
 
-    let label: LabelMain2 = {
-        let label = LabelMain2()
+    let label: LabelMain4 = {
+        let label = LabelMain4()
         label.numberOfLines = 0
         label.textAlignment = .center
         return label

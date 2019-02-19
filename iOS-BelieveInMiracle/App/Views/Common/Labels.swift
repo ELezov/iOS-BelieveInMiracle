@@ -14,7 +14,7 @@ import UIKit
 
 @IBDesignable
 class LabelH1: BaseLabel {
-    
+
     override class func currentStyle() -> FontStyle {
         return .h1
     }
@@ -22,7 +22,7 @@ class LabelH1: BaseLabel {
 
 @IBDesignable
 class LabelH2: BaseLabel {
-    
+
     override class func currentStyle() -> FontStyle {
         return .h2
     }
@@ -30,17 +30,7 @@ class LabelH2: BaseLabel {
 
 @IBDesignable
 class LabelH3: BaseLabel {
-    
-    override class func currentStyle() -> FontStyle {
-        return .h3
-    }
-}
 
-@IBDesignable
-class LabelH4: BaseLabel {
-    override class func font() -> UIFont {
-        return UIFont.initFrom(style: .h4)
-    }
     override class func currentStyle() -> FontStyle {
         return .h3
     }
@@ -48,7 +38,7 @@ class LabelH4: BaseLabel {
 
 @IBDesignable
 class LabelMain1: BaseLabel {
-    
+
     override class func currentStyle() -> FontStyle {
         return .main1
     }
@@ -67,6 +57,14 @@ class LabelMain3: BaseLabel {
 
     override class func currentStyle() -> FontStyle {
         return .main3
+    }
+}
+
+@IBDesignable
+class LabelMain4: BaseLabel {
+
+    override class func currentStyle() -> FontStyle {
+        return .main4
     }
 }
 

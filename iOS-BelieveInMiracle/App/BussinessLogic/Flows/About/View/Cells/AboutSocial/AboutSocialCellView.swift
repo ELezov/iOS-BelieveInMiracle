@@ -49,7 +49,7 @@ class AboutSocialCellView: BaseCell {
     
     // MARK: - Outlets
     
-    @IBOutlet private weak var lTitle: LabelH2! {
+    @IBOutlet private weak var lTitle: LabelMain2! {
         didSet {
             lTitle.text = L10n.About.Social.title
         }

@@ -10,7 +10,7 @@ import UIKit
 //swiftlint:disable private_outlet
 class RequestVolunterTypeDescriptionCellView: BaseCell {
     
-    @IBOutlet weak var titleLabel: LabelMain2!
+    @IBOutlet weak var titleLabel: LabelMain4!
     
     @IBOutlet weak var heightConstraintSeparatorView: NSLayoutConstraint! {
         didSet {

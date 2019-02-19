@@ -42,12 +42,16 @@ KidsListView {
             tableView.addSubview(refreshControl)
         }
         
-        refreshControl.addTarget(self, action: #selector(updateKidsList(_:)), for: .valueChanged)
+        refreshControl.addTarget(self,
+                                 action: #selector(updateKidsList(_:)),
+                                 for: .valueChanged)
+        self.refreshControl = refreshControl
 
     }
     
     @objc func updateKidsList(_ sender: Any) {
         page = 0
+        allKids = []
         self.tableViewModel?.reload()
     }
     

@@ -17,7 +17,7 @@ extension URLFlowMixin where Self: BaseCoordinator {
     
     func openURL(urlString: String) {
         guard
-            let url = URL(string: urlString),
+            let url = URL(string: urlString.encodeURLString()),
             UIApplication.shared.canOpenURL(url)
         else { return }
         UIApplication.shared.open(url)

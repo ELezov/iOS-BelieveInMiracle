@@ -8,29 +8,36 @@ enum FontStyle {
     case h1
     case h2
     case h3
-    case h4
     case main1
     case main2
     case main3
+    case main4
     case input
     case buttonText
     case tabbarActive
     case tabbarInactive
     case card
-    
+
     case system
 }
 
 extension FontStyle {
     func color() -> UIColor {
         switch self {
-        case .h1, .main2, .main3:
-            return Color.Default.warmGray
-        case .h2, .h3, .main1, .input:
+        case .h1,
+             .h2,
+             .main1,
+             .main2,
+             .input:
             return Color.Default.black
-        case .h4, .tabbarInactive:
+        case .main3,
+             .main4:
+            return Color.Default.warmGray
+        case .h3,
+             .tabbarInactive:
             return Color.Default.greyish
-        case .buttonText:
+        case .card,
+             .buttonText:
             return Color.Base.white
         case .tabbarActive:
             return Color.Default.brightBlue
@@ -45,7 +52,7 @@ extension FontStyle {
         let font = fontStyle()
         return font
     }
-    
+
     func lineSpacing() -> CGFloat {
         switch self {
         case .h1:
@@ -54,8 +61,6 @@ extension FontStyle {
             return 24
         case .h3:
             return 24
-        case .h4:
-            return 14
         case .main1:
             return 24
         case .main2:
@@ -83,31 +88,31 @@ fileprivate extension FontStyle {
     func fontStyle() -> Font {
         switch self {
         case .h1:
-            return FontFamily.Corbel.regular.font(size: 20)
+            return UIFont.systemFont(ofSize: 32)
         case .h2:
-            return FontFamily.Corbel.bold.font(size: 16)
+            return UIFont.systemFont(ofSize: 14)
         case .h3:
-            return FontFamily.Corbel.bold.font(size: 14)
-        case .h4:
-            return FontFamily.Corbel.regular.font(size: 12)
+            return UIFont.systemFont(ofSize: 12)
         case .main1:
-            return FontFamily.Corbel.regular.font(size: 16)
+            return UIFont.systemFont(ofSize: 20)
         case .main2:
-            return FontFamily.Corbel.regular.font(size: 12)
+            return UIFont.systemFont(ofSize: 16)
         case .main3:
-            return FontFamily.Corbel.italic.font(size: 16)
+            return UIFont.systemFont(ofSize: 16)
+        case .main4:
+            return UIFont.systemFont(ofSize: 12)
         case .input:
-            return FontFamily.Corbel.bold.font(size: 12)
+            return UIFont.systemFont(ofSize: 12)
         case .buttonText:
-            return FontFamily.Corbel.regular.font(size: 16)
+            return UIFont.systemFont(ofSize: 16)
         case .tabbarActive:
-            return FontFamily.Corbel.regular.font(size: 10)
+            return UIFont.systemFont(ofSize: 10)
         case .tabbarInactive:
-            return FontFamily.Corbel.regular.font(size: 10)
+            return UIFont.systemFont(ofSize: 10)
         case .card:
             // TODO: fix
             return FontFamily.Corbel.regular.font(size: 10)
-            
+
         case .system:
             return UIFont.systemFont(ofSize: UIFont.systemFontSize)
         }

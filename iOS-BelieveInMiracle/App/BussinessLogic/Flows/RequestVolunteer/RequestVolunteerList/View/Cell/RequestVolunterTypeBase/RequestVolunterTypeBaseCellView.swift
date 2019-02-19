@@ -28,7 +28,7 @@ class RequestVolunterTypeBaseCellView: BaseCell {
     @IBOutlet weak var checkBoxContainer: UIView!
     @IBOutlet weak var indicatorButton: UIButton!
     @IBOutlet weak var typeIconView: UIImageView!
-    @IBOutlet weak var typeTitleLabel: LabelH3!
+    @IBOutlet weak var typeTitleLabel: LabelH2!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var heightConstraintSeparatorView: NSLayoutConstraint! {
         didSet {
