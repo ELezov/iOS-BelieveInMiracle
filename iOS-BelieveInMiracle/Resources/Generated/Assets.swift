@@ -45,6 +45,21 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum About {
+    internal enum Programm {
+      internal static let address = ImageAsset(name: "address")
+      internal static let games = ImageAsset(name: "games")
+      internal static let grownvolunteer = ImageAsset(name: "grownvolunteer")
+      internal static let hospital = ImageAsset(name: "hospital")
+      internal static let internat = ImageAsset(name: "internat")
+      internal static let modern = ImageAsset(name: "modern")
+      internal static let social = ImageAsset(name: "social")
+    }
+    internal enum Project {
+      internal static let fruppolohospis = ImageAsset(name: "fruppolohospis")
+      internal static let fruppololager = ImageAsset(name: "fruppololager")
+      internal static let miraclion = ImageAsset(name: "miraclion")
+      internal static let pogruzenie = ImageAsset(name: "pogruzenie")
+    }
     internal static let facebook = ImageAsset(name: "facebook")
     internal static let instagram = ImageAsset(name: "instagram")
     internal static let vkontakte = ImageAsset(name: "vkontakte")
@@ -123,6 +138,17 @@ internal enum Asset {
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
+    About.Programm.address,
+    About.Programm.games,
+    About.Programm.grownvolunteer,
+    About.Programm.hospital,
+    About.Programm.internat,
+    About.Programm.modern,
+    About.Programm.social,
+    About.Project.fruppolohospis,
+    About.Project.fruppololager,
+    About.Project.miraclion,
+    About.Project.pogruzenie,
     About.facebook,
     About.instagram,
     About.vkontakte,

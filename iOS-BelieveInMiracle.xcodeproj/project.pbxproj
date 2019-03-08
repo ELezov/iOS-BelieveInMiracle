@@ -369,7 +369,6 @@
 		D51A7AA621E2CB2F00AAADA0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D51A7AA821E2D03000AAADA0 /* SocialNetworkFlowMixin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkFlowMixin.swift; sourceTree = "<group>"; };
 		D54F9CF521F1295D00DDFC64 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
-		D558CB17220C65C600F5DA57 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D558CB1A220F891800F5DA57 /* UIApplicationStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationStatusBar.swift; sourceTree = "<group>"; };
 		D558CB1C220F8B5900F5DA57 /* UIImage + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extensions.swift"; sourceTree = "<group>"; };
 		D558CB1F220F8BDF00F5DA57 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
@@ -1536,7 +1535,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
@@ -1573,7 +1572,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS-BelieveInMiracle/Pods-iOS-BelieveInMiracle-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98A1E86021762D8D00522557 /* SwiftGen */ = {
@@ -1588,7 +1587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
 		};
 		98A1E86121762DB100522557 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1816,7 +1815,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				98A1E87C21763FBE00522557 /* en */,
-				D558CB17220C65C600F5DA57 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

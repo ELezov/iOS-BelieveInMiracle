@@ -18,6 +18,5 @@ class KidsListItemCellView: BaseCell {
     @IBOutlet weak var lName: LabelH2!
     @IBOutlet weak var lDiagnoz: LabelMain4!
     @IBOutlet weak var lAge: LabelH3!
-    @IBOutlet weak var lBalance: LabelMain2!
     
 }

@@ -27,15 +27,34 @@ AboutVCTableBuilderAbstract {
         result.append(topVM)
         
         let programmsVM = AboutProgrammsCellViewModel(programms:
-            [ProgrammItemModel(img: Asset.mainLogo.image,
-                               description: "!Участие в социализации воспитанников интернатных учреждений"),
-             ProgrammItemModel(img: Asset.mainLogo.image,
-                               description: "!Участие в социализации воспитанников интернатных учреждений"),
-             ProgrammItemModel(img: Asset.mainLogo.image,
-                               description: "!Участие в социализации воспитанников интернатных учреждений"),
-             ProgrammItemModel(img: Asset.mainLogo.image,
-                               description: "!Участие в социализации воспитанников интернатных учреждений")])
+            [ProgrammItemModel(img: Asset.About.Programm.internat.image,
+                               description: L10n.About.Program.internat),
+             ProgrammItemModel(img: Asset.About.Programm.games.image,
+                               description: L10n.About.Program.game),
+             ProgrammItemModel(img: Asset.About.Programm.grownvolunteer.image,
+                               description: L10n.About.Program.grownvolunteer),
+             ProgrammItemModel(img: Asset.About.Programm.social.image,
+                               description: L10n.About.Program.social),
+             ProgrammItemModel(img: Asset.About.Programm.address.image,
+                               description: L10n.About.Program.address),
+             ProgrammItemModel(img: Asset.About.Programm.modern.image,
+                               description: L10n.About.Program.modern),
+             ProgrammItemModel(img: Asset.About.Programm.hospital.image,
+                               description: L10n.About.Program.hospital),
+             ], title: L10n.About.Programms.title)
         result.append(programmsVM)
+        
+        let projectsVM = AboutProgrammsCellViewModel(programms:
+            [ProgrammItemModel(img: Asset.About.Project.miraclion.image,
+                               description: L10n.About.Project.miraclion),
+             ProgrammItemModel(img: Asset.About.Project.fruppololager.image,
+                               description: L10n.About.Project.fruppoloter),
+             ProgrammItemModel(img: Asset.About.Project.fruppolohospis.image,
+                               description: L10n.About.Project.fruppolohospis),
+             ProgrammItemModel(img: Asset.About.Project.pogruzenie.image,
+                               description: L10n.About.Project.pogruzenije),
+             ], title: L10n.About.Project.title)
+        result.append(projectsVM)
         
         let aboutInfoVM = AboutInfoCellViewModel()
         result.append(aboutInfoVM)

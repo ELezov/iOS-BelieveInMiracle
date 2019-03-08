@@ -26,18 +26,19 @@
                             <constraint firstAttribute="width" constant="64" id="tJ4-WU-ZiX"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxR-Fw-1Lt" customClass="LabelMain4" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
-                        <rect key="frame" x="88" y="46.5" width="239" height="28"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxR-Fw-1Lt" customClass="LabelMain4" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
+                        <rect key="frame" x="88" y="51" width="239" height="42"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="28" id="nlX-Z3-ziu"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="nlX-Z3-ziu"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPq-he-LeX" customClass="LabelH2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
-                        <rect key="frame" x="88" y="16" width="239" height="12.5"/>
+                        <rect key="frame" x="88" y="16" width="239" height="17"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="0en-qq-6xx"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="12" id="Qdj-a5-3wF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -45,7 +46,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I6-01-gFr" customClass="LabelH3" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
-                        <rect key="frame" x="88" y="30.5" width="239" height="12"/>
+                        <rect key="frame" x="88" y="35" width="239" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="rLZ-lq-c2n"/>
                         </constraints>
@@ -53,31 +54,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAs-on-5jP" customClass="LabelMain2" customModule="iOS_BelieveInMiracle" customModuleProvider="target">
-                        <rect key="frame" x="88" y="82.5" width="239" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pBC-Z5-U8F"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="aAs-on-5jP" secondAttribute="bottom" constant="16" id="0bY-28-Vg0"/>
-                    <constraint firstItem="aAs-on-5jP" firstAttribute="leading" secondItem="TxR-Fw-1Lt" secondAttribute="leading" id="7Mv-Ta-toU"/>
                     <constraint firstItem="TxR-Fw-1Lt" firstAttribute="top" secondItem="2I6-01-gFr" secondAttribute="bottom" constant="4" id="8Bt-Qc-YUP"/>
                     <constraint firstItem="TxR-Fw-1Lt" firstAttribute="leading" secondItem="rPq-he-LeX" secondAttribute="leading" id="9EJ-rf-eXS"/>
                     <constraint firstItem="rPq-he-LeX" firstAttribute="leading" secondItem="Kxb-Um-ae0" secondAttribute="trailing" constant="16" id="Ap7-En-Iss"/>
                     <constraint firstItem="2I6-01-gFr" firstAttribute="leading" secondItem="rPq-he-LeX" secondAttribute="leading" id="Cgg-Qp-2lY"/>
-                    <constraint firstItem="aAs-on-5jP" firstAttribute="trailing" secondItem="TxR-Fw-1Lt" secondAttribute="trailing" id="Nmh-KQ-65l"/>
                     <constraint firstItem="Kxb-Um-ae0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VBc-nk-Wsc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="TxR-Fw-1Lt" secondAttribute="bottom" constant="16" id="X9a-4P-SiA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="rPq-he-LeX" secondAttribute="trailing" constant="32" id="Ywv-nY-DID"/>
                     <constraint firstItem="TxR-Fw-1Lt" firstAttribute="trailing" secondItem="rPq-he-LeX" secondAttribute="trailing" id="aWA-ng-o1K"/>
                     <constraint firstItem="rPq-he-LeX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="gE2-e1-CUU"/>
                     <constraint firstItem="2I6-01-gFr" firstAttribute="top" secondItem="rPq-he-LeX" secondAttribute="bottom" constant="2" id="h7H-kt-TWf"/>
                     <constraint firstItem="2I6-01-gFr" firstAttribute="trailing" secondItem="rPq-he-LeX" secondAttribute="trailing" id="hV1-J4-flR"/>
-                    <constraint firstItem="aAs-on-5jP" firstAttribute="top" secondItem="TxR-Fw-1Lt" secondAttribute="bottom" constant="8" id="i4C-Ww-lSj"/>
                     <constraint firstItem="Kxb-Um-ae0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mtd-6y-1Tw"/>
                 </constraints>
             </tableViewCellContentView>
@@ -85,7 +74,6 @@
             <connections>
                 <outlet property="ivPhoto" destination="Kxb-Um-ae0" id="Dtg-dZ-NZD"/>
                 <outlet property="lAge" destination="2I6-01-gFr" id="0Kj-5m-j0w"/>
-                <outlet property="lBalance" destination="aAs-on-5jP" id="M7M-eZ-xeQ"/>
                 <outlet property="lDiagnoz" destination="TxR-Fw-1Lt" id="lWC-Yo-avR"/>
                 <outlet property="lName" destination="rPq-he-LeX" id="2ZK-3V-mYw"/>
             </connections>

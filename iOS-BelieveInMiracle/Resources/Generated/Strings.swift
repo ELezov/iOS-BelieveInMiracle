@@ -12,9 +12,41 @@ internal enum L10n {
     /// О фонде
     internal static let title = L10n.tr("Localizable", "about.title")
 
+    internal enum Program {
+      /// Адресная и паллиативная помощь
+      internal static let address = L10n.tr("Localizable", "about.program.address")
+      /// Творим, играем
+      internal static let game = L10n.tr("Localizable", "about.program.game")
+      /// Развитие волонтества
+      internal static let grownvolunteer = L10n.tr("Localizable", "about.program.grownvolunteer")
+      /// Больничные дети-сироты
+      internal static let hospital = L10n.tr("Localizable", "about.program.hospital")
+      /// Воспитанники интернатный учреждений
+      internal static let internat = L10n.tr("Localizable", "about.program.internat")
+      /// Модернизация больничной
+      internal static let modern = L10n.tr("Localizable", "about.program.modern")
+      /// Социальная реабилитация детей с тяжелыми
+      internal static let social = L10n.tr("Localizable", "about.program.social")
+      /// Наши программы:
+      internal static let title = L10n.tr("Localizable", "about.program.title")
+    }
+
     internal enum Programms {
       /// Наши программы:
       internal static let title = L10n.tr("Localizable", "about.programms.title")
+    }
+
+    internal enum Project {
+      /// Надомный хоспис "Дом Фрупполо" \n Выездная служба, которая помогает семьям с детьми с неизлечимыми заболеваниями (покупка медикаментов, расзодных материалов, медицинского оборудования; медицинская и психологическая помощь)
+      internal static let fruppolohospis = L10n.tr("Localizable", "about.project.fruppolohospis")
+      /// «Терапевтический лагерь «Фрупполо» для семей с детьми в паллиативном статусе.\n Лагерь для семей с неизлечимо больными детьми.
+      internal static let fruppoloter = L10n.tr("Localizable", "about.project.fruppoloter")
+      /// Реабилитационный лагерь "Мираклион". \nДля детей перенесших онкологические заболевания
+      internal static let miraclion = L10n.tr("Localizable", "about.project.miraclion")
+      /// Адаптационно-оздоровительный социальный лагерь «Погружение» \n Реабилитационный лагерь для детей без попечения родителей.
+      internal static let pogruzenije = L10n.tr("Localizable", "about.project.pogruzenije")
+      /// Наши проекты:
+      internal static let title = L10n.tr("Localizable", "about.project.title")
     }
 
     internal enum Social {

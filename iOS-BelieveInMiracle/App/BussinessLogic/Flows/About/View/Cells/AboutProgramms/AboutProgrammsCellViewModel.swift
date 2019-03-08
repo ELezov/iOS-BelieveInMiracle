@@ -22,8 +22,10 @@ CellViewModelHeightable {
     let height: CGFloat = cellHeight
     
     let programms: [ProgrammItemModel]
+    let title: String
     
     func setup(cell: AboutProgrammsCellView) {
+        cell.configureTitle(title: title)
         cell.configureScrollView(models: programms)
     }
     

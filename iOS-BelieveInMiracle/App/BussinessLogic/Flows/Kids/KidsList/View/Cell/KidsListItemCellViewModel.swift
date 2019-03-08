@@ -25,7 +25,6 @@ CellViewModelActionableFasseles {
         cell.lName.text = kid.fullName
         cell.lDiagnoz.text = kid.diagnoz
         cell.lAge.text = kid.ageString
-        cell.lBalance.text = kid.balanceString
         guard let url = URL(string: kid.image?
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
         else { return }

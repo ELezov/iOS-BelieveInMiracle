@@ -26,6 +26,10 @@ class AboutProgrammsCellView: BaseCell {
     
     // MARK: - Public Functions
     
+    func configureTitle(title: String?) {
+        lTitle.text = title
+    }
+    
     func configureScrollView(models: [ProgrammItemModel]) {
         scrollView.layoutIfNeeded()
         var totalWidth: CGFloat = 0.0

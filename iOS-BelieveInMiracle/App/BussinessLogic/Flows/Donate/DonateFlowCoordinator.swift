@@ -39,8 +39,8 @@ URLFlowMixin {
     private func showDonate() {
         let controller = diContainer.resolve(DonateView.self)
         controller?.onCardDonate = { [weak self] configModel in
-            //self?.openURLinWebView(urlModel: configModel)
-            self?.showPayment()
+            self?.openURLinWebView(urlModel: configModel)
+            //self?.showPayment()
         }
         controller?.onSmsDonate = { [weak self] in
             self?.showInputMoneyScreen()
