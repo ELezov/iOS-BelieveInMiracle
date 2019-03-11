@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3311DC502237017C002ED8E3 /* AppProductionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311DC4E2237017C002ED8E3 /* AppProductionCellView.swift */; };
+		3311DC512237017C002ED8E3 /* AppProductionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3311DC4F2237017C002ED8E3 /* AppProductionCellView.xib */; };
+		3311DC542237019A002ED8E3 /* AppProductionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311DC532237019A002ED8E3 /* AppProductionCellViewModel.swift */; };
+		3311DC582237019F002ED8E3 /* AppProductionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311DC4E2237017C002ED8E3 /* AppProductionCellView.swift */; };
+		3311DC592237019F002ED8E3 /* AppProductionCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3311DC4F2237017C002ED8E3 /* AppProductionCellView.xib */; };
+		3311DC5A2237019F002ED8E3 /* AppProductionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3311DC532237019A002ED8E3 /* AppProductionCellViewModel.swift */; };
 		331CC57F2231F01F0051A910 /* KidDetailsDescriptionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E6B37B220A4BF10020041B /* KidDetailsDescriptionCellViewModel.swift */; };
 		331CC5802231F01F0051A910 /* UniversalSetupableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A7A9621E2C01D00AAADA0 /* UniversalSetupableView.swift */; };
 		331CC5812231F01F0051A910 /* UIColor+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98307C52217F5C9A0007D279 /* UIColor+Style.swift */; };
@@ -405,6 +411,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3311DC4E2237017C002ED8E3 /* AppProductionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProductionCellView.swift; sourceTree = "<group>"; };
+		3311DC4F2237017C002ED8E3 /* AppProductionCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppProductionCellView.xib; sourceTree = "<group>"; };
+		3311DC532237019A002ED8E3 /* AppProductionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProductionCellViewModel.swift; sourceTree = "<group>"; };
 		331CC64D2231F01F0051A910 /* iOS-BelieveInMiracle prod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-BelieveInMiracle prod.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		331CC64E2231F01F0051A910 /* iOS-BelieveInMiracle copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iOS-BelieveInMiracle copy-Info.plist"; path = "/Users/elezov/Desktop/Projects/iOS-BelieveInMiracle/iOS-BelieveInMiracle copy-Info.plist"; sourceTree = "<absolute>"; };
 		333CBCA221D656430059444F /* iCreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCreditCard.swift; sourceTree = "<group>"; };
@@ -649,6 +658,16 @@
 				A61A530F1A20E5C960C56E6D /* Pods-iOS-BelieveInMiracle prod.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3311DC5222370181002ED8E3 /* AppProduction */ = {
+			isa = PBXGroup;
+			children = (
+				3311DC4E2237017C002ED8E3 /* AppProductionCellView.swift */,
+				3311DC4F2237017C002ED8E3 /* AppProductionCellView.xib */,
+				3311DC532237019A002ED8E3 /* AppProductionCellViewModel.swift */,
+			);
+			path = AppProduction;
 			sourceTree = "<group>";
 		};
 		333CBCA121D656300059444F /* CreditCard */ = {
@@ -1373,6 +1392,7 @@
 		D51A7A7A21E2A69600AAADA0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3311DC5222370181002ED8E3 /* AppProduction */,
 				D51A7A9F21E2C80100AAADA0 /* AboutSocial */,
 				D51A7A9821E2C67900AAADA0 /* AboutInfo */,
 				D51A7A8221E2A9BB00AAADA0 /* AboutProgramms */,
@@ -1734,6 +1754,7 @@
 				331CC6252231F01F0051A910 /* DonateVC.storyboard in Resources */,
 				331CC6262231F01F0051A910 /* LaunchScreen.storyboard in Resources */,
 				331CC6272231F01F0051A910 /* KidDetailsVC.storyboard in Resources */,
+				3311DC592237019F002ED8E3 /* AppProductionCellView.xib in Resources */,
 				331CC6282231F01F0051A910 /* KidDetailsNameCellView.xib in Resources */,
 				331CC6292231F01F0051A910 /* KidDetailsDiagnosisCellView.xib in Resources */,
 				331CC62A2231F01F0051A910 /* DonateWelcomeVC.storyboard in Resources */,
@@ -1776,6 +1797,7 @@
 				98BA7418216D262200886AD2 /* DonateVC.storyboard in Resources */,
 				9887FF9D21663CC9003FC06F /* LaunchScreen.storyboard in Resources */,
 				D5C07FE72204A163000C68CE /* KidDetailsVC.storyboard in Resources */,
+				3311DC512237017C002ED8E3 /* AppProductionCellView.xib in Resources */,
 				D5E6B369220A401C0020041B /* KidDetailsNameCellView.xib in Resources */,
 				D5E6B373220A48C50020041B /* KidDetailsDiagnosisCellView.xib in Resources */,
 				337CA9FD21AC57D800CD4A2F /* DonateWelcomeVC.storyboard in Resources */,
@@ -1998,7 +2020,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen";
+			shellScript = $PODS_ROOT/SwiftGen/bin/swiftgen;
 		};
 		98A1E86121762DB100522557 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2121,6 +2143,7 @@
 				331CC5CE2231F01F0051A910 /* BaseTableManager.swift in Sources */,
 				331CC5CF2231F01F0051A910 /* RequestVolunteerViewModel.swift in Sources */,
 				331CC5D02231F01F0051A910 /* KidDetailsViewModelAbstract.swift in Sources */,
+				3311DC5A2237019F002ED8E3 /* AppProductionCellViewModel.swift in Sources */,
 				331CC5D12231F01F0051A910 /* DonateInputMoneyView.swift in Sources */,
 				331CC5D22231F01F0051A910 /* NetworkManager.swift in Sources */,
 				331CC5D32231F01F0051A910 /* RequestVolunterTypeBaseCellViewModel.swift in Sources */,
@@ -2132,6 +2155,7 @@
 				331CC5D92231F01F0051A910 /* RequestVolunteerInfoConfigurationModel.swift in Sources */,
 				331CC5DA2231F01F0051A910 /* DonateFlowCoordinator.swift in Sources */,
 				331CC5DB2231F01F0051A910 /* TransactionResponse.swift in Sources */,
+				3311DC582237019F002ED8E3 /* AppProductionCellView.swift in Sources */,
 				331CC5DC2231F01F0051A910 /* LoadingCellViewModel.swift in Sources */,
 				331CC5DD2231F01F0051A910 /* iCreditCard.swift in Sources */,
 				331CC5DE2231F01F0051A910 /* RequestVolunteerInfoViewModel.swift in Sources */,
@@ -2289,6 +2313,7 @@
 				98A1E85821762B2D00522557 /* BaseTableManager.swift in Sources */,
 				982CF08C2178F355002A235B /* RequestVolunteerViewModel.swift in Sources */,
 				D5C07FE42204A163000C68CE /* KidDetailsViewModelAbstract.swift in Sources */,
+				3311DC542237019A002ED8E3 /* AppProductionCellViewModel.swift in Sources */,
 				988CC9FE2178E5B600E87CCD /* DonateInputMoneyView.swift in Sources */,
 				D5B7524221E8E9F000C8C276 /* NetworkManager.swift in Sources */,
 				982CF09A2178F600002A235B /* RequestVolunterTypeBaseCellViewModel.swift in Sources */,
@@ -2300,6 +2325,7 @@
 				98F0CAF221821AEF00066A4F /* RequestVolunteerInfoConfigurationModel.swift in Sources */,
 				98A1E86F2176381F00522557 /* DonateFlowCoordinator.swift in Sources */,
 				33B1FB0B21ADAC4E00080630 /* TransactionResponse.swift in Sources */,
+				3311DC502237017C002ED8E3 /* AppProductionCellView.swift in Sources */,
 				D5B7527121EA208E00C8C276 /* LoadingCellViewModel.swift in Sources */,
 				333CBCA321D656430059444F /* iCreditCard.swift in Sources */,
 				98F0CAEE21821A2D00066A4F /* RequestVolunteerInfoViewModel.swift in Sources */,

@@ -20,7 +20,8 @@ AboutView {
             tableView.register(nibModels: [AboutTopCellViewModel.self,
                                            AboutProgrammsCellViewModel.self,
                                            AboutInfoCellViewModel.self,
-                                           AboutSocialCellViewModel.self])
+                                           AboutSocialCellViewModel.self,
+                                           AppProductionCellViewModel.self])
             tableViewModel?.tableView = tableView
         }
     }

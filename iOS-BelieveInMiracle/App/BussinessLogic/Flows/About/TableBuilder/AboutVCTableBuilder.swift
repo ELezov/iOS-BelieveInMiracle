@@ -63,6 +63,16 @@ AboutVCTableBuilderAbstract {
             onSocial(socialType)
         })
         result.append(aboutSocialVM)
+        
+        
+        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+            let buildVersionNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+        
+            let appVersionString = "\(L10n.About.App.version)\(version).\(buildVersionNumber)"
+            let appVersionVM = AppProductionCellViewModel(appVersion: appVersionString)
+            result.append(appVersionVM)
+        }
+        
         return result
     }
 }

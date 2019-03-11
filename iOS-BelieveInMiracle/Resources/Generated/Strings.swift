@@ -12,6 +12,11 @@ internal enum L10n {
     /// О фонде
     internal static let title = L10n.tr("Localizable", "about.title")
 
+    internal enum App {
+      /// Версия приложения: 
+      internal static let version = L10n.tr("Localizable", "about.app.version")
+    }
+
     internal enum Program {
       /// Адресная и паллиативная помощь
       internal static let address = L10n.tr("Localizable", "about.program.address")

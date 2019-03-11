@@ -86,6 +86,8 @@
 "about.project.pogruzenije" = "Адаптационно-оздоровительный социальный лагерь «Погружение»";
 
 
+"about.app.version" = "Версия приложения: ";
+
 // Kids
 
 "kids.list.item.balance" = "Собрано %@ из %@";
