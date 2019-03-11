@@ -29,7 +29,8 @@ DonateWelcomeView {
     
     @IBOutlet private weak var ivArrowIcon: UIImageView! {
         didSet {
-            ivArrowIcon.image = Asset.Volunteer.arrow.image
+            let image = Asset.Volunteer.arrow.image
+            ivArrowIcon.image = image.withHorizontallyFlippedOrientation()
             ivArrowIcon.contentMode = .scaleAspectFit
         }
     }

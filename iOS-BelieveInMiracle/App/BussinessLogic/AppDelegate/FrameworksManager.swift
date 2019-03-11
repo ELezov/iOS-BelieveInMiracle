@@ -8,6 +8,8 @@
 
 import Foundation
 import IQKeyboardManager
+import Fabric
+import Crashlytics
 
 final class FrameworksManager {
     
@@ -20,6 +22,7 @@ fileprivate extension FrameworksManager {
     
     func setupKeyboardManager() {
         IQKeyboardManager.shared().isEnableAutoToolbar = true
+        Fabric.with([Crashlytics.self])
     }
     
 }

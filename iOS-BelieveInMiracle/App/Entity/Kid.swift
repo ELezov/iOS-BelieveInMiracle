@@ -10,6 +10,13 @@ import Foundation
 
 
 struct Kid {
+    
+    enum KidStatus: String {
+        case helped
+        case needHelp = "needhelp"
+        case undefined
+    }
+    
     let fullName: String?
     let diagnoz: String?
     let needMoney: String?
@@ -20,6 +27,7 @@ struct Kid {
     let city: String?
     let descriptionText: String?
     let status: String?
+    let kidStatus: KidStatus
     let image: String?
     let linkHelp: String?
     
@@ -65,6 +73,7 @@ extension Kid: Decodable {
         case city = "city_kids"
         case descriptionText = "opisanie_rebenka"
         case status = "khod_lecheniya"
+        case kidStatus = "status"
         case img
         case linkHelp = "link_help"
     }
@@ -82,6 +91,8 @@ extension Kid: Decodable {
         city = try container.decodeIfPresent(String.self, forKey: .city)
         descriptionText = try container.decodeIfPresent(String.self, forKey: .descriptionText)
         status = try container.decodeIfPresent(String.self, forKey: .status)
+        let statusString = try container.decodeIfPresent(String.self, forKey: .kidStatus)
+        kidStatus = KidStatus(rawValue: statusString ?? "") ?? .undefined
         
         do {
            let cont = try container.decodeIfPresent(KidImage.self, forKey: .img)

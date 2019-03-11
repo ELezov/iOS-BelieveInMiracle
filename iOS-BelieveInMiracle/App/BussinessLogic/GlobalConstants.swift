@@ -9,7 +9,7 @@ enum GlobalConstants {
     static let smsCodeForDonate = "7715"
     static let donateLink = "https://www.deti39.com/donate/"
     
-    static let mailForVolunteer = "eugenkgd@gmail.com"//deti39v@mail.ru"
+    static let mailForVolunteer = "deti39v@mail.ru"
     
     // Payment
     static let merchantPulicId = "test_api_00000000000000000000002" // Test host

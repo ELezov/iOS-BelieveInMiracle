@@ -37,13 +37,13 @@ internal enum L10n {
     }
 
     internal enum Project {
-      /// Надомный хоспис "Дом Фрупполо" \n Выездная служба, которая помогает семьям с детьми с неизлечимыми заболеваниями (покупка медикаментов, расзодных материалов, медицинского оборудования; медицинская и психологическая помощь)
+      /// Надомный хоспис "Дом Фрупполо"
       internal static let fruppolohospis = L10n.tr("Localizable", "about.project.fruppolohospis")
-      /// «Терапевтический лагерь «Фрупполо» для семей с детьми в паллиативном статусе.\n Лагерь для семей с неизлечимо больными детьми.
+      /// «Терапевтический лагерь «Фрупполо» для семей с детьми в паллиативном статусе
       internal static let fruppoloter = L10n.tr("Localizable", "about.project.fruppoloter")
-      /// Реабилитационный лагерь "Мираклион". \nДля детей перенесших онкологические заболевания
+      /// Реабилитационный лагерь "Мираклион"
       internal static let miraclion = L10n.tr("Localizable", "about.project.miraclion")
-      /// Адаптационно-оздоровительный социальный лагерь «Погружение» \n Реабилитационный лагерь для детей без попечения родителей.
+      /// Адаптационно-оздоровительный социальный лагерь «Погружение»
       internal static let pogruzenije = L10n.tr("Localizable", "about.project.pogruzenije")
       /// Наши проекты:
       internal static let title = L10n.tr("Localizable", "about.project.title")

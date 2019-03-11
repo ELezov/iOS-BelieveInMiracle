@@ -74,15 +74,14 @@ KidsListView {
                     },
                 kid: $0)}
             )
-            self.tableViewModel?.setNewItems([cellVMs])//.appendItems(items: cellVMs, section: 0)
-            //setNewItems([cellVMs])//(items: cellVMs, section: 0)
+            self.tableViewModel?.setNewItems([cellVMs])
         }
     }
     
     func filterKids(kids: [Kid]) -> [Kid] {
         let filteredKids = kids.filter({
-            $0.dieday?.nilIfEmpty == nil })
-        // && $0.fullName?.nilIfEmpty != nil })
+            $0.dieday?.nilIfEmpty == nil  &&
+                $0.kidStatus == .needHelp })
         return filteredKids
     }
 }
