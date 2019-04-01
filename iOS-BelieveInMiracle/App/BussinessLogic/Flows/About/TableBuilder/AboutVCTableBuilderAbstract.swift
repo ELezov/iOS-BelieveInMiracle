@@ -11,5 +11,6 @@ import Foundation
 protocol AboutVCTableBuilderAbstract {
     /// Create view models
     ///
-    func map(onSocial: @escaping SocialTypeCompletion) -> [CellViewModel]
+    func map(onSocial: @escaping SocialTypeCompletion,
+             onOpenLink: @escaping OptionalStringCompletion) -> [CellViewModel]
 }

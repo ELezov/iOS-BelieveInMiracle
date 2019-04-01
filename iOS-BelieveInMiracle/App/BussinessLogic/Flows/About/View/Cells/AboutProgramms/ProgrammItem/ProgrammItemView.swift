@@ -31,12 +31,33 @@ final class ProgrammItemView: UniversalSetupableView {
         label.textAlignment = .center
         return label
     }()
+    
+    let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .clear
+        return button
+    }()
+    
+    var programm: ProgrammItemModel? {
+        didSet {
+            label.text = programm?.description
+            imageView.image = programm?.img
+        }
+    }
+    
+    var onClick: OptionalStringCompletion?
 
     // MARK: - Override
 
     override func configure() {
         addSubview(imageView)
         addSubview(label)
+        addSubview(button)
+        button.addTarget(self, action: #selector(itemDidSelected), for: .touchUpInside)
+    }
+    
+    @objc func itemDidSelected() {
+        onClick?(programm?.link)
     }
 
     override func setupConstraints() {
@@ -54,6 +75,10 @@ final class ProgrammItemView: UniversalSetupableView {
             maker.leading.equalToSuperview().offset(UIConstants.Margin.default)
             maker.trailing.equalToSuperview().offset(-UIConstants.Margin.default)
             maker.bottom.equalToSuperview().offset(-UIConstants.Margin.default)
+        }
+        
+        button.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
         }
     }
 }

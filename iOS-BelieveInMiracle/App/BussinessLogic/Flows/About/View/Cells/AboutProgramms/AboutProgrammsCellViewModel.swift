@@ -11,6 +11,7 @@ import UIKit
 struct ProgrammItemModel {
     let img: UIImage
     let description: String
+    let link: String
 }
 
 struct AboutProgrammsCellViewModel:
@@ -19,6 +20,8 @@ CellViewModelHeightable {
     
     static let cellHeight: CGFloat = UITableViewAutomaticDimension
     
+    var onClick: OptionalStringCompletion?
+    
     let height: CGFloat = cellHeight
     
     let programms: [ProgrammItemModel]
@@ -26,6 +29,7 @@ CellViewModelHeightable {
     
     func setup(cell: AboutProgrammsCellView) {
         cell.configureTitle(title: title)
+        cell.onClick = onClick
         cell.configureScrollView(models: programms)
     }
     

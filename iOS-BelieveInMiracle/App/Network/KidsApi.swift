@@ -32,21 +32,21 @@ extension KidsApi: TargetType {
     
     var path: String {
         switch self {
-        case .fetchAll(let page):
+        case .fetchAll( _):
             return "/kids"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .fetchAll(let page):
+        case .fetchAll( _):
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .fetchAll(let page):
+        case .fetchAll( _):
             return stubbedResponse("fetchAll")
         }
     }

@@ -15,8 +15,8 @@ class AboutTopCellView: BaseCell {
     
     @IBOutlet weak var ivLogo: UIImageView! {
         didSet {
-            ivLogo.image = Asset.mainLogo.image
-            ivLogo.contentMode = .scaleAspectFill
+            ivLogo.image = Asset.submainLogo.image
+            ivLogo.contentMode = .scaleAspectFit
         }
     }
     

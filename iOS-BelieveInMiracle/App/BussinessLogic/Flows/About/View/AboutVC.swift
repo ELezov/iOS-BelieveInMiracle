@@ -5,6 +5,7 @@ ViewController,
 AboutView {
 
     var onOpenSocial: ((String?, String) -> Void)?
+    var onOpenLink: ((String) -> Void)?
     
     // MARK: - Public Variable
     
@@ -51,6 +52,12 @@ fileprivate extension AboutVC {
             }
         }
         
-        tableViewModel?.setNewItems([tableBuilder?.map(onSocial: socialComplection) ?? []])
+        let openLink: OptionalStringCompletion = { [weak self] link in
+            guard let link = link else { return }
+            self?.onOpenLink?(link)
+        }
+        
+        tableViewModel?.setNewItems([tableBuilder?.map(onSocial: socialComplection,
+                                                       onOpenLink: openLink) ?? []])
     }
 }

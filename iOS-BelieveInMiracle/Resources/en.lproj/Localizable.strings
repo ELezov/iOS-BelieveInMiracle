@@ -60,7 +60,7 @@
 
 // About
 
-"about.title" = "О фонде";
+"about.title" = "О Центре";
 "about.top.title" = "Благотворительный центр «Верю в чудо» – Калининградская общественная молодёжная благотворительная организация.";
 "about.programms.title" = "Наши программы:";
 "about.we.title" = "О нас:";
@@ -68,22 +68,39 @@
 "about.social.title" = "Мы в соцсетях:";
 
 
-"about.program.internat" = "Воспитанники интернатный учреждений";
-"about.program.game" = "Творим, играем";
-"about.program.grownvolunteer" = "Развитие волонтества";
-"about.program.social" = "Социальная реабилитация детей с тяжелыми";
-"about.program.address" = "Адресная и паллиативная помощь";
-"about.program.modern" = "Модернизация больничной";
-"about.program.hospital" = "Больничные дети-сироты";
+"about.program.internat.name" = "Участие в социализации воспитанников интернатных учреждений";
+"about.program.internat.link" = "https://www.deti39.com/programs/socializaciya-vospitannikov/";
+
+"about.program.game.name" = "Творим, играя и развиваясь в детских больницах ";
+"about.program.game.link" = "https://www.deti39.com/programs/tvorim-igraem-razvivaemsya/";
+
+"about.program.grownvolunteer.name" = "Развитие волонтёрства и благотворительности в Калининградской области";
+"about.program.grownvolunteer.link" = "https://www.deti39.com/programs/razvitie-volontyorstva/";
+
+"about.program.social.name" = "Социальная реабилитация детей, переживших жизнеугрожающие заболевания";
+"about.program.social.link" = "https://www.deti39.com/programs/socialnaya-reabilitaciya/";
+
+"about.program.address.name" = "Адресная и паллиативная помощь семьям с детьми с тяжелыми заболеваниями ";
+"about.program.address.link" = "https://www.deti39.com/programs/adresnaya-palliativnaya-pomoshch/";
+
+"about.program.modern.name" = "Модернизация больничной инфраструктуры детских лечебно-профилактических учреждений";
+"about.program.modern.link" = "https://www.deti39.com/programs/modernizatsiya-infrastruktury/";
+
+"about.program.hospital.name" = "Больничные дети-сироты";
+"about.program.hospital.link" = "https://www.deti39.com/programs/bolnichnye-deti-siroty/";
 
 "about.program.title" = "Наши программы:";
 
 "about.project.title" = "Наши проекты:";
 
-"about.project.miraclion" = "Реабилитационный лагерь \"Мираклион\"";
-"about.project.fruppoloter" = "«Терапевтический лагерь «Фрупполо» для семей с детьми в паллиативном статусе";
-"about.project.fruppolohospis" = "Надомный хоспис \"Дом Фрупполо\"";
-"about.project.pogruzenije" = "Адаптационно-оздоровительный социальный лагерь «Погружение»";
+"about.project.miraclion.name" = "Мираклион";
+"about.project.miraclion.link" = "http://miraclion.deti39.com/";
+"about.project.fruppoloter.name" = "Лагурь «Фрупполо»";
+"about.project.fruppoloter.link" = "https://dom.deti39.com/";
+"about.project.fruppolohospis.name" = "Надомный хоспис \"Дом Фрупполо\"";
+"about.project.fruppolohospis.link" = "https://dom.deti39.com/";
+"about.project.pobediteli.name" = "Игры победителей";
+"about.project.pobediteli.link" = "https://www.deti39.com/proekt-igry-pobeditelej/";
 
 
 "about.app.version" = "Версия приложения: ";

@@ -20,39 +20,55 @@ enum SocialType {
 
 final class AboutVCTableBuilder:
 AboutVCTableBuilderAbstract {
-    func map(onSocial: @escaping SocialTypeCompletion) -> [CellViewModel] {
+    func map(onSocial: @escaping SocialTypeCompletion,
+             onOpenLink: @escaping OptionalStringCompletion) -> [CellViewModel] {
         var result = [CellViewModel]()
         
         let topVM = AboutTopCellViewModel(description: L10n.About.Top.title)
         result.append(topVM)
         
-        let programmsVM = AboutProgrammsCellViewModel(programms:
+        let programmsVM = AboutProgrammsCellViewModel(
+            onClick: onOpenLink,
+            programms:
             [ProgrammItemModel(img: Asset.About.Programm.internat.image,
-                               description: L10n.About.Program.internat),
+                               description: L10n.About.Program.Internat.name,
+                               link: L10n.About.Program.Internat.link),
              ProgrammItemModel(img: Asset.About.Programm.games.image,
-                               description: L10n.About.Program.game),
+                               description: L10n.About.Program.Game.name,
+                               link: L10n.About.Program.Game.link),
              ProgrammItemModel(img: Asset.About.Programm.grownvolunteer.image,
-                               description: L10n.About.Program.grownvolunteer),
+                               description: L10n.About.Program.Grownvolunteer.name,
+                               link: L10n.About.Program.Grownvolunteer.name),
              ProgrammItemModel(img: Asset.About.Programm.social.image,
-                               description: L10n.About.Program.social),
+                               description: L10n.About.Program.Social.name,
+                               link: L10n.About.Program.Social.link),
              ProgrammItemModel(img: Asset.About.Programm.address.image,
-                               description: L10n.About.Program.address),
+                               description: L10n.About.Program.Address.name,
+                               link: L10n.About.Program.Address.link),
              ProgrammItemModel(img: Asset.About.Programm.modern.image,
-                               description: L10n.About.Program.modern),
+                               description: L10n.About.Program.Modern.name,
+                               link: L10n.About.Program.Modern.link),
              ProgrammItemModel(img: Asset.About.Programm.hospital.image,
-                               description: L10n.About.Program.hospital),
+                               description: L10n.About.Program.Hospital.name,
+                               link: L10n.About.Program.Hospital.link)
              ], title: L10n.About.Programms.title)
         result.append(programmsVM)
         
-        let projectsVM = AboutProgrammsCellViewModel(programms:
+        let projectsVM = AboutProgrammsCellViewModel(
+            onClick: onOpenLink,
+            programms:
             [ProgrammItemModel(img: Asset.About.Project.miraclion.image,
-                               description: L10n.About.Project.miraclion),
+                               description: L10n.About.Project.Miraclion.name,
+                               link: L10n.About.Project.Miraclion.link),
              ProgrammItemModel(img: Asset.About.Project.fruppololager.image,
-                               description: L10n.About.Project.fruppoloter),
+                               description: L10n.About.Project.Fruppoloter.name,
+                               link: L10n.About.Project.Fruppoloter.link),
              ProgrammItemModel(img: Asset.About.Project.fruppolohospis.image,
-                               description: L10n.About.Project.fruppolohospis),
-             ProgrammItemModel(img: Asset.About.Project.pogruzenie.image,
-                               description: L10n.About.Project.pogruzenije),
+                               description: L10n.About.Project.Fruppolohospis.name,
+                               link: L10n.About.Project.Fruppolohospis.link),
+             ProgrammItemModel(img: Asset.About.Project.pobediteli.image,
+                               description: L10n.About.Project.Pobediteli.name,
+                               link: L10n.About.Project.Pobediteli.link)
              ], title: L10n.About.Project.title)
         result.append(projectsVM)
         

@@ -7,7 +7,7 @@ enum GlobalConstants {
     }
 
     static let smsCodeForDonate = "7715"
-    static let donateLink = "https://www.deti39.com/donate/"
+    static let donateLink = "https://www.deti39.com/monthly_donation/#.XJ5FJ-szbBJ"
     
     static let mailForVolunteer = "deti39v@mail.ru"
     

@@ -58,7 +58,7 @@ internal enum Asset {
       internal static let fruppolohospis = ImageAsset(name: "fruppolohospis")
       internal static let fruppololager = ImageAsset(name: "fruppololager")
       internal static let miraclion = ImageAsset(name: "miraclion")
-      internal static let pogruzenie = ImageAsset(name: "pogruzenie")
+      internal static let pobediteli = ImageAsset(name: "pobediteli")
     }
     internal static let facebook = ImageAsset(name: "facebook")
     internal static let instagram = ImageAsset(name: "instagram")
@@ -130,6 +130,7 @@ internal enum Asset {
   internal static let icPersonBlack24dp = ImageAsset(name: "ic_person_black_24dp")
   internal static let insta = ImageAsset(name: "insta")
   internal static let mainLogo = ImageAsset(name: "main_logo")
+  internal static let submainLogo = ImageAsset(name: "submain_logo")
   internal static let vk = ImageAsset(name: "vk")
   internal static let web = ImageAsset(name: "web")
   internal static let whiteLogo = ImageAsset(name: "white_logo")
@@ -148,7 +149,7 @@ internal enum Asset {
     About.Project.fruppolohospis,
     About.Project.fruppololager,
     About.Project.miraclion,
-    About.Project.pogruzenie,
+    About.Project.pobediteli,
     About.facebook,
     About.instagram,
     About.vkontakte,
@@ -206,6 +207,7 @@ internal enum Asset {
     icPersonBlack24dp,
     insta,
     mainLogo,
+    submainLogo,
     vk,
     web,
     whiteLogo,

@@ -3,7 +3,8 @@ import Swinject
 
 final class AboutFlowCoordinator:
 BaseCoordinator,
-SocialNetworkFlowMixin {
+SocialNetworkFlowMixin,
+URLFlowMixin {
 
     
     
@@ -26,6 +27,9 @@ SocialNetworkFlowMixin {
         controller?.onOpenSocial = { [weak self] appUrlString, safariUrlString in
             self?.differentApp(appUrlString: appUrlString,
                                safariURLString: safariUrlString)
+        }
+        controller?.onOpenLink = { [weak self] link in
+            self?.openURL(urlString: link)
         }
         router.setRootModule(controller)
         return router.rootController

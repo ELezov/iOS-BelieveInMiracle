@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias OptionalStringCompletion = (String?) -> Void
+
 class AboutProgrammsCellView: BaseCell {
     
     // MARK: - Outlets
@@ -23,6 +25,8 @@ class AboutProgrammsCellView: BaseCell {
             scrollView.showsHorizontalScrollIndicator = false
         }
     }
+    
+    var onClick: OptionalStringCompletion?
     
     // MARK: - Public Functions
     
@@ -41,8 +45,10 @@ class AboutProgrammsCellView: BaseCell {
                 height: scrollView.bounds.size.height)
             let view = ProgrammItemView(frame: frame)
             totalWidth = view.bounds.width * CGFloat(index + 1)
-            view.imageView.image = model.img
-            view.label.text = model.description
+            view.programm = model
+            view.onClick = { [weak self] link in
+                self?.onClick?(link)
+            }
             self.scrollView.addSubview(view)
         }
         

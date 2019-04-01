@@ -9,7 +9,7 @@ import Foundation
 internal enum L10n {
 
   internal enum About {
-    /// О фонде
+    /// О Центре
     internal static let title = L10n.tr("Localizable", "about.title")
 
     internal enum App {
@@ -18,22 +18,57 @@ internal enum L10n {
     }
 
     internal enum Program {
-      /// Адресная и паллиативная помощь
-      internal static let address = L10n.tr("Localizable", "about.program.address")
-      /// Творим, играем
-      internal static let game = L10n.tr("Localizable", "about.program.game")
-      /// Развитие волонтества
-      internal static let grownvolunteer = L10n.tr("Localizable", "about.program.grownvolunteer")
-      /// Больничные дети-сироты
-      internal static let hospital = L10n.tr("Localizable", "about.program.hospital")
-      /// Воспитанники интернатный учреждений
-      internal static let internat = L10n.tr("Localizable", "about.program.internat")
-      /// Модернизация больничной
-      internal static let modern = L10n.tr("Localizable", "about.program.modern")
-      /// Социальная реабилитация детей с тяжелыми
-      internal static let social = L10n.tr("Localizable", "about.program.social")
       /// Наши программы:
       internal static let title = L10n.tr("Localizable", "about.program.title")
+
+      internal enum Address {
+        /// https://www.deti39.com/programs/adresnaya-palliativnaya-pomoshch/
+        internal static let link = L10n.tr("Localizable", "about.program.address.link")
+        /// Адресная и паллиативная помощь семьям с детьми с тяжелыми заболеваниями 
+        internal static let name = L10n.tr("Localizable", "about.program.address.name")
+      }
+
+      internal enum Game {
+        /// https://www.deti39.com/programs/tvorim-igraem-razvivaemsya/
+        internal static let link = L10n.tr("Localizable", "about.program.game.link")
+        /// Творим, играя и развиваясь в детских больницах 
+        internal static let name = L10n.tr("Localizable", "about.program.game.name")
+      }
+
+      internal enum Grownvolunteer {
+        /// https://www.deti39.com/programs/razvitie-volontyorstva/
+        internal static let link = L10n.tr("Localizable", "about.program.grownvolunteer.link")
+        /// Развитие волонтёрства и благотворительности в Калининградской области
+        internal static let name = L10n.tr("Localizable", "about.program.grownvolunteer.name")
+      }
+
+      internal enum Hospital {
+        /// https://www.deti39.com/programs/bolnichnye-deti-siroty/
+        internal static let link = L10n.tr("Localizable", "about.program.hospital.link")
+        /// Больничные дети-сироты
+        internal static let name = L10n.tr("Localizable", "about.program.hospital.name")
+      }
+
+      internal enum Internat {
+        /// https://www.deti39.com/programs/socializaciya-vospitannikov/
+        internal static let link = L10n.tr("Localizable", "about.program.internat.link")
+        /// Участие в социализации воспитанников интернатных учреждений
+        internal static let name = L10n.tr("Localizable", "about.program.internat.name")
+      }
+
+      internal enum Modern {
+        /// https://www.deti39.com/programs/modernizatsiya-infrastruktury/
+        internal static let link = L10n.tr("Localizable", "about.program.modern.link")
+        /// Модернизация больничной инфраструктуры детских лечебно-профилактических учреждений
+        internal static let name = L10n.tr("Localizable", "about.program.modern.name")
+      }
+
+      internal enum Social {
+        /// https://www.deti39.com/programs/socialnaya-reabilitaciya/
+        internal static let link = L10n.tr("Localizable", "about.program.social.link")
+        /// Социальная реабилитация детей, переживших жизнеугрожающие заболевания
+        internal static let name = L10n.tr("Localizable", "about.program.social.name")
+      }
     }
 
     internal enum Programms {
@@ -42,16 +77,36 @@ internal enum L10n {
     }
 
     internal enum Project {
-      /// Надомный хоспис "Дом Фрупполо"
-      internal static let fruppolohospis = L10n.tr("Localizable", "about.project.fruppolohospis")
-      /// «Терапевтический лагерь «Фрупполо» для семей с детьми в паллиативном статусе
-      internal static let fruppoloter = L10n.tr("Localizable", "about.project.fruppoloter")
-      /// Реабилитационный лагерь "Мираклион"
-      internal static let miraclion = L10n.tr("Localizable", "about.project.miraclion")
-      /// Адаптационно-оздоровительный социальный лагерь «Погружение»
-      internal static let pogruzenije = L10n.tr("Localizable", "about.project.pogruzenije")
       /// Наши проекты:
       internal static let title = L10n.tr("Localizable", "about.project.title")
+
+      internal enum Fruppolohospis {
+        /// https://dom.deti39.com/
+        internal static let link = L10n.tr("Localizable", "about.project.fruppolohospis.link")
+        /// Надомный хоспис "Дом Фрупполо"
+        internal static let name = L10n.tr("Localizable", "about.project.fruppolohospis.name")
+      }
+
+      internal enum Fruppoloter {
+        /// https://dom.deti39.com/
+        internal static let link = L10n.tr("Localizable", "about.project.fruppoloter.link")
+        /// Лагурь «Фрупполо»
+        internal static let name = L10n.tr("Localizable", "about.project.fruppoloter.name")
+      }
+
+      internal enum Miraclion {
+        /// http://miraclion.deti39.com/
+        internal static let link = L10n.tr("Localizable", "about.project.miraclion.link")
+        /// Мираклион
+        internal static let name = L10n.tr("Localizable", "about.project.miraclion.name")
+      }
+
+      internal enum Pobediteli {
+        /// https://www.deti39.com/proekt-igry-pobeditelej/
+        internal static let link = L10n.tr("Localizable", "about.project.pobediteli.link")
+        /// Игры победителей
+        internal static let name = L10n.tr("Localizable", "about.project.pobediteli.name")
+      }
     }
 
     internal enum Social {
