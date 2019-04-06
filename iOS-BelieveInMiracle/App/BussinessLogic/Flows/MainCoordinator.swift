@@ -44,7 +44,10 @@ final class MainCoordinator: BaseCoordinator & MainCoordinatorOutput {
         addDependency(aboutFlowCoordinator)
         addDependency(donateFlowCoordinator)
         addDependency(requestVolunteerFlowCoordinator)
-        mainView.controllers = [aboutVC, kidsListVC, donateVC, requestVolunteerVC]
+        mainView.controllers = [donateVC,
+                                kidsListVC,
+                                aboutVC,
+                                requestVolunteerVC]
         return mainView.toPresent()
     }
 }

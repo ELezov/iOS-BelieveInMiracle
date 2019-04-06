@@ -10,7 +10,11 @@ DonateWelcomeView {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lDescription: LabelMain1!
+    @IBOutlet weak var lDescription: LabelMain1! {
+        didSet {
+            lDescription.text = L10n.Donate.Screen.description
+        }
+    }
     @IBOutlet private weak var ivPoster: UIImageView! {
         didSet {
             ivPoster.image = Asset.Volunteer.help.image
@@ -20,12 +24,18 @@ DonateWelcomeView {
     
     @IBOutlet private weak var bDonationAction: ActionButton! {
         didSet {
+            bDonationAction.setTitle(L10n.Donate.Help.money,
+                                     for: .normal)
             bDonationAction.style = .filled
             bDonationAction.status = .enabled
         }
     }
     
-    @IBOutlet private weak var lSubtitle: LabelMain3!
+    @IBOutlet private weak var lSubtitle: LabelMain3! {
+        didSet {
+            lSubtitle.text = L10n.Donate.Help.volunteer
+        }
+    }
     
     @IBOutlet private weak var ivArrowIcon: UIImageView! {
         didSet {

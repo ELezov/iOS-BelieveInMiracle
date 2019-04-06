@@ -18,7 +18,7 @@ CellViewModelHeightable {
     let appVersion: String
     
     func setup(cell: AppProductionCellView) {
-        cell.appVersionLabel.text = appVersion
+        cell.appVersion = appVersion
     }
     
     static func getCellHeight() -> CGFloat {
